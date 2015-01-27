@@ -1,0 +1,111 @@
+#intro {
+    position: relative;
+    .spacer {
+        height: 2px;
+        width: 40px;
+        margin: 20px auto;
+        background: $successColor;
+    }
+    .hero {
+        position: relative;
+        margin-top: 75px;
+        header h1 {
+            color: #fff;
+            line-height: 1.3em;
+        }
+        .features {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .features li {
+            color: #fff;
+            font-weight: 600;
+            padding: 3px 0;
+        }
+    }
+    .overlay-bg {
+        background: $successColor;
+        position: relative;
+        height: 428px;
+    }
+    .call-to-action > a {
+        margin: 10px;
+    }
+    .intro-text {
+        margin: 65px 0;
+    }
+}
+@media (max-width: 1200px) {
+    #intro {
+        .overlay-bg {
+            height: 325px;
+        }
+        .hero {
+            margin-top: 30px;
+            header {
+                margin-top: 0;
+            }
+            header h1 {
+                font-size: $size18px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    #intro {
+        .overlay-bg {
+            height: 300px;
+        }
+        .hero {
+            margin-top: 20px;
+            header {
+                margin-top: 0;
+            }
+            header h1 {
+                font-size: $size18px;
+            }
+            .features li {
+                font-size: $size13px
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    #intro {
+        .overlay-bg {
+            height: 280px;
+        }
+        .hero {
+            header {
+                margin-top: 20px;
+                margin-top: 0;
+            }
+            header h1 {
+                font-size: $size16px;
+            }
+            .features li {
+                font-size: $size13px
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    #intro {
+        .overlay-bg {
+            height: 275px;
+        }
+        .hero {
+            margin-top: 20px;
+            header {
+                margin-top: 0;
+            }
+            header h1 {
+                font-size: $size16px;
+            }
+            .features li {
+                display: none;
+            }
+        }
+    }
+}

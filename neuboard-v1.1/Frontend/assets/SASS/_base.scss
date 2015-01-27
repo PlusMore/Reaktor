@@ -1,0 +1,76 @@
+html {
+height: 100%;
+font-size:100%; 
+}
+body {
+    color: #788093; 
+    background: #fff;
+    font-family:  $fontStack;
+    font-size:100%;
+    padding: 0px;
+    margin: 0px;
+    min-height: 100%;
+    position: relative;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+a:link, a:visited {
+    text-decoration: none;
+    outline: none;
+    color: $aLinkColor;
+    @include transition(all, .5s, ease);
+
+} 
+a:hover, a:active {
+    outline: none;
+    text-decoration: none;
+    color: $aLinkHover;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family:  $fontHeader;
+    font-weight: 600;
+     color: #13161C;
+      margin:0;
+}
+h1,.h1 {
+  font-size: $size26px;
+  text-transform: uppercase;
+  margin: 15px 0 10px 0;
+}
+
+
+h2,.h2 {
+  font-size: $size19px;
+}
+
+h3,.h3 {
+  font-size: $size17px; 
+}
+
+h4,.h4 {
+  font-size: $size15px;
+}
+
+h5,.h5 {
+  font-size: $size13px;
+}
+
+h6,.h6 {
+  font-size: $size12px;
+}
+p {
+    font-size: $size14px;
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+img {
+    max-width: 100%;
+}
+::selection {
+    background: #fff7dd;
+}
+::-moz-selection {
+    background: #fff7dd;
+}

@@ -1,0 +1,43 @@
+ // Font Family
+$fontHeader: "Montserrat", sans-serif;
+$fontStack: "Open Sans",Helvetica,Arial,sans-serif; 
+
+// Font Size 
+$size6px:0.375em;
+$size7px:0.438em;
+$size8px:0.500em;
+$size9px:0.563em;
+$size10px:0.625em;
+$size11px:0.688em;
+$size12px:0.750em;
+$size13px:0.813em;
+$size14px:0.875em;
+$size15px:0.938em;
+$size16px:1.000em;
+$size17px:1.063em;
+$size18px:1.125em;
+$size19px:1.188em;
+$size20px:1.250em;
+$size21px:1.313em;
+$size22px:1.375em;
+$size23px:1.438em;
+$size24px:1.500em;
+
+//Button and Banner Colors
+ $defaultColor:#909AA0; //grey
+ $defaultColorHover:lighten($defaultColor,5%); //lighter grey
+ $primaryColor:#556B8D; // dark blue (main app color)
+ $primaryColorHover:lighten($primaryColor,5%); //lighter dark blue (main app hover color)
+ $successColor:#27B6AF; //turquoise
+ $successColorHover:lighten($successColor,5%); //lighter turquoise
+ $warningColor:#EDCE8C; //yellow
+ $warningColorHover:lighten($warningColor,5%); //lighter yellow
+ $infoColor:#1F7BB6; //blue
+ $infoColorHover:lighten($infoColor,5%); //lighter blue
+ $dangerColor:#e25d5d; //red
+ $dangerColorHover:lighten($dangerColor,5%); //lighter red 
+
+//Main link color
+$aLinkColor:#2E2E32;
+$aLinkHover:#999; 
+ 

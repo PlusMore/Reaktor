@@ -1,0 +1,113 @@
+#pricing {
+    padding: 75px 0;
+	    .spacer {
+        height: 2px;
+        width: 40px;
+        margin: 20px auto;
+        background: $successColor;
+    }
+    #plan1, #plan1 ul, #plan1 ul li, #plan2, #plan2 ul, #plan2 ul li, #plan3, #plan3 ul, #plan3 ul li, #plan4, #plan4 ul, #plan4 ul li {
+        margin: 0;
+        padding: 0;
+        list-style: none
+    }
+    #pricePlans:after {
+        content: '';
+        display: table;
+        clear: both
+    }
+    #pricePlans {
+        zoom: 1;
+        max-width: 69em
+    }
+    #pricePlans #plan1 .plan, #pricePlans #plan2 .plan, #pricePlans #plan3 .plan, #pricePlans #plan4 .plan {
+        background: #fff;
+        float: left;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        margin: 0 0 20px;
+        border: 1px solid #f0f0f0;
+    }
+    .planContainer .title h2 {
+        font-size: 2.125em;
+        font-weight: 300;
+        color: #3e4f6a;
+        margin: 0;
+        padding: .6em 0
+    }
+    .planContainer .title h2.bestPlanTitle {
+        background: #1F2329;
+        color: #fff;
+        border-radius: 5px 5px 0 0
+    }
+    .planContainer .price p {
+        background: #1F2329;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 700;
+        height: 2.6em;
+        line-height: 2.6em;
+        margin: 0 0 1em
+    }
+    .planContainer .options {
+        margin-top: 10em
+    }
+    .planContainer .options li {
+        font-weight: 700;
+        color: #364762;
+        line-height: 2.5
+    }
+    .planContainer .options li span {
+        font-weight: 400;
+        color: #979797
+    }
+    .planContainer .button a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #3e4f6a;
+        font-weight: 700;
+        letter-spacing: 3px;
+        line-height: 2.8em;
+        border: 2px solid #1F2329;
+        display: inline-block;
+        width: 80%;
+        height: 2.8em;
+        margin: 1.5em 0 1.8em
+    }
+    .planContainer .button a.bestPlanButton {
+        color: #fff
+    }
+    #pricePlans {
+        margin: 2em auto
+    }
+    #pricePlans #plan1>li:last-child, #pricePlans #plan2>li:last-child, #pricePlans #plan3>li:last-child, #pricePlans #plan4>li:last-child {
+        margin-right: 0
+    }
+    #pricePlans #plan1 .plan:hover, #pricePlans #plan2 .plan:hover, #pricePlans #plan3 .plan:hover, #pricePlans #plan4 .plan:hover {
+        -webkit-transform: scale(1.04);
+        -moz-transform: scale(1.04);
+        -ms-transform: scale(1.04);
+        -o-transform: scale(1.04);
+        transform: scale(1.04)
+    }
+    .planContainer .button a {
+        -webkit-transition: all .25s;
+        -moz-transition: all .25s;
+        -ms-transition: all .25s;
+        -o-transition: all .25s;
+        transition: all .25s
+    }
+    .planContainer .button a:hover {
+        background: #1F2329;
+        color: #fff
+    }
+    .planContainer .button a.bestPlanButton, .planContainer .price p.bestPlanPrice, .planContainer .button a.bestPlanButton {
+        background: $successColor;
+        border: 2px solid $successColor;
+    }
+    .planContainer .button a.bestPlanButton:hover {
+        background: $successColor;
+        border: 2px solid $successColor;
+    }
+}

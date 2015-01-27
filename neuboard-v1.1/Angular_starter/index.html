@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Application Name - app.js and Main controller - controller.js-->
+<html ng-app="neuboard" ng-controller="MainCtrl as main">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Page title - directive.js -->
+    <title page-title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons.css" rel="stylesheet">
+    <!--  CSS Animations -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!--  CSS Main -->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Feature detection -->
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!-- Current state name -->
+<body class="{{$state.current.name}}">
+    <!-- Page Wrapper-->
+     <section id="main-wrapper" class="theme-default">
+       <!-- Page wrapper -->
+        <header id="header" ng-include="'views/header.html'"></header>
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar sidebar-left" ng-include="'views/left-sidebar.html'"></aside>
+        <!-- Content wraper -->
+         <section class="main-content-wrapper">
+            <!-- Main content view  -->
+            <div ui-view></div>
+            <!-- Footer -->
+            <div ng-include="'views/footer.html'"></div>
+        </section>
+        <!-- /Content wraper-->
+    </section>
+    <!-- /Page wrapper-->
+    <!-- Right Sidebar Navigation -->
+    <aside ng-include="'views/right-sidebar.html'" id="sidebar-right"></aside>
+    <!-- /Left Sidebar Navigation -->
+    
+    <!-- jQuery -->
+    <script src="js/vendor/jquery-2.1.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/navgoco/jquery.navgoco.min.js"></script>
+    <!-- Pace JS -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Custom  -->
+    <script src="js/custom.js"></script>
+    <!-- Angular -->
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/ui-router/angular-ui-router.min.js"></script>
+    <script src="js/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- Angular Script -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/controllers.js"></script>
+
+</body>
+
+</html>

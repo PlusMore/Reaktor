@@ -1,0 +1,35 @@
+.avatar {
+        position: relative;
+        display: block;
+    }
+
+    .avatar i {
+        position: absolute;
+        top: 0; 
+        width: 12px;
+        height: 12px;
+        margin: 1px;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 100%;
+    }
+
+.avatar i.on {
+    background-color: $successColor;
+}
+
+.avatar i.off {
+    background-color: $defaultColor;
+}
+
+.avatar i.busy {
+    background-color: $dangerColor;
+}
+
+.avatar i.away {
+    background-color: $warningColor;
+}
+
+.border-dark { 
+    border-color: #13161C; 
+}  
