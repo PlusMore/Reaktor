@@ -64,6 +64,42 @@ Router.route('/ui-elements/typography', function () {
   name: 'UI.Typography'
 });
 
+Router.route('/forms/components', function () {
+  this.render('FormComponents', {});
+},{
+  name: 'Forms.Components'
+});
+
+Router.route('/forms/validation', function () {
+  this.render('FormValidation', {});
+},{
+  name: 'Forms.Validation'
+});
+
+Router.route('/forms/mask', function () {
+  this.render('FormMask', {});
+},{
+  name: 'Forms.Mask'
+});
+
+Router.route('/forms/wizard', function () {
+  this.render('FormWizard', {});
+},{
+  name: 'Forms.Wizard'
+});
+
+Router.route('/forms/file-upload', function () {
+  this.render('FileUpload', {});
+},{
+  name: 'Forms.FileUpload'
+});
+
+Router.route('/forms/wysiwyg', function () {
+  this.render('FormWysiwyg', {});
+},{
+  name: 'Forms.WYSIWYG'
+});
+
 Router.route('/css-animations', function () {
   this.render('CSSAnimations', {});
 }, {

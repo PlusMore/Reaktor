@@ -69,22 +69,40 @@
                 </li>
             </ul>
         </li>
-        <li class="nav-dropdown {{stateClass 'forms'}}" data-state="forms" data-toggle="collapse" data-target="#forms-nav-sub">
-            <a href="#" title="Forms">
+        <li class="nav-dropdown {{stateClass 'forms'}}" data-state="forms" >
+            <a href="#" title="Forms" data-toggle="collapse" data-target="#forms-nav-sub">
                 <i class="fa  fa-fw fa-edit"></i> Forms
             </a>
             <ul id="forms-nav-sub" class="nav-sub collapse">
-                <li><a href="forms-components.html" title="Components">Components</a>
+                <li class="{{currentRouteClass 'Forms.Components'}}" data-state="forms.components">
+                    <a href="{{pathFor 'Forms.Components'}}" title="Components">
+                        Components
+                    </a>
                 </li>
-                <li><a href="forms-validation.html" title="Validation">Validation</a>
+                <li class="{{currentRouteClass 'Forms.Validation'}}" data-state="forms.validation">
+                    <a href="{{pathFor 'Forms.Validation'}}" title="Validation">
+                        Validation
+                    </a>
                 </li>
-                <li><a href="forms-mask.html" title="Mask">Mask</a>
+                <li class="{{currentRouteClass 'Forms.Mask'}}" data-state="forms.mask">
+                    <a href="{{pathFor 'Forms.Mask'}}" title="Mask">
+                        Mask
+                    </a>
                 </li>
-                <li><a href="forms-wizard.html" title="Wizard">Wizard</a>
+                <li class="{{currentRouteClass 'Forms.Wizard'}}" data-state="forms.wizard">
+                    <a href="{{pathFor 'Forms.Wizard'}}" title="Wizard">
+                        Wizard
+                    </a>
                 </li>
-                <li><a href="forms-multiple-file.html" title="Multiple File Upload">Multiple File Upload</a>
+                <li class="{{currentRouteClass 'Forms.FileUpload'}}" data-state="forms.fileupload">
+                    <a href="{{pathFor 'Forms.FileUpload'}}" title="Multiple File Upload">
+                        Multiple File Upload
+                    </a>
                 </li>
-                <li><a href="forms-wysiwyg.html" title="WYSIWYG Editor">WYSIWYG Editor</a>
+                <li class="{{currentRouteClass 'Forms.WYSIWYG'}}" data-state="forms.wysiwyg">
+                    <a href="{{pathFor 'Forms.WYSIWYG'}}" title="WYSIWYG Editor">
+                        WYSIWYG Editor
+                    </a>
                 </li>
             </ul>
         </li>
