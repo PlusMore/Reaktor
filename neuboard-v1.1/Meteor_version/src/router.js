@@ -8,6 +8,6 @@ Router.route('/', function () {
   this.render('Dashboard', {});
 });
 
-Router.route('/ui-elements', function () {
-  this.render('UIElements', {});
+Router.route('/css-animations', function () {
+  this.render('CSSAnimations', {});
 });
