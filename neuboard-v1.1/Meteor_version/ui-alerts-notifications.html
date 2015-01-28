@@ -14,7 +14,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Fonts  -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/simple-line-icons.css">
+    <!-- Switchery -->
+    <link rel="stylesheet" href="assets/plugins/switchery/switchery.min.css">
+    <!-- CSS Animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--Page Level CSS-->
+    <link rel="stylesheet" href="assets/plugins/messenger/css/messenger.css">
+    <link rel="stylesheet" href="assets/plugins/messenger/css/messenger-theme-flat.css">
+    <link rel="stylesheet" href="assets/plugins/messenger/css/location-sel.css">
+    <!-- Custom styles for this theme -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Feature detection -->
+    <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="assets/js/vendor/html5shiv.js"></script>
@@ -182,8 +198,8 @@
                                      Tabs &amp; Accordions
                                 </a>
                             </li>
-
-                            <li>
+    
+                            <li class="active">
                                 <a href="ui-alerts-notifications.html" title="Alerts &amp; Notifications">
                                      Alerts &amp; Notifications
                                 </a>
@@ -203,7 +219,7 @@
                                      Icons
                                 </a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="ui-typography.html" title="Typography">
                                      Typography
                                 </a>
@@ -215,7 +231,7 @@
                             <i class="fa  fa-fw fa-edit"></i> Forms
                         </a>
                         <ul class="nav-sub">
-                            <li><a href="forms-components.html" title="Components">Components</a>
+                 <li><a href="forms-components.html" title="Components">Components</a>
                             </li>
                             <li><a href="forms-validation.html" title="Validation">Validation</a>
                             </li>
@@ -251,8 +267,8 @@
                             <i class="fa  fa-fw fa-bar-chart-o"></i> Charts
                         </a>
                         <ul class="nav-sub">
-                            <li>
-                                <a href="charts-chartjs.html" title="Chartjs">
+                 <li>
+                                <a href="charts-chartjs.html"  title="Chartjs">
                                     Chartjs
                                 </a>
                             </li>
@@ -301,16 +317,12 @@
                             <i class="fa  fa-fw fa-file-text"></i> Pages
                         </a>
                         <ul class="nav-sub">
-                            <li>
+                             <li>
                                 <a href="pages-blank-page.html" title="Blank Page">
                                      Blank Page
                                 </a>
                             </li>
-                            <li>
-                                <a href="pages-timeline.html" title="Timeline">
-                                     Timeline
-                                </a>
-                            </li>
+  
                             <li>
                                 <a href="pages-profile.html" title="Profile">
                                      Profile
@@ -350,64 +362,76 @@
                         <ul class="nav-sub">
                             <li>
                                 <a href="javascript:;" title="Level 2.1">
-                                    <i class="fa fa-fw fa-file"></i> Level 1.1
+                                    <i class="fa fa-fw fa-file"></i>
+                                    Level 1.1
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:;" title="Level 2.2">
-                                    <i class="fa fa-fw fa-file"></i> Level 1.2
+                                    <i class="fa fa-fw fa-file"></i>
+                                    Level 1.2
                                 </a>
                             </li>
                             <li class="nav-dropdown">
                                 <a href="#" title="Level 2.3">
-                                    <i class="fa fa-fw fa-folder-open"></i> Level 1.3
+                                    <i class="fa fa-fw fa-folder-open"></i>
+                                    Level 1.3
                                 </a>
                                 <ul class="nav-sub">
                                     <li>
                                         <a href="javascript:;" title="Level 3.1">
-                                            <i class="fa fa-fw fa-file"></i> Level 2.1
+                                            <i class="fa fa-fw fa-file"></i>
+                                            Level 2.1
                                         </a>
                                     </li>
                                     <li class="nav-dropdown">
                                         <a href="#" title="Level 3.2">
-                                            <i class="fa fa-fw fa-folder-open"></i> Level 2.2
+                                            <i class="fa fa-fw fa-folder-open"></i>
+                                            Level 2.2
                                         </a>
                                         <ul class="nav-sub">
                                             <li>
                                                 <a href="javascript:;" title="Level 4.1">
-                                                    <i class="fa fa-fw fa-file"></i> Level 3.1
+                                                    <i class="fa fa-fw fa-file"></i>
+                                                    Level 3.1
                                                 </a>
                                             </li>
                                             <li class="nav-dropdown">
                                                 <a href="#" title="Level 4.2">
-                                                    <i class="fa fa-fw fa-folder-open"></i> Level 3.2
+                                                    <i class="fa fa-fw fa-folder-open"></i>
+                                                    Level 3.2
                                                 </a>
                                                 <ul class="nav-sub">
                                                     <li class="nav-dropdown">
                                                         <a href="#" title="Level 5.1">
-                                                            <i class="fa fa-fw fa-folder-open"></i> Level 4.1
+                                                            <i class="fa fa-fw fa-folder-open"></i>
+                                                            Level 4.1
                                                         </a>
                                                         <ul class="nav-sub">
                                                             <li>
                                                                 <a href="javascript:;" title="Level 6.1">
-                                                                    <i class="fa fa-fw fa-file"></i> Level 5.1
+                                                                    <i class="fa fa-fw fa-file"></i>
+                                                                    Level 5.1
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="javascript:;" title="Level 6.2">
-                                                                    <i class="fa fa-fw fa-file"></i> Level 5.2
+                                                                    <i class="fa fa-fw fa-file"></i>
+                                                                    Level 5.2
                                                                 </a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
                                                         <a href="javascript:;" title="Level 5.2">
-                                                            <i class="fa fa-fw fa-file"></i> Level 4.2
+                                                            <i class="fa fa-fw fa-file"></i>
+                                                            Level 4.2
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="javascript:;" title="Level 5.3">
-                                                            <i class="fa fa-fw fa-file"></i> Level 4.3
+                                                            <i class="fa fa-fw fa-file"></i>
+                                                            Level 4.3
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -420,7 +444,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="animations.html" title="CSS Animations">
+                     <a href="animations.html" title="CSS Animations">
                             <i class="fa  fa-fw fa-magic"></i> CSS Animations
                         </a>
                     </li>
@@ -450,232 +474,58 @@
         <!--main content start-->
         <section class="main-content-wrapper">
             <div class="pageheader">
-                <h1>Typography</h1>
+                <h1></i>Alerts &amp; Notifications</h1>
                 <div class="breadcrumb-wrapper hidden-xs">
                     <span class="label">You are here:</span>
                     <ol class="breadcrumb">
                         <li><a href="index.html">Dashboard</a>
                         </li>
                         <li>UI Elements</li>
-                        <li class="active">Typography</li>
+                        <li class="active">Alerts &amp; Notifications</li>
                     </ol>
                 </div>
             </div>
             <section id="main-content" class="animated fadeInUp">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Headings</h3>
+                                <h3 class="panel-title">Notifications</h3>
                                 <div class="actions pull-right">
                                     <i class="fa fa-chevron-down"></i>
                                     <i class="fa fa-times"></i>
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h3>Message Options</h3>
+                                        <p>Show progress, success or error messages in your web application. You can also add a retry message to your failed requests.
+                                            <p>
+                                                <p>
+                                                    <button type="button" class="btn btn-info" onclick="tryAgain()">Show Retry Message</button>
+                                                </p>
+                                                <p>
+                                                    <button type="button" class="btn btn-danger" onclick="showErrorMessage('Houston, we have a problem.')">Show Error Message</button>
+                                                </p>
+                                                <p>
+                                                    <button type="button" class="btn btn-success" onclick="showSuccess('We have lift off!')">Show Success Message</button>
+                                                </p>
+                                    </div>
 
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <h1>h1. Bootstrap heading</h1>
-                                            </td>
-                                            <td class="type-info">Semibold 1.500em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2>h2. Bootstrap heading</h2>
-                                            </td>
-                                            <td class="type-info">Semibold 1.375em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h3>h3. Bootstrap heading</h3>
-                                            </td>
-                                            <td class="type-info">Semibold 1.125em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h4>h4. Bootstrap heading</h4>
-                                            </td>
-                                            <td class="type-info">Semibold 1.000em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h5>h5. Bootstrap heading</h5>
-                                            </td>
-                                            <td class="type-info">Semibold 0.875em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h6>h6. Bootstrap heading</h6>
-                                            </td>
-                                            <td class="type-info">Semibold 0.750em</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Headings</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
+                                    <div class="col-md-8">
+                                        <h3>Location Options</h3>
+                                        <p>This jQuery Notification plugin gives you the ability to place your messages in any corner of the screen. Simply click on any of the areas below while a message is visible.</p>
+                                        <div class="location-selector">
+                                            <div class="bit top left" data-position="top left"></div>
+                                            <div class="bit top right" data-position="top right"></div>
+                                            <div class="bit top" data-position="top"></div>
+                                            <div class="bit bottom left" data-position="bottom left"></div>
+                                            <div class="bit bottom right" data-position="bottom right"></div>
+                                            <div class="bit bottom" data-position="bottom"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag or the <code>.small</code> class.</p>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <h1>h1. Bootstrap heading</h1>
-                                            </td>
-                                            <td class="type-info">Semibold 1.500em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2>h2. Bootstrap heading</h2>
-                                            </td>
-                                            <td class="type-info">Semibold 1.188em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h3>h3. Bootstrap heading</h3>
-                                            </td>
-                                            <td class="type-info">Semibold 1.063em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h4>h4. Bootstrap heading</h4>
-                                            </td>
-                                            <td class="type-info">Semibold 0.875em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h5>h5. Bootstrap heading</h5>
-                                            </td>
-                                            <td class="type-info">Semibold 0.813em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h6>h6. Bootstrap heading</h6>
-                                            </td>
-                                            <td class="type-info">Semibold 0.750em</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Body copy</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>NeuBoard's gloabl default <code>font-size</code> is <strong>1em</strong> with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs are set to <code>0.875em</code>.</p>
-                                <p>For ease of use the font sizes are set as variables in the LESS and SASS as px and converted to em.</p>
-                                <code>@6px:0.375em;</code>
-                                <br>
-                                <code>@7px:0.438em;</code>
-                                <br>
-                                <code>@8px:0.500em;</code>
-                                <br>
-                                <code>@9px:0.563em;</code>
-                                <br>
-                                <code>@10px:0.625em;</code>
-                                <br>
-                                <code>@11px:0.688em;</code>
-                                <br>
-                                <code> @12px:0.750em;</code>
-                                <br>
-                                <code>@13px:0.813em;</code>
-                                <br>
-                                <code>@14px:0.875em;</code>
-                                <br>
-                                <code>@15px:0.938em;</code>
-                                <br>
-                                <code>@16px:1.000em;</code>
-                                <br>
-                                <code> @17px:1.063em;</code>
-                                <br>
-                                <code> @18px:1.125em;</code>
-                                <br>
-                                <code> @19px:1.188em;</code>
-                                <br>
-                                <code> @20px:1.250em;</code>
-                                <br>
-                                <code> @21px:1.313em;</code>
-                                <br>
-                                <code> @22px:1.375em;</code>
-                                <br>
-                                <code>@23px:1.438em;</code>
-                                <br>
-                                <code>  @24px:1.500em;</code>
-                                <br>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Addresses</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
-
-                                <address>
-                                    <strong>Twitter, Inc.</strong>
-                                    <br> 795 Folsom Ave, Suite 600
-                                    <br> San Francisco, CA 94107
-                                    <br>
-                                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                                </address>
-                                <address>
-                                    <strong>Full Name</strong>
-                                    <br>
-                                    <a href="mailto:#">first.last@example.com</a>
-                                </address>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Blockquotes</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.</p>
-                                <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                    <footer>Someone famous in
-                                        <cite title="Source Title">Source Title</cite>
-                                    </footer>
-                                </blockquote>
                             </div>
                         </div>
                     </div>
@@ -686,44 +536,32 @@
                     <div class="col-md-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Alignment classes</h3>
+                                <h3 class="panel-title">Simple Alerts</h3>
                                 <div class="actions pull-right">
                                     <i class="fa fa-chevron-down"></i>
                                     <i class="fa fa-times"></i>
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <p>Easily realign text to components with text alignment classes.</p>
-
-                                <p class="text-left">Left aligned text.</p>
-                                <p class="text-center">Center aligned text.</p>
-                                <p class="text-right">Right aligned text.</p>
-                                <p class="text-justify">Justified text.</p>
-
+                                <div class="alert alert-success alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <strong>Well done!</strong>You successfully read this important alert message.</div>
+                                <div class="alert alert-info alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <strong>Heads up!</strong>This alert needs your attention, but it's not super important.</div>
+                                <div class="alert alert-warning alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <strong>Warning!</strong>Better check yourself, you're not looking too good.</div>
+                                <div class="alert alert-danger alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <strong>Oh snap!</strong>Change a few things up and try submitting again.</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Lead body copy</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
-                                <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Lists</h3>
+                                <h3 class="panel-title">Alert Messages</h3>
                                 <div class="actions pull-right">
                                     <i class="fa fa-chevron-down"></i>
                                     <i class="fa fa-times"></i>
@@ -731,45 +569,22 @@
                             </div>
                             <div class="panel-body">
 
-                                <div class="col-md-6">
-                                    <h3>Unordered</h3>
-                                    <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
-                                    <ul>
-                                        <li>Lorem ipsum dolor sit amet</li>
-                                        <li>Consectetur adipiscing elit</li>
-                                        <li>Integer molestie lorem at massa</li>
-                                        <li>Facilisis in pretium nisl aliquet</li>
-                                        <li>Nulla volutpat aliquam velit
-                                            <ul>
-                                                <li>Phasellus iaculis neque</li>
-                                                <li>Purus sodales ultricies</li>
-                                                <li>Vestibulum laoreet porttitor sem</li>
-                                                <li>Ac tristique libero volutpat at</li>
-                                            </ul>
-                                        </li>
-                                        <li>Faucibus porta lacus fringilla vel</li>
-                                        <li>Aenean sit amet erat nunc</li>
-                                        <li>Eget porttitor lorem</li>
-                                    </ul>
+                                <div class="alert alert-danger fade in">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <h4>Oh snap! You got an error!</h4>
+                                    <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                                    <p>
+                                        <button type="button" class="btn btn-danger ">Take this action</button>
+                                    </p>
                                 </div>
-                                <div class="col-md-6">
-                                    <h3>Ordered</h3>
-                                    <p>A list of items in which the order <em>does</em> explicitly matter.</p>
-                                    <ol>
-                                        <li>Lorem ipsum dolor sit amet</li>
-                                        <li>Consectetur adipiscing elit</li>
-                                        <li>Integer molestie lorem at massa</li>
-                                        <li>Facilisis in pretium nisl aliquet</li>
-                                        <li>Nulla volutpat aliquam velit</li>
-                                        <li>Faucibus porta lacus fringilla vel</li>
-                                        <li>Aenean sit amet erat nunc</li>
-                                        <li>Eget porttitor lorem</li>
-                                    </ol>
-                                </div>
+
                             </div>
                         </div>
                     </div>
+
+
                 </div>
+
             </section>
         </section>
         <!--main content end-->
@@ -920,17 +735,14 @@
                 </ul>
             </div>
             <div id="contact-user">
-                <div class="chat-user active"><span><i class="icon-bubble"></i></span>
-                </div>
-                <div class="email-user"><span><i class="icon-envelope-open"></i></span>
-                </div>
-                <div class="call-user"><span><i class="icon-call-out"></i></span>
-                </div>
+                <div class="chat-user active"><span><i class="icon-bubble"></i></span></div>
+                <div class="email-user"><span><i class="icon-envelope-open"></i></span></div>
+                <div class="call-user"><span><i class="icon-call-out"></i></span></div>
             </div>
         </div>
     </aside>
     <!--sidebar right end-->
-    <!--Config demo-->
+        <!--Config demo-->
     <div id="config" class="config hidden-xs">
         <h4>Settings<a href="javascript:void(0)" class="config-link closed"><i class="icon-settings"></i></a></h4>
         <div class="config-swatch-wrap">
@@ -965,7 +777,7 @@
                                 <span class="nav bg-dark"></span>
                             </div>
                         </li>
-                        <li>
+                         <li>
                             <div class="theme-style-wrapper" data-theme="theme-grey">
                                 <span class="header bg-grey"></span>
                                 <span class="header bg-white"></span>
@@ -979,7 +791,7 @@
                                 <span class="nav bg-dark"></span>
                             </div>
                         </li>
-
+        
                     </ul>
                 </div>
                 <div class="col-xs-6">
@@ -998,7 +810,7 @@
                                 <span class="nav bg-dark"></span>
                             </div>
                         </li>
-                        <li>
+                         <li>
                             <div class="theme-style-wrapper" data-theme="theme-green-full">
                                 <span class="header bg-green"></span>
                                 <span class="header bg-green"></span>
@@ -1039,6 +851,17 @@
      <script src="assets/plugins/switchery/switchery.min.js"></script>
     <script src="assets/plugins/pace/pace.min.js"></script>
     <script src="assets/js/src/app.js"></script>
+    <!--Page Level JS for Demo-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+    <!--Page Level JS -->
+    <script src="assets/plugins/messenger/js/messenger.min.js"></script>
+    <script src="assets/plugins/messenger/js/messenger-theme-future.js"></script>
+    <!--Page Level JS for Demo-->
+    <script src="assets/plugins/messenger/js/demo/location-sel.js"></script>
+    <script src="assets/plugins/messenger/js/demo/theme-sel.js"></script>
+    <script src="assets/plugins/messenger/js/demo/demo.js"></script>
+    <script src="assets/plugins/messenger/js/demo/demo-messages.js"></script>
 </body>
 
 </html>

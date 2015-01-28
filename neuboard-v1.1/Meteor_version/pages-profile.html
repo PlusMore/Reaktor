@@ -14,7 +14,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Fonts  -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/simple-line-icons.css">
+    <!-- Switchery -->
+    <link rel="stylesheet" href="assets/plugins/switchery/switchery.min.css">
+    <!-- CSS Animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Custom styles for this theme -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Feature detection -->
+    <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="assets/js/vendor/html5shiv.js"></script>
@@ -157,7 +169,7 @@
                             <i class="fa  fa-fw fa-tachometer"></i> Dashboard
                         </a>
                     </li>
-                    <li class="nav-dropdown open active">
+                    <li class="nav-dropdown">
                         <a href="#" title="UI Elements">
                             <i class="fa  fa-fw fa-cogs"></i> UI Elements
                         </a>
@@ -203,7 +215,7 @@
                                      Icons
                                 </a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="ui-typography.html" title="Typography">
                                      Typography
                                 </a>
@@ -296,7 +308,7 @@
                             <span class="pull-right badge badge-danger">new</span>
                         </a>
                     </li>
-                    <li class="nav-dropdown">
+                    <li class="nav-dropdown open active">
                         <a href="#" title="Pages">
                             <i class="fa  fa-fw fa-file-text"></i> Pages
                         </a>
@@ -306,12 +318,8 @@
                                      Blank Page
                                 </a>
                             </li>
-                            <li>
-                                <a href="pages-timeline.html" title="Timeline">
-                                     Timeline
-                                </a>
-                            </li>
-                            <li>
+  
+                            <li class="active">
                                 <a href="pages-profile.html" title="Profile">
                                      Profile
                                 </a>
@@ -450,324 +458,165 @@
         <!--main content start-->
         <section class="main-content-wrapper">
             <div class="pageheader">
-                <h1>Typography</h1>
+                <h1>Profile</h1>
                 <div class="breadcrumb-wrapper hidden-xs">
                     <span class="label">You are here:</span>
                     <ol class="breadcrumb">
                         <li><a href="index.html">Dashboard</a>
                         </li>
-                        <li>UI Elements</li>
-                        <li class="active">Typography</li>
+                        <li>Pages</li>
+                        <li class="active">Profile</li>
                     </ol>
                 </div>
             </div>
-            <section id="main-content" class="animated fadeInUp">
+            <section id="main-content">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Headings</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
+                        <section class="panel">
+                            <div class="panel-body profile-wrapper">
+                                <div class="col-md-3">
+                                    <div class="profile-pic text-center">
+                                        <img src="assets/img/avatar2.png" alt="" class="img-circle">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
-
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <h1>h1. Bootstrap heading</h1>
-                                            </td>
-                                            <td class="type-info">Semibold 1.500em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2>h2. Bootstrap heading</h2>
-                                            </td>
-                                            <td class="type-info">Semibold 1.375em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h3>h3. Bootstrap heading</h3>
-                                            </td>
-                                            <td class="type-info">Semibold 1.125em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h4>h4. Bootstrap heading</h4>
-                                            </td>
-                                            <td class="type-info">Semibold 1.000em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h5>h5. Bootstrap heading</h5>
-                                            </td>
-                                            <td class="type-info">Semibold 0.875em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h6>h6. Bootstrap heading</h6>
-                                            </td>
-                                            <td class="type-info">Semibold 0.750em</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Headings</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag or the <code>.small</code> class.</p>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <h1>h1. Bootstrap heading</h1>
-                                            </td>
-                                            <td class="type-info">Semibold 1.500em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2>h2. Bootstrap heading</h2>
-                                            </td>
-                                            <td class="type-info">Semibold 1.188em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h3>h3. Bootstrap heading</h3>
-                                            </td>
-                                            <td class="type-info">Semibold 1.063em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h4>h4. Bootstrap heading</h4>
-                                            </td>
-                                            <td class="type-info">Semibold 0.875em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h5>h5. Bootstrap heading</h5>
-                                            </td>
-                                            <td class="type-info">Semibold 0.813em</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h6>h6. Bootstrap heading</h6>
-                                            </td>
-                                            <td class="type-info">Semibold 0.750em</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Body copy</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>NeuBoard's gloabl default <code>font-size</code> is <strong>1em</strong> with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs are set to <code>0.875em</code>.</p>
-                                <p>For ease of use the font sizes are set as variables in the LESS and SASS as px and converted to em.</p>
-                                <code>@6px:0.375em;</code>
-                                <br>
-                                <code>@7px:0.438em;</code>
-                                <br>
-                                <code>@8px:0.500em;</code>
-                                <br>
-                                <code>@9px:0.563em;</code>
-                                <br>
-                                <code>@10px:0.625em;</code>
-                                <br>
-                                <code>@11px:0.688em;</code>
-                                <br>
-                                <code> @12px:0.750em;</code>
-                                <br>
-                                <code>@13px:0.813em;</code>
-                                <br>
-                                <code>@14px:0.875em;</code>
-                                <br>
-                                <code>@15px:0.938em;</code>
-                                <br>
-                                <code>@16px:1.000em;</code>
-                                <br>
-                                <code> @17px:1.063em;</code>
-                                <br>
-                                <code> @18px:1.125em;</code>
-                                <br>
-                                <code> @19px:1.188em;</code>
-                                <br>
-                                <code> @20px:1.250em;</code>
-                                <br>
-                                <code> @21px:1.313em;</code>
-                                <br>
-                                <code> @22px:1.375em;</code>
-                                <br>
-                                <code>@23px:1.438em;</code>
-                                <br>
-                                <code>  @24px:1.500em;</code>
-                                <br>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Addresses</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
-
-                                <address>
-                                    <strong>Twitter, Inc.</strong>
-                                    <br> 795 Folsom Ave, Suite 600
-                                    <br> San Francisco, CA 94107
-                                    <br>
-                                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                                </address>
-                                <address>
-                                    <strong>Full Name</strong>
-                                    <br>
-                                    <a href="mailto:#">first.last@example.com</a>
-                                </address>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Blockquotes</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.</p>
-                                <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                    <footer>Someone famous in
-                                        <cite title="Source Title">Source Title</cite>
-                                    </footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Alignment classes</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>Easily realign text to components with text alignment classes.</p>
-
-                                <p class="text-left">Left aligned text.</p>
-                                <p class="text-center">Center aligned text.</p>
-                                <p class="text-right">Right aligned text.</p>
-                                <p class="text-justify">Justified text.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Lead body copy</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
-                                <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Lists</h3>
-                                <div class="actions pull-right">
-                                    <i class="fa fa-chevron-down"></i>
-                                    <i class="fa fa-times"></i>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-
-                                <div class="col-md-6">
-                                    <h3>Unordered</h3>
-                                    <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
-                                    <ul>
-                                        <li>Lorem ipsum dolor sit amet</li>
-                                        <li>Consectetur adipiscing elit</li>
-                                        <li>Integer molestie lorem at massa</li>
-                                        <li>Facilisis in pretium nisl aliquet</li>
-                                        <li>Nulla volutpat aliquam velit
+                                <div class="col-md-9">
+                                    <div class="profile-info">
+                                        <h1>Aaron Adams</h1>
+                                        <span class="text-muted">UI Designer</span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="connect">
+                                            <button type="button" class="btn btn-success btn-trans"><span class="fa fa-check"></span> Following</button>
+                                            <button type="button" class="btn btn-primary btn-trans"><span class="fa fa-comments"></span> Chat</button>
+                                        </div>
+                                        <div class="social">
                                             <ul>
-                                                <li>Phasellus iaculis neque</li>
-                                                <li>Purus sodales ultricies</li>
-                                                <li>Vestibulum laoreet porttitor sem</li>
-                                                <li>Ac tristique libero volutpat at</li>
+                                                <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-lg fa-github"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-lg fa-dribbble"></i></a>
+                                                </li>
+
                                             </ul>
-                                        </li>
-                                        <li>Faucibus porta lacus fringilla vel</li>
-                                        <li>Aenean sit amet erat nunc</li>
-                                        <li>Eget porttitor lorem</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3>Ordered</h3>
-                                    <p>A list of items in which the order <em>does</em> explicitly matter.</p>
-                                    <ol>
-                                        <li>Lorem ipsum dolor sit amet</li>
-                                        <li>Consectetur adipiscing elit</li>
-                                        <li>Integer molestie lorem at massa</li>
-                                        <li>Facilisis in pretium nisl aliquet</li>
-                                        <li>Nulla volutpat aliquam velit</li>
-                                        <li>Faucibus porta lacus fringilla vel</li>
-                                        <li>Aenean sit amet erat nunc</li>
-                                        <li>Eget porttitor lorem</li>
-                                    </ol>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
+                    </div>
+                    <div class="col-md-6">
+                        <section class="panel  timeline-post-to">
+                            <div class="panel-body">
+                                <form role="form">
+                                    <textarea class="form-control" placeholder="What's on your mind?"></textarea>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <a class="btn btn-sm btn-default"><i class="fa fa-camera"></i></a>
+                                            <a class="btn btn-sm btn-default"><i class="fa fa-video-camera"></i></a>
+                                            <a class="btn btn-sm btn-default"><i class="fa fa-music"></i></a>
+                                            <a class="btn btn-sm btn-default"><i class="fa fa-map-marker"></i></a>
+                                        </div>
+                                        <div class="col-sm-6 text-right">
+                                            <button type="submit" class="btn btn-primary">Post</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                        <section class="panel  timeline-post">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        <div class="date">
+                                            <span>23</span>
+                                            <span class="small">Feb</span>
+                                        </div>
+                                        <h4>Lorem ipsum dolor sit</h4>
+                                        <p>
+                                            Tortor metus suscipit lectus lacinia mi. Duis quis ullamcorper, felis consequat ut felis sit, pellentesque sit nunc, porttitor a, neque enim metus sed dictum scelerisque. Ante ornare, ante nunc ac, et feugiat justo urna, pharetra velit convallis, sit magna odio in nunc sit.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="date">
+                                            <span>14</span>
+                                            <span class="small">Feb</span>
+                                        </div>
+                                        <h4>Something good can work.</h4>
+                                        <p>
+
+                                            <div class='embed-container'>
+                                                <iframe src='//player.vimeo.com/video/16566326?title=0&amp;byline=0&amp;portrait=0"' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                            </div>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="date">
+                                            <span>12</span>
+                                            <span class="small">Jan</span>
+                                        </div>
+                                        <h4>Lorem ipsum dolor!</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                        </p>
+
+                                    </li>
+                                    <li>
+                                        <div class="date">
+                                            <span>01</span>
+                                            <span class="small">Jan</span>
+                                        </div>
+                                        <h4>Vacation photos</h4>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="assets/img/vac-1.jpg" alt="" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="assets/img/vac-2.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="assets/img/vac-3.jpg" alt="" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="assets/img/vac-4.jpg" alt="" />
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="date">
+                                            <span>23</span>
+                                            <span class="small">Dec</span>
+                                        </div>
+                                        <h4>Lorem ipsum dolor!</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="date">
+                                            <span>14</span>
+                                            <span class="small">Dec</span>
+                                        </div>
+                                        <h4>Lorem ipsum dolor!</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                        </p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </section>
+
                     </div>
                 </div>
             </section>
@@ -920,17 +769,14 @@
                 </ul>
             </div>
             <div id="contact-user">
-                <div class="chat-user active"><span><i class="icon-bubble"></i></span>
-                </div>
-                <div class="email-user"><span><i class="icon-envelope-open"></i></span>
-                </div>
-                <div class="call-user"><span><i class="icon-call-out"></i></span>
-                </div>
+                <div class="chat-user active"><span><i class="icon-bubble"></i></span></div>
+                <div class="email-user"><span><i class="icon-envelope-open"></i></span></div>
+                <div class="call-user"><span><i class="icon-call-out"></i></span></div>
             </div>
         </div>
     </aside>
     <!--sidebar right end-->
-    <!--Config demo-->
+        <!--Config demo-->
     <div id="config" class="config hidden-xs">
         <h4>Settings<a href="javascript:void(0)" class="config-link closed"><i class="icon-settings"></i></a></h4>
         <div class="config-swatch-wrap">
@@ -965,7 +811,7 @@
                                 <span class="nav bg-dark"></span>
                             </div>
                         </li>
-                        <li>
+                         <li>
                             <div class="theme-style-wrapper" data-theme="theme-grey">
                                 <span class="header bg-grey"></span>
                                 <span class="header bg-white"></span>
@@ -979,7 +825,7 @@
                                 <span class="nav bg-dark"></span>
                             </div>
                         </li>
-
+        
                     </ul>
                 </div>
                 <div class="col-xs-6">
@@ -998,7 +844,7 @@
                                 <span class="nav bg-dark"></span>
                             </div>
                         </li>
-                        <li>
+                         <li>
                             <div class="theme-style-wrapper" data-theme="theme-green-full">
                                 <span class="header bg-green"></span>
                                 <span class="header bg-green"></span>
