@@ -16,6 +16,12 @@ Router.route('/ui-elements/buttons', function () {
   name: 'UI.Buttons'
 });
 
+Router.route('/ui-elements/sliders-and-progress', function () {
+  this.render('SlidersAndProgress', {});
+},{
+  name: 'UI.SlidersAndProgress'
+});
+
 Router.route('/css-animations', function () {
   this.render('CSSAnimations', {});
 }, {

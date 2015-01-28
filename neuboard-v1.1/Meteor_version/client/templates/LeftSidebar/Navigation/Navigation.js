@@ -1,7 +1,8 @@
 var getStateClass = function (state) {
-  
+  var currentState = Session.get('state') || "";
+
   // if session state matches return true
-  if (Session.get('state').indexOf(state) > -1) {
+  if (currentState.indexOf(state) > -1) {
     return 'open';
   }
 
