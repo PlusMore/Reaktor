@@ -7,3 +7,7 @@ Router.configure({
 Router.route('/', function () {
   this.render('Dashboard', {});
 });
+
+Router.route('/ui-elements', function () {
+  this.render('UIElements', {});
+});
