@@ -6,8 +6,12 @@ Router.configure({
 
 Router.route('/', function () {
   this.render('Dashboard', {});
+},{
+  name: 'Dashboard'
 });
 
 Router.route('/css-animations', function () {
   this.render('CSSAnimations', {});
+}, {
+  name: 'CSSAnimations'
 });
