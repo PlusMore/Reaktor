@@ -13,3 +13,5 @@ nemo64:bootstrap
 mquandalle:bower
 momentjs:moment
 vazco:maps
+fortawesome:fontawesome
+nahue:simple-line-icons
