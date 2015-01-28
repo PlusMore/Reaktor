@@ -10,3 +10,6 @@ insecure
 iron:router
 less
 nemo64:bootstrap
+mquandalle:bower
+momentjs:moment
+vazco:maps

@@ -1,0 +1,16 @@
+{
+  "name": "NeoBoard",
+  "version": "0.0.1",
+  "dependencies": {
+    "ckeditor": "~4.4.7",
+    "datatables": "~1.10.4",
+    "flot": "~0.8.3",
+    "messenger": "~1.4.1",
+    "morrisjs": "~0.5.1",
+    "jquery-validation": "~1.13.1",
+    "gauge.js": "~1.2.1",
+    "c3": "~0.4.9",
+    "chartjs": "~1.0.1"
+  },
+  "private": true
+}
