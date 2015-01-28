@@ -56,6 +56,11 @@
 .sidebar .nav .nav-sub .nav-dropdown>a {
     padding-right: 30px
 }
+.sidebar .nav .nav-sub {
+    &.collapse.in, &.collapsing {
+        display: block;
+    }
+} 
 .sidebar .nav .nav-sub>.open>a, .sidebar .nav .nav-sub>.open>a:focus, .sidebar .nav .nav-sub>.open>a:hover {
     background-color: transparent;
     border-color: transparent

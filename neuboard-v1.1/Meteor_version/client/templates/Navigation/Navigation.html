@@ -2,16 +2,18 @@
   <nav>
     <h5 class="sidebar-header">Navigation</h5>
     <ul class="nav nav-pills nav-stacked">
+        
         <li class="{{currentRouteClass 'Dashboard'}}">
             <a href="{{pathFor 'Dashboard'}}" title="Dashboard">
                 <i class="fa  fa-fw fa-tachometer"></i> Dashboard
             </a>
         </li>
-        <li class="nav-dropdown {{stateClass 'ui'}}" data-state="ui">
+
+        <li class="nav-dropdown {{stateClass 'ui'}}" data-state="ui" data-toggle="collapse" data-target="#ui-elements-nav-sub">
             <a href="#" title="UI Elements">
                 <i class="fa  fa-fw fa-cogs"></i> UI Elements
             </a>
-            <ul class="nav-sub">
+            <ul id="ui-elements-nav-sub" class="nav-sub collapse">
                 <li>
                     <a href="ui-buttons.html" title="Buttons">
                          Buttons

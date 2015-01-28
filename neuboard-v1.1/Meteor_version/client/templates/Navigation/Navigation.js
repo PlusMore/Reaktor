@@ -26,13 +26,19 @@ Template.Navigation.helpers({
     return getCurrentRouteClass(routeName);
   },
   stateClass: function(state) {
-    return highlightState(state);
+    return getStateClass(state);
   }
 });
 
 Template.Navigation.events({
   'click [data-state]': function (e, tmpl) {
+    var currentState = Session.get('state');
     var state = tmpl.$(e.currentTarget).data('state');
-    Session.set('state', state);
+
+    if (currentState === state) {
+      Session.set('state', undefined);
+    } else {
+      Session.set('state', state);
+    }
   }
 });
