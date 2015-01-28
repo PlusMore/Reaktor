@@ -1,7 +1,7 @@
 Router.configure({
-  layoutTemplate: 'Layout'
-  // loadingTemplate: 'loading',
-  // notFoundTemplate: 'notFound'
+  layoutTemplate: 'Layout',
+  loadingTemplate: 'Loading',
+  notFoundTemplate: '404'
 });
 
 Router.route('/', function () {
