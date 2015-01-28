@@ -9,13 +9,13 @@
             </a>
         </li>
 
-        <li class="nav-dropdown {{stateClass 'ui'}}" data-state="ui" data-toggle="collapse" data-target="#ui-elements-nav-sub">
-            <a href="#" title="UI Elements">
+        <li class="nav-dropdown {{stateClass 'ui'}} {{currentRouteClass 'UI'}}" data-state="ui">
+            <a href="#" title="UI Elements" data-toggle="collapse" data-target="#ui-elements-nav-sub">
                 <i class="fa  fa-fw fa-cogs"></i> UI Elements
             </a>
             <ul id="ui-elements-nav-sub" class="nav-sub collapse">
-                <li>
-                    <a href="ui-buttons.html" title="Buttons">
+                <li class="{{currentRouteClass 'UI.Buttons'}}" data-state="ui.buttons">
+                    <a href="{{pathFor 'UI.Buttons'}}" title="Buttons">
                          Buttons
                     </a>
                 </li>

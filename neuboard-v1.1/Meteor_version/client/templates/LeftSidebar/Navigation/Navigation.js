@@ -1,7 +1,7 @@
 var getStateClass = function (state) {
   
   // if session state matches return true
-  if (Session.get('state') === state) {
+  if (Session.get('state').indexOf(state) > -1) {
     return 'open';
   }
 
@@ -11,7 +11,7 @@ var getStateClass = function (state) {
 var getCurrentRouteClass = function (routeName) {
   
   // if page is current route, also return true 
-  if (Router.current().route.getName() === routeName) {
+  if (Router.current().route.getName().indexOf(routeName) > -1) {
     return 'active';
   }
 

@@ -10,6 +10,12 @@ Router.route('/', function () {
   name: 'Dashboard'
 });
 
+Router.route('/ui-elements/buttons', function () {
+  this.render('Buttons', {});
+},{
+  name: 'UI.Buttons'
+});
+
 Router.route('/css-animations', function () {
   this.render('CSSAnimations', {});
 }, {
