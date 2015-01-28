@@ -23,21 +23,26 @@
     <!-- Page Wrapper-->
     <section id="main-wrapper" class="theme-default">
         <!-- Page wrapper -->
-        <!-- <header id="header" ng-include="'views/header.html'"></header> -->
+        {{> Header}}
+        
         <!-- Left Sidebar Navigation -->
-        <!-- <aside class="sidebar sidebar-left" ng-include="'views/left-sidebar.html'"></aside> -->
-        <!-- Content wraper -->
+        {{> LeftSidebar}}
+        
+        <!-- Content wrapper -->
         <section class="main-content-wrapper">
             <!-- Main content view  -->
             {{> yield}}
-            <!-- Footer -->
-            <!-- <div ng-include="'views/footer.html'"></div> -->
+            
+            {{> Footer}}
         </section>
         <!-- /Content wraper-->
+
     </section>
     <!-- /Page wrapper-->
+
     <!-- Right Sidebar Navigation -->
-    <!-- <aside ng-include="'views/right-sidebar.html'" id="sidebar-right"></aside> -->
+    {{> RightSidebar}}
+
     <!--Config demo-->
-    <!-- <div id="config" class="config hidden-xs"  ng-include="'views/demo-settings.html'"></div> -->   
+    {{> ConfigDemo}}
 </template>
