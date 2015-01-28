@@ -1,0 +1,21 @@
+<template name="AccountSettings">
+  <h5 class="sidebar-header">Account Settings</h5>
+  <div class="setting-list">
+    <div class="row">
+        <div class="col-xs-8">
+            <label for="checkOne" class="control-label">Share your status</label>
+        </div>
+        <div class="col-xs-4">
+        <input type="checkbox" class="js-switch" ui-switch="{size: 'small', color:'#27B6AF',secondaryColor: '#B3B8C3'}" ng-model="checkOne" checked id="checkOne"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8">
+            <label for="checkTwo" class="control-label">Push Notifications</label>
+        </div>
+        <div class="col-xs-4">
+          <input type="checkbox" class="js-switch" ui-switch="{size: 'small',color:'#27B6AF',secondaryColor: '#B3B8C3'}" ng-model="checkTwo" id="checkTwo"/>
+        </div>
+    </div>
+  </div>
+</template>
