@@ -36,6 +36,11 @@ Template.Navigation.helpers({
 });
 
 Template.Navigation.events({
+  'click li.disabled > a': function(e, tmpl) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    return false;
+  },
   'click [data-state]': function (e, tmpl) {
     var currentState = Session.get('state');
     var state = tmpl.$(e.currentTarget).data('state');
@@ -53,7 +58,6 @@ Template.Navigation.events({
     } else {
       Session.set('state', state);
     }
-
-    
-  }
+  },
+  
 });
