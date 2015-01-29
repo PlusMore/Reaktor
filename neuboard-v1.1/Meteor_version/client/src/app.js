@@ -1,43 +1,21 @@
-var app = function() {
+App = function() {
 
     $(function() {
-        toggleSettings();
-        switchTheme();
+        // toggleSettings();
+        // switchTheme();
         navToggleRight();
         navToggleLeft();
-        // navToggleSub();
+        // // navToggleSub();
         profileToggle();
         widgetToggle();
         widgetClose();
         widgetFlip();
-        tooltips();
-        switcheryToggle();
+        // tooltips();
+        // switcheryToggle();
 
     });
 
-    var toggleSettings = function() {
-        $(document).on('click', '.config-link', function() {
-            if ($(this).hasClass('open')) {
-                $('#config').animate({
-                    "right": "-205px"
-                }, 150);
-                $(this).removeClass('open').addClass('closed');
-            } else {
-                $("#config").animate({
-                    "right": "0px"
-                }, 150);
-                $(this).removeClass('closed').addClass('open');
-            }
-        });
-    };
-
-    var switchTheme = function() {
-        $(document).on('click', '.theme-style-wrapper', function() {
-            $('#main-wrapper').attr('class', '');
-            var themeValue = $(this).data('theme');
-            $('#main-wrapper').addClass(themeValue);
-        });
-    };
+    
 
 
     var navToggleRight = function() {
@@ -45,6 +23,37 @@ var app = function() {
             $('#sidebar-right').toggleClass('sidebar-right-open');
             $("#toggle-right .fa").toggleClass("fa-indent fa-dedent");
 
+        });
+    };
+
+    var navToggleLeft = function() {
+        $(document).on('click', '#toggle-left', function() {
+            var bodyEl = $('#main-wrapper');
+            ($(window).width() > 767) ? $(bodyEl).toggleClass('sidebar-mini'): $(bodyEl).toggleClass('sidebar-opened');
+        });
+    };
+
+    var profileToggle = function() {
+        $(document).on('click', '#toggle-profile', function() {
+            $('.sidebar-profile').slideToggle();
+        });
+    };
+
+    var widgetToggle = function() {
+        $(document).on('click', '.actions > .fa-chevron-down, .actions > .fa-chevron-up', function() {
+            $(this).parent().parent().next().slideToggle("fast"), $(this).toggleClass("fa-chevron-down fa-chevron-up")
+        });
+    };
+
+    var widgetClose = function() {
+        $(document).on('click', '.actions > .fa-times', function() {
+            $(this).parent().parent().parent().fadeOut()
+        });
+    };
+
+    var widgetFlip = function() {
+        $(document).on('click', ".actions > .fa-cog", function() {
+            $(this).closest('.flip-wrapper').toggleClass('flipped')
         });
     };
 
@@ -91,12 +100,7 @@ var app = function() {
         $('#myWizard').wizard()
     }
 
-    var navToggleLeft = function() {
-        $(document).on('click', '#toggle-left', function() {
-            var bodyEl = $('#main-wrapper');
-            ($(window).width() > 767) ? $(bodyEl).toggleClass('sidebar-mini'): $(bodyEl).toggleClass('sidebar-opened');
-        });
-    };
+    
 
 
     // var navToggleSub = function() {
@@ -108,29 +112,7 @@ var app = function() {
 
     // };
 
-    var profileToggle = function() {
-        $(document).on('click', '#toggle-profile', function() {
-            $('.sidebar-profile').slideToggle();
-        });
-    };
-
-    var widgetToggle = function() {
-        $(document).on('click', '.actions > .fa-chevron-down, .actions > .fa-chevron-up', function() {
-            $(this).parent().parent().next().slideToggle("fast"), $(this).toggleClass("fa-chevron-down fa-chevron-up")
-        });
-    };
-
-    var widgetClose = function() {
-        $(document).on('click', '.actions > .fa-times').click(function() {
-            $(this).parent().parent().parent().fadeOut()
-        });
-    };
-
-    var widgetFlip = function() {
-        $(document).on('click', ".actions > .fa-cog",function() {
-            $(this).closest('.flip-wrapper').toggleClass('flipped')
-        });
-    };
+    
 
     var dateRangePicker = function() {
         $('.reportdate').daterangepicker({
@@ -367,23 +349,26 @@ var app = function() {
         });
     }
 
+    // TODO: Add Meteor Loader
 
-    var spinStart = function(spinOn) {
-        var spinFull = $('<div class="preloader"><div class="iconWrapper"><i class="fa fa-circle-o-notch fa-spin"></i></div></div>');
-        var spinInner = $('<div class="preloader preloader-inner"><div class="iconWrapper"><i class="fa fa-circle-o-notch fa-spin"></i></div></div>');
-        if (spinOn === undefined) {
-            $('body').prepend(spinFull);
-        } else {
-            $(spinOn).prepend(spinInner);
-        };
+    // var spinStart = function(spinOn) {
+    //     var spinFull = $('<div class="preloader"><div class="iconWrapper"><i class="fa fa-circle-o-notch fa-spin"></i></div></div>');
+    //     var spinInner = $('<div class="preloader preloader-inner"><div class="iconWrapper"><i class="fa fa-circle-o-notch fa-spin"></i></div></div>');
+    //     if (spinOn === undefined) {
+    //         $('body').prepend(spinFull);
+    //     } else {
+    //         $(spinOn).prepend(spinInner);
+    //     };
 
-    };
+    // };
 
 
-    var spinStop = function() {
-        $('.preloader').remove();
-    };
+    // var spinStop = function() {
+    //     $('.preloader').remove();
+    // };
 
+
+    // TODO: Use CSS toggles
     var switcheryToggle = function() {
         var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
         elems.forEach(function(html) {
@@ -414,5 +399,5 @@ var app = function() {
 
 
 $(window).resize(function() {
-    app.chartJs();
+    App.chartJs();
 });

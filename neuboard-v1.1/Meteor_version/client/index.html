@@ -22,30 +22,4 @@
 
 </body>
 
-<template name="Layout">
-    <!-- Page Wrapper-->
-    <section id="main-wrapper" class="theme-default">
-        <!-- Page wrapper -->
-        {{> Header}}
-        
-        <!-- Left Sidebar Navigation -->
-        {{> LeftSidebar}}
-        
-        <!-- Content wrapper -->
-        <section class="main-content-wrapper">
-            <!-- Main content view  -->
-            {{> yield}}
-            
-            {{> Footer}}
-        </section>
-        <!-- /Content wraper-->
-
-    </section>
-    <!-- /Page wrapper-->
-
-    <!-- Right Sidebar Navigation -->
-    {{> RightSidebar}}
-
-    <!--Config demo-->
-    {{> ConfigDemo}}
-</template>
+<!-- Configured to use /client/templates/Layout/Layout.html in /src/router.js -->
