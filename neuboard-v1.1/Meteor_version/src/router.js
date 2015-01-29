@@ -100,6 +100,18 @@ Router.route('/forms/wysiwyg', function () {
   name: 'Forms.WYSIWYG'
 });
 
+Router.route('/tables/basic-tables', function () {
+  this.render('BasicTables', {});
+},{
+  name: 'Tables.BasicTables'
+});
+
+Router.route('/tables/data-tables', function () {
+  this.render('DataTables', {});
+},{
+  name: 'Tables.DataTables'
+});
+
 Router.route('/css-animations', function () {
   this.render('CSSAnimations', {});
 }, {
