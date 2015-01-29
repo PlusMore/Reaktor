@@ -13,7 +13,7 @@
             <a href="#" title="UI Elements">
                 <i class="fa  fa-fw fa-cogs"></i> UI Elements
             </a>
-            <ul id="ui-elements-nav-sub" class="nav-sub">
+            <ul id="ui-elements-nav-sub" class="nav-sub {{navSubStateClass 'ui'}}">
                 <li class="{{currentRouteClass 'UI.Buttons'}}" data-state="ui.buttons">
                     <a href="{{pathFor 'UI.Buttons'}}" title="Buttons">
                          Buttons
@@ -73,7 +73,7 @@
             <a href="#" title="Forms">
                 <i class="fa  fa-fw fa-edit"></i> Forms
             </a>
-            <ul id="forms-nav-sub" class="nav-sub">
+            <ul id="forms-nav-sub" class="nav-sub {{navSubStateClass 'forms'}}">
                 <li class="{{currentRouteClass 'Forms.Components'}}" data-state="forms.components">
                     <a href="{{pathFor 'Forms.Components'}}" title="Components">
                         Components
@@ -110,7 +110,7 @@
             <a href="#" title="Tables">
                 <i class="fa  fa-fw fa-th-list"></i> Tables
             </a>
-            <ul class="nav-sub">
+            <ul class="nav-sub {{navSubStateClass 'tables'}}">
                 <li>
                     <a href="tables-basic-tables.html" title="Basic Tables">
                          Basic Tables
@@ -127,7 +127,7 @@
             <a href="#" title="Charts">
                 <i class="fa  fa-fw fa-bar-chart-o"></i> Charts
             </a>
-            <ul class="nav-sub">
+            <ul class="nav-sub {{navSubStateClass 'charts'}}">
                 <li>
                     <a href="charts-chartjs.html" title="Chartjs">
                         Chartjs
@@ -154,7 +154,7 @@
             <a href="#" title="Maps">
                 <i class="fa  fa-fw fa-map-marker"></i> Maps
             </a>
-            <ul class="nav-sub">
+            <ul class="nav-sub {{navSubStateClass 'maps'}}">
                 <li>
                     <a href="maps-google.html" title="Google Maps">
                          Google Maps
@@ -177,7 +177,7 @@
             <a href="#" title="Pages">
                 <i class="fa  fa-fw fa-file-text"></i> Pages
             </a>
-            <ul class="nav-sub">
+            <ul class="nav-sub {{navSubStateClass 'pages'}}">
                 <li>
                     <a href="pages-blank-page.html" title="Blank Page">
                          Blank Page
@@ -220,7 +220,7 @@
             <a href="#" title="Menu Levels">
                 <i class="fa  fa-fw fa-folder-open"></i> Menu Levels
             </a>
-            <ul class="nav-sub">
+            <ul class="nav-sub {{navSubStateClass 'levels'}}">
                 <li>
                     <a href="javascript:;" title="Level 2.1">
                         <i class="fa fa-fw fa-file"></i> Level 1.1
