@@ -16,7 +16,7 @@ var app = function() {
     });
 
     var toggleSettings = function() {
-        $('.config-link').click(function() {
+        $(document).on('click', '.config-link', function() {
             if ($(this).hasClass('open')) {
                 $('#config').animate({
                     "right": "-205px"
@@ -32,7 +32,7 @@ var app = function() {
     };
 
     var switchTheme = function() {
-        $('.theme-style-wrapper').click(function() {
+        $(document).on('click', '.theme-style-wrapper', function() {
             $('#main-wrapper').attr('class', '');
             var themeValue = $(this).data('theme');
             $('#main-wrapper').addClass(themeValue);
@@ -41,13 +41,14 @@ var app = function() {
 
 
     var navToggleRight = function() {
-        $('#toggle-right').on('click', function() {
+         $(document).on('click', '#toggle-right', function() {
             $('#sidebar-right').toggleClass('sidebar-right-open');
             $("#toggle-right .fa").toggleClass("fa-indent fa-dedent");
 
         });
     };
 
+    // Needs to be moved to template (maybe every route change)
     var customCheckbox = function() {
         $('input').iCheck({
             checkboxClass: 'icheckbox_flat-grey',
@@ -55,7 +56,10 @@ var app = function() {
         });
     }
 
+
     var formMask = function() {
+        // apply on click using data attributes
+
         $("#input1").mask("99/99/9999");
         $("#input2").mask('(999) 999-9999');
         $("#input3").mask("(999) 999-9999? x99999");

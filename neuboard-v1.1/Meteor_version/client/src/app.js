@@ -1,11 +1,11 @@
-app = function() {
+var app = function() {
 
     $(function() {
         toggleSettings();
         switchTheme();
         navToggleRight();
         navToggleLeft();
-        navToggleSub();
+        // navToggleSub();
         profileToggle();
         widgetToggle();
         widgetClose();
@@ -16,7 +16,7 @@ app = function() {
     });
 
     var toggleSettings = function() {
-        $('.config-link').click(function() {
+        $(document).on('click', '.config-link', function() {
             if ($(this).hasClass('open')) {
                 $('#config').animate({
                     "right": "-205px"
@@ -32,7 +32,7 @@ app = function() {
     };
 
     var switchTheme = function() {
-        $('.theme-style-wrapper').click(function() {
+        $(document).on('click', '.theme-style-wrapper', function() {
             $('#main-wrapper').attr('class', '');
             var themeValue = $(this).data('theme');
             $('#main-wrapper').addClass(themeValue);
@@ -41,13 +41,14 @@ app = function() {
 
 
     var navToggleRight = function() {
-        $('#toggle-right').on('click', function() {
+         $(document).on('click', '#toggle-right', function() {
             $('#sidebar-right').toggleClass('sidebar-right-open');
             $("#toggle-right .fa").toggleClass("fa-indent fa-dedent");
 
         });
     };
 
+    // Needs to be moved to template (maybe every route change)
     var customCheckbox = function() {
         $('input').iCheck({
             checkboxClass: 'icheckbox_flat-grey',
@@ -55,7 +56,10 @@ app = function() {
         });
     }
 
+
     var formMask = function() {
+        // apply on click using data attributes
+
         $("#input1").mask("99/99/9999");
         $("#input2").mask('(999) 999-9999');
         $("#input3").mask("(999) 999-9999? x99999");
@@ -88,41 +92,42 @@ app = function() {
     }
 
     var navToggleLeft = function() {
-        $('#toggle-left').on('click', function() {
+        $(document).on('click', '#toggle-left', function() {
             var bodyEl = $('#main-wrapper');
             ($(window).width() > 767) ? $(bodyEl).toggleClass('sidebar-mini'): $(bodyEl).toggleClass('sidebar-opened');
         });
     };
 
-    var navToggleSub = function() {
-        var subMenu = $('.sidebar .nav');
-        $(subMenu).navgoco({
-            caretHtml: false,
-            accordion: true
-        });
 
-    };
+    // var navToggleSub = function() {
+    //     var subMenu = $('.sidebar .nav');
+    //     $(subMenu).navgoco({
+    //         caretHtml: false,
+    //         accordion: true
+    //     });
+
+    // };
 
     var profileToggle = function() {
-        $('#toggle-profile').click(function() {
+        $(document).on('click', '#toggle-profile', function() {
             $('.sidebar-profile').slideToggle();
         });
     };
 
     var widgetToggle = function() {
-        $(".actions > .fa-chevron-down").click(function() {
+        $(document).on('click', '.actions > .fa-chevron-down, .actions > .fa-chevron-up', function() {
             $(this).parent().parent().next().slideToggle("fast"), $(this).toggleClass("fa-chevron-down fa-chevron-up")
         });
     };
 
     var widgetClose = function() {
-        $(".actions > .fa-times").click(function() {
+        $(document).on('click', '.actions > .fa-times').click(function() {
             $(this).parent().parent().parent().fadeOut()
         });
     };
 
     var widgetFlip = function() {
-        $(".actions > .fa-cog").click(function() {
+        $(document).on('click', ".actions > .fa-cog",function() {
             $(this).closest('.flip-wrapper').toggleClass('flipped')
         });
     };
@@ -406,6 +411,7 @@ app = function() {
         spinStop: spinStop
     };
 }();
+
 
 $(window).resize(function() {
     app.chartJs();
