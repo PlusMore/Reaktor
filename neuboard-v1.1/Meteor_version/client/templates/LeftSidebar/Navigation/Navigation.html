@@ -74,32 +74,32 @@
                 <i class="fa  fa-fw fa-edit"></i> Forms
             </a>
             <ul id="forms-nav-sub" class="nav-sub {{navSubStateClass 'Forms'}}">
-                <li class="{{currentRouteClass 'Forms.Components'}}" data-state="Forms.components">
+                <li class="{{currentRouteClass 'Forms.Components'}}" data-state="Forms.Components">
                     <a href="{{pathFor 'Forms.Components'}}" title="Components">
                         Components
                     </a>
                 </li>
-                <li class="{{currentRouteClass 'Forms.Validation'}}" data-state="Forms.validation">
+                <li class="{{currentRouteClass 'Forms.Validation'}}" data-state="Forms.Validation">
                     <a href="{{pathFor 'Forms.Validation'}}" title="Validation">
                         Validation
                     </a>
                 </li>
-                <li class="{{currentRouteClass 'Forms.Mask'}}" data-state="Forms.mask">
+                <li class="{{currentRouteClass 'Forms.Mask'}}" data-state="Forms.Mask">
                     <a href="{{pathFor 'Forms.Mask'}}" title="Mask">
                         Mask
                     </a>
                 </li>
-                <li class="{{currentRouteClass 'Forms.Wizard'}}" data-state="Forms.wizard">
+                <li class="{{currentRouteClass 'Forms.Wizard'}}" data-state="Forms.Wizard">
                     <a href="{{pathFor 'Forms.Wizard'}}" title="Wizard">
                         Wizard
                     </a>
                 </li>
-                <li class="{{currentRouteClass 'Forms.FileUpload'}}" data-state="Forms.fileupload">
+                <li class="{{currentRouteClass 'Forms.FileUpload'}}" data-state="Forms.FileUpload">
                     <a href="{{pathFor 'Forms.FileUpload'}}" title="Multiple File Upload">
                         Multiple File Upload
                     </a>
                 </li>
-                <li class="{{currentRouteClass 'Forms.WYSIWYG'}}" data-state="Forms.wysiwyg">
+                <li class="{{currentRouteClass 'Forms.WYSIWYG'}}" data-state="Forms.WYSIWYG">
                     <a href="{{pathFor 'Forms.WYSIWYG'}}" title="WYSIWYG Editor">
                         WYSIWYG Editor
                     </a>
@@ -111,12 +111,12 @@
                 <i class="fa  fa-fw fa-th-list"></i> Tables
             </a>
             <ul class="nav-sub {{navSubStateClass 'Tables'}}">
-                <li class="{{currentRouteClass 'Tables.BasicTables'}}" data-state="Tables.basic">
+                <li class="{{currentRouteClass 'Tables.BasicTables'}}" data-state="Tables.BasicTables">
                     <a href="{{pathFor 'Tables.BasicTables'}}" title="Basic Tables">
                          Basic Tables
                     </a>
                 </li>
-                <li class="{{currentRouteClass 'Tables.DataTables'}}" data-state="Tables.data">
+                <li class="{{currentRouteClass 'Tables.DataTables'}}" data-state="Tables.DataTables">
                     <a href="{{pathFor 'Tables.DataTables'}}" title="Data Tables">
                          Data Tables
                     </a>
@@ -154,14 +154,14 @@
             <a href="#" title="Maps">
                 <i class="fa  fa-fw fa-map-marker"></i> Maps
             </a>
-            <ul class="nav-sub {{navSubStateClass 'maps'}}">
-                <li>
-                    <a href="{{pathFor 'Tables.BasicTables'}}" title="Google Maps">
+            <ul class="nav-sub {{navSubStateClass 'Maps'}}">
+                <li class="{{currentRouteClass 'Maps.GoogleMaps'}}" data-state="Maps.GoogleMaps">   
+                    <a href="{{pathFor 'Maps.GoogleMaps'}}" title="Google Maps">
                          Google Maps
                     </a>
                 </li>
-                <li>
-                    <a href="{{pathFor 'Tables.BasicTables'}}" title="Vector Maps">
+                <li class="{{currentRouteClass 'Maps.VectorMaps'}}" data-state="Maps.VectorMaps"> 
+                    <a href="{{pathFor 'Maps.VectorMaps'}}" title="Vector Maps">
                          Vector Maps
                     </a>
                 </li>
@@ -177,109 +177,110 @@
             <a href="#" title="Pages">
                 <i class="fa  fa-fw fa-file-text"></i> Pages
             </a>
-            <ul class="nav-sub {{navSubStateClass 'pages'}}">
-                <li>
-                    <a href="{{pathFor 'Tables.BasicTables'}}" title="Blank Page">
+            <ul class="nav-sub {{navSubStateClass 'Pages'}}">
+                <li class="{{currentRouteClass 'Pages.BlankPage'}}" data-state="Pages.BlankPage">
+                    <a href="{{pathFor 'Pages.BlankPage'}}" title="Blank Page">
                          Blank Page
                     </a>
                 </li>
 
-                <li>
-                    <a href="{{pathFor 'Tables.BasicTables'}}" title="Profile">
+                <li class="{{currentRouteClass 'Pages.Profile'}}" data-state="Pages.Profile">
+                    <a href="{{pathFor 'Pages.Profile'}}" title="Profile">
                          Profile
                     </a>
                 </li>
-                <li>
-                    <a href="{{pathFor 'Tables.BasicTables'}}" title="Sign In">
+                <li class="{{currentRouteClass 'Pages.SignIn'}}" data-state="Pages.SignIn">
+                    <a href="{{pathFor 'Pages.SignIn'}}" title="Sign In">
                          Sign In
                     </a>
                 </li>
-                <li>
-                    <a href="{{pathFor 'Tables.BasicTables'}}" title="Sign Up">
+                <li class="{{currentRouteClass 'Pages.SignUp'}}" data-state="Pages.SignUp">
+                    <a href="{{pathFor 'Pages.SignUp'}}" title="Sign Up">
                          Sign Up
                     </a>
                 </li>
-                <li>
-                    <a href="{{pathFor 'Tables.BasicTables'}}" title="Locked Screen">
+                <li class="{{currentRouteClass 'Pages.LockedScreen'}}" data-state="Pages.LockedScreen">
+                    <a href="{{pathFor 'Pages.LockedScreen'}}" title="Locked Screen">
                          Locked Screen
                     </a>
                 </li>
-                <li>
-                    <a href="{{pathFor 'Tables.BasicTables'}}" title="404 Page">
+                <li class="{{currentRouteClass 'Pages.404'}}" data-state="Pages.404">
+                    <a href="{{pathFor 'Pages.404'}}" title="404 Page">
                          404 Page
                     </a>
                 </li>
-                <li>
-                    <a href="{{pathFor 'Tables.BasicTables'}}" title="500 Page">
+                <li class="{{currentRouteClass 'Pages.500'}}" data-state="Pages.500">
+                    <a href="{{pathFor 'Pages.500'}}" title="500 Page">
                          500 Page
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="nav-dropdown {{stateClass 'Levels'}} {{currentRouteClass 'Levels'}}" data-state="Levels" >
+
+        <li class="nav-dropdown {{stateClass 'Levels'}} {{currentRouteClass 'Levels'}} disabled" data-state="Levels.1" >
             <a href="#" title="Menu Levels">
                 <i class="fa  fa-fw fa-folder-open"></i> Menu Levels
             </a>
-            <ul class="nav-sub {{navSubStateClass 'levels'}}">
-                <li>
-                    <a href="javascript:;" title="Level 2.1">
+            <ul class="nav-sub {{navSubStateClass 'Levels.1'}}">
+                <li data-state="Levels.1.1">
+                    <a href="javascript:;" title="Level 1.1">
                         <i class="fa fa-fw fa-file"></i> Level 1.1
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:;" title="Level 2.2">
+                <li data-state="Levels.1.2">
+                    <a href="javascript:;" title="Level 1.2">
                         <i class="fa fa-fw fa-file"></i> Level 1.2
                     </a>
                 </li>
-                <li class="nav-dropdown">
-                    <a href="#" title="Level 2.3">
+                <li class="nav-dropdown {{stateClass 'Levels.1.3'}}" data-state="Levels.1.3">
+                    <a href="#" title="Level 1.3">
                         <i class="fa fa-fw fa-folder-open"></i> Level 1.3
                     </a>
                     <ul class="nav-sub">
-                        <li>
-                            <a href="javascript:;" title="Level 3.1">
+                        <li data-state="Levels.1.3-2.1">
+                            <a href="javascript:;" title="Level 2.1">
                                 <i class="fa fa-fw fa-file"></i> Level 2.1
                             </a>
                         </li>
-                        <li class="nav-dropdown">
-                            <a href="#" title="Level 3.2">
+                        <li class="nav-dropdown" data-state="Levels.1.3-2.2">
+                            <a href="#" title="Level 2.2">
                                 <i class="fa fa-fw fa-folder-open"></i> Level 2.2
                             </a>
                             <ul class="nav-sub">
-                                <li>
-                                    <a href="javascript:;" title="Level 4.1">
+                                <li data-state="Levels.1.3-2.2-3.1">
+                                    <a href="javascript:;" title="Level 3.1">
                                         <i class="fa fa-fw fa-file"></i> Level 3.1
                                     </a>
                                 </li>
-                                <li class="nav-dropdown">
-                                    <a href="#" title="Level 4.2">
+                                <li class="nav-dropdown" data-state="Levels.1.3-2.2-3.2">
+                                    <a href="#" title="Level 3.2">
                                         <i class="fa fa-fw fa-folder-open"></i> Level 3.2
                                     </a>
                                     <ul class="nav-sub">
-                                        <li class="nav-dropdown">
-                                            <a href="#" title="Level 5.1">
+                                        <li class="nav-dropdown" data-state="Levels.1.3-2.2-3.2-4.1">
+                                            <a href="#" title="Level 4.1">
                                                 <i class="fa fa-fw fa-folder-open"></i> Level 4.1
                                             </a>
                                             <ul class="nav-sub">
-                                                <li>
-                                                    <a href="javascript:;" title="Level 6.1">
+                                                <li data-state="Levels.1.3-2.2-3.2-4.1-5.1">
+                                                    <a href="javascript:;" title="Level 5.1">
                                                         <i class="fa fa-fw fa-file"></i> Level 5.1
                                                     </a>
                                                 </li>
-                                                <li>
-                                                    <a href="javascript:;" title="Level 6.2">
+                                                <li data-state="Levels.1.3-2.2-3.2-4.1-5.2">
+                                                    <a href="javascript:;" title="Level 5.2">
                                                         <i class="fa fa-fw fa-file"></i> Level 5.2
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="javascript:;" title="Level 5.2">
+                                        <li data-state="Levels.1.3-2.2-3.2-4.2">
+                                            <a href="javascript:;" title="Level 4.2">
                                                 <i class="fa fa-fw fa-file"></i> Level 4.2
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="javascript:;" title="Level 5.3">
+                                        <li data-state="Levels.1.3-2.2-3.2-4.3">
+                                            <a href="javascript:;" title="Level 4.3">
                                                 <i class="fa fa-fw fa-file"></i> Level 4.3
                                             </a>
                                         </li>

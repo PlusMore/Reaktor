@@ -136,6 +136,60 @@ Router.route('/charts/charts-sparkline', function () {
   name: 'Charts.Sparkline'
 });
 
+Router.route('/maps/google-maps', function () {
+  this.render('GoogleMaps', {});
+},{
+  name: 'Maps.GoogleMaps'
+});
+
+Router.route('/maps/vector-maps', function () {
+  this.render('VectorMaps', {});
+},{
+  name: 'Maps.VectorMaps'
+});
+
+Router.route('/pages/404', function () {
+  this.render('404', {});
+},{
+  name: 'Pages.404'
+});
+
+Router.route('/pages/500', function () {
+  this.render('500', {});
+},{
+  name: 'Pages.500'
+});
+
+Router.route('/pages/blank-page', function () {
+  this.render('BlankPage', {});
+},{
+  name: 'Pages.BlankPage'
+});
+
+Router.route('/pages/locked-screen', function () {
+  this.render('LockedScreen', {});
+},{
+  name: 'Pages.LockedScreen'
+});
+
+Router.route('/pages/profile', function () {
+  this.render('Profile', {});
+},{
+  name: 'Pages.Profile'
+});
+
+Router.route('/pages/sign-in', function () {
+  this.render('SignIn', {});
+},{
+  name: 'Pages.SignIn'
+});
+
+Router.route('/pages/sign-up', function () {
+  this.render('SignUp', {});
+},{
+  name: 'Pages.SignUp'
+});
+
 Router.route('/css-animations', function () {
   this.render('CSSAnimations', {});
 }, {
