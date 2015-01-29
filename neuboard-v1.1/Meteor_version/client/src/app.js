@@ -1,12 +1,8 @@
 App = function() {
 
     $(function() {
-        // toggleSettings();
-        // switchTheme();
-        navToggleRight();
-        navToggleLeft();
+
         // // navToggleSub();
-        profileToggle();
         widgetToggle();
         widgetClose();
         widgetFlip();
@@ -15,29 +11,7 @@ App = function() {
 
     });
 
-    
 
-
-    var navToggleRight = function() {
-         $(document).on('click', '#toggle-right', function() {
-            $('#sidebar-right').toggleClass('sidebar-right-open');
-            $("#toggle-right .fa").toggleClass("fa-indent fa-dedent");
-
-        });
-    };
-
-    var navToggleLeft = function() {
-        $(document).on('click', '#toggle-left', function() {
-            var bodyEl = $('#main-wrapper');
-            ($(window).width() > 767) ? $(bodyEl).toggleClass('sidebar-mini'): $(bodyEl).toggleClass('sidebar-opened');
-        });
-    };
-
-    var profileToggle = function() {
-        $(document).on('click', '#toggle-profile', function() {
-            $('.sidebar-profile').slideToggle();
-        });
-    };
 
     var widgetToggle = function() {
         $(document).on('click', '.actions > .fa-chevron-down, .actions > .fa-chevron-up', function() {
