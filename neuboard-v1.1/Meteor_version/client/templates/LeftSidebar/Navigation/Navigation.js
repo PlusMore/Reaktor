@@ -9,6 +9,17 @@ var getStateClass = function (state) {
   return '';
 }
 
+var getSubnavStateClass = function (state) {
+  var currentState = Session.get('state') || "";
+
+  // if session state matches return true
+  if (currentState.indexOf(state) > -1) {
+    return 'in';
+  }
+
+  return '';
+}
+
 var getCurrentRouteClass = function (routeName) {
   
   // if page is current route, also return true 
@@ -28,6 +39,9 @@ Template.Navigation.helpers({
   },
   stateClass: function(state) {
     return getStateClass(state);
+  },
+  subnavStateClass: function(state) {
+    return getSubnavStateClass(state);
   }
 });
 

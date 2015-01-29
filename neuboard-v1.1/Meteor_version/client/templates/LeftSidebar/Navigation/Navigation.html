@@ -1,19 +1,19 @@
 <template name="Navigation">
   <nav>
     <h5 class="sidebar-header">Navigation</h5>
-    <ul class="nav nav-pills nav-stacked">
+    <ul class="nav nav-pills nav-stacked" id="nav-accordion">
         
-        <li class="{{currentRouteClass 'Dashboard'}}">
+        <li class="{{currentRouteClass 'Dashboard'}}" data-state="dashboard">
             <a href="{{pathFor 'Dashboard'}}" title="Dashboard">
                 <i class="fa  fa-fw fa-tachometer"></i> Dashboard
             </a>
         </li>
 
         <li class="nav-dropdown {{stateClass 'ui'}} {{currentRouteClass 'UI'}}" data-state="ui">
-            <a href="#" title="UI Elements" data-toggle="collapse" data-target="#ui-elements-nav-sub">
+            <a href="#" title="UI Elements">
                 <i class="fa  fa-fw fa-cogs"></i> UI Elements
             </a>
-            <ul id="ui-elements-nav-sub" class="nav-sub collapse">
+            <ul id="ui-elements-nav-sub" class="nav-sub">
                 <li class="{{currentRouteClass 'UI.Buttons'}}" data-state="ui.buttons">
                     <a href="{{pathFor 'UI.Buttons'}}" title="Buttons">
                          Buttons
@@ -69,11 +69,11 @@
                 </li>
             </ul>
         </li>
-        <li class="nav-dropdown {{stateClass 'forms'}}" data-state="forms" >
-            <a href="#" title="Forms" data-toggle="collapse" data-target="#forms-nav-sub">
+        <li class="nav-dropdown {{stateClass 'forms'}} {{currentRouteClass 'Forms'}}" data-state="forms" >
+            <a href="#" title="Forms">
                 <i class="fa  fa-fw fa-edit"></i> Forms
             </a>
-            <ul id="forms-nav-sub" class="nav-sub collapse">
+            <ul id="forms-nav-sub" class="nav-sub">
                 <li class="{{currentRouteClass 'Forms.Components'}}" data-state="forms.components">
                     <a href="{{pathFor 'Forms.Components'}}" title="Components">
                         Components

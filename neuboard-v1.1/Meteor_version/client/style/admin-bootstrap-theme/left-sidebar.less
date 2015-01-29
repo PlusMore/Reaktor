@@ -15,10 +15,31 @@
     font-size: @16px;
     margin-right: 5px;
 }
+
+.sidebar .nav > li.nav-dropdown {
+    &.open {
+        & > .nav-sub {
+            visibility: visible;
+            max-height: 500px;
+        }
+    }
+
+    & > .nav-sub {
+        visibility: hidden;
+
+        overflow-y: hidden;
+        max-height: 0;
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        
+    }
+}
+
 .sidebar .nav .nav-sub {
     list-style: none;
     padding: 0;
-    display: none; 
+    // display: none; 
 }
 .sidebar .nav .nav-sub li>a {
     padding-right: 10px;
