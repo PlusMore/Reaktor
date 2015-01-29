@@ -112,6 +112,30 @@ Router.route('/tables/data-tables', function () {
   name: 'Tables.DataTables'
 });
 
+Router.route('/charts/charts-c3', function () {
+  this.render('ChartsC3', {});
+},{
+  name: 'Charts.C3'
+});
+
+Router.route('/charts/charts-chartjs', function () {
+  this.render('ChartsChartJS', {});
+},{
+  name: 'Charts.ChartJS'
+});
+
+Router.route('/charts/charts-morris', function () {
+  this.render('ChartsMorris', {});
+},{
+  name: 'Charts.Morris'
+});
+
+Router.route('/charts/charts-sparkline', function () {
+  this.render('ChartsSparkline', {});
+},{
+  name: 'Charts.Sparkline'
+});
+
 Router.route('/css-animations', function () {
   this.render('CSSAnimations', {});
 }, {
