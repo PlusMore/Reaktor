@@ -1,52 +1,37 @@
-var getStateClass = function (state) {
-  var currentState = Session.get('state') || "";
-
-  // if session state matches return true
-  if (currentState.indexOf(state) > -1) {
-    return 'open';
-  }
-
-  return '';
-}
-
-var getSubnavStateClass = function (state) {
-  var currentState = Session.get('state') || "";
-  var collapsingState = Session.get('collapsing') || "";
-
-
-  // if session state matches return true
-  if (currentState.indexOf(state) > -1) {
-    if (collapsingState.indexOf(state) > -1) {
-      return 'collapsing'
-    }
-    return 'collapse in';
-  }
-
-  return 'collapse';
-}
-
-var getCurrentRouteClass = function (routeName) {
-  
-  // if page is current route, also return true 
-  if (Router.current().route.getName().indexOf(routeName) > -1) {
-    return 'active';
-  }
-
-  return '';
-}
-
-
-
-
 Template.Navigation.helpers({
   currentRouteClass: function (routeName) {
-    return getCurrentRouteClass(routeName);
+    // if page is current route, also return true 
+    if (Router.current().route.getName().indexOf(routeName) > -1) {
+      return 'active';
+    }
+
+    return '';
   },
   stateClass: function(state) {
-    return getStateClass(state);
+    var currentState = Session.get('state') || "";
+
+    // if session state matches return true
+    if (currentState.indexOf(state) > -1) {
+      return 'open';
+    }
+
+    return '';
   },
   navSubStateClass: function(state) {
-    return getSubnavStateClass(state);
+    // Can't get animations to work completely, tabling for now
+
+    // var currentState = Session.get('state') || "";
+    // var collapsingState = Session.get('collapsing') || "";
+    // // if session state matches return true
+    // if (currentState.indexOf(state) > -1) {
+    //   return 'in';
+    // }
+
+    // if (collapsingState.indexOf(state) > -1) {
+    //   return 'collapsing'
+    // }
+
+    return '';
   }
 });
 
@@ -55,18 +40,20 @@ Template.Navigation.events({
     var currentState = Session.get('state');
     var state = tmpl.$(e.currentTarget).data('state');
 
+    // // if toggle is open, then a section may need to be collapsed
+    // if (currentState) {
+    //   Session.set('collapsing', currentState);
+    //   Meteor.setTimeout(function() {
+    //     Session.set('collapsing', undefined);
+    //   }, 500);
+    // }
+
     if (currentState === state) {
       Session.set('state', undefined);
     } else {
       Session.set('state', state);
     }
 
-    // if toggle is open, then a section may need to be collapsed
-    if (currentState) {
-      Session.set('collapsing', state);
-      Meteor.setTimeout(function() {
-        Session.set('collapsing', undefined);
-      });
-    }
+    
   }
 });
