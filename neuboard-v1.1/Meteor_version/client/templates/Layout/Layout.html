@@ -1,6 +1,6 @@
 <template name="Layout">
     <!-- Page Wrapper-->
-    <section id="main-wrapper" class="{{theme}}">
+    <section id="main-wrapper" class="{{theme}} {{modalOpen}}">
         <!-- Page wrapper -->
         {{> Header}}
         
@@ -24,4 +24,6 @@
 
     <!--Config demo-->
     {{> ConfigDemo}}
+
+    {{> modal}}
 </template>
