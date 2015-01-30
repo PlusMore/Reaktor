@@ -6,7 +6,14 @@ Template.Layout.helpers({
   },
   modalOpen: function() {
     // allow session variable for manual triggering of modal open
-    var modalOpen = Session.get('modalOpen') || modal.open();
-    return modalOpen ? 'modal-open' : '';
+    if (!!modal.open()) {
+      if (modal.hiding()) {
+        return 'modal-hiding';
+      }
+      return 'modal-open';
+    } else {
+      return '';
+    }
   }
 });
+
