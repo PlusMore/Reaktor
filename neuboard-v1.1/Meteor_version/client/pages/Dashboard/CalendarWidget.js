@@ -19,8 +19,8 @@ Template.CalendarWidget.rendered = function () {
   this.calendar = this.$('.cal1').clndr({
     events: eventArray,
     // constraints: {
-    //   startDate: '2013-11-01',
-    //   endDate: '2013-11-15'
+    //   startDate: '2015-01-01',
+    //   endDate: '2015-01-15'
     // },
     clickEvents: {
       click: function(target) {
@@ -61,9 +61,6 @@ Template.CalendarWidget.rendered = function () {
 };
 
 Template.CalendarWidget.destroyed = function () {
-  this.$('.panel').off()
+  this.calendar = null;
 };
-
-
-
   
