@@ -170,7 +170,7 @@ App = function() {
         });
     }
 
-    // TODO: Add Meteor Loader
+    // TODO: Add Meteor PreLoader
 
     var spinStart = function(spinOn) {
         var spinFull = $('<div class="preloader"><div class="iconWrapper"><i class="fa fa-circle-o-notch fa-spin"></i></div></div>');
