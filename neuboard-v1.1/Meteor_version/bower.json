@@ -12,7 +12,8 @@
     "c3": "~0.4.9",
     "chartjs": "~1.0.1",
     "iCheck": "~1.0.2",
-    "clndr": "~1.2.7"
+    "clndr": "~1.2.7",
+    "seiyria-bootstrap-slider": "~4.4.1"
   },
   "private": true
 }
