@@ -4,6 +4,9 @@
     .transition(all, .2s, ease-in-out); 
     overflow: hidden; 
 
+    // blur needs height to be at least the size of viewport height
+    min-height: 100vh;
+
     &.modal-open {
         -webkit-filter: blur(8px);
         -moz-filter: blur(8px);
