@@ -1,0 +1,32 @@
+<template name="AlertsAndNotifications">
+    <div class="pageheader">
+        <h1>Alerts &amp; Notifications</h1>
+        <div class="breadcrumb-wrapper hidden-xs">
+            <span class="label">You are here:</span>
+            <ol class="breadcrumb">
+                <li><a href="index.html">Dashboard</a>
+                </li>
+                <li>UI Elements</li>
+                <li class="active">Alerts &amp; Notifications</li>
+            </ol>
+        </div>
+    </div>
+    <section id="main-content" class="animated fadeInUp">
+        <div class="row">
+            <div class="col-md-12">
+                {{> Notifications}}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                {{> SimpleAlerts}}
+            </div>
+            <div class="col-md-6">
+                {{> AlertMessages}}
+            </div>
+        </div>
+
+    </section>
+</template>
