@@ -8,7 +8,7 @@ configureMessenger = function(position, theme){
 
   var classes = 'messenger-fixed';
 
-  if (position.length > 0) {
+  if (position && position.length > 0) {
     for (var i=0; i < position.length; i++) {
       classes += ' messenger-on-' + position[i];  
     }
@@ -24,7 +24,7 @@ configureMessenger = function(position, theme){
 
 Meteor.startup(function() {
   var position = ['top', 'right'];
-  var theme = 'flat';
+  var theme = 'air';
 
   configureMessenger(position, theme);
 });
