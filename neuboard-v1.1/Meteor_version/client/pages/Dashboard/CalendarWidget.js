@@ -1,8 +1,4 @@
-// call this from the developer console and you can control both instances
-var calendars = {};
-
-$(document).ready( function() {
-
+Template.CalendarWidget.rendered = function () {
   // assuming you've got the appropriate language files,
   // clndr will respect whatever moment's language is set to.
   // moment.locale('ru');
@@ -20,7 +16,7 @@ $(document).ready( function() {
   // then onMonthChange (if the month changed).
   // finally onYearChange (if the year changed).
 
-  calendars.clndr1 = $('.cal1').clndr({
+  this.calendar = this.$('.cal1').clndr({
     events: eventArray,
     // constraints: {
     //   startDate: '2013-11-01',
@@ -62,35 +58,12 @@ $(document).ready( function() {
     showAdjacentMonths: true,
     adjacentDaysChangeMonth: false
   });
+};
 
-  calendars.clndr2 = $('.cal2').clndr({
-    template: $('#template-calendar').html(),
-    events: eventArray,
-    multiDayEvents: {
-      startDate: 'startDate',
-      endDate: 'endDate'
-    },
-    startWithMonth: moment().add(1, 'month'),
-    clickEvents: {
-      click: function(target) {
-        console.log(target);
-      }
-    },
-    forceSixRows: true
-  });
+Template.CalendarWidget.destroyed = function () {
+  this.$('.panel').off()
+};
 
-  // bind both clndrs to the left and right arrow keys
-  $(document).keydown( function(e) {
-    if(e.keyCode == 37) {
-      // left arrow
-      calendars.clndr1.back();
-      calendars.clndr2.back();
-    }
-    if(e.keyCode == 39) {
-      // right arrow
-      calendars.clndr1.forward();
-      calendars.clndr2.forward();
-    }
-  });
 
-});
+
+  
