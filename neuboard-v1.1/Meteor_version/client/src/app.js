@@ -6,8 +6,6 @@ App = function() {
         widgetFlip();
     });
 
-
-
     var widgetToggle = function() {
         $(document).on('click', '.actions > .fa-chevron-down, .actions > .fa-chevron-up', function() {
             $(this).parent().parent().next().slideToggle("fast"), $(this).toggleClass("fa-chevron-down fa-chevron-up")
@@ -25,17 +23,6 @@ App = function() {
             $(this).closest('.flip-wrapper').toggleClass('flipped')
         });
     };
-
-    var formMask = function() {
-        // apply on click using data attributes
-
-        $("#input1").mask("99/99/9999");
-        $("#input2").mask('(999) 999-9999');
-        $("#input3").mask("(999) 999-9999? x99999");
-        $("#input4").mask("99-9999999");
-        $("#input5").mask("999-99-9999");
-        $("#input6").mask("a*-999-a999");
-    }
 
     var weather = function() {
         var icons = new Skycons({
@@ -333,7 +320,6 @@ App = function() {
         nestedSortable: nestedSortable,
         chartJs: chartJs,
         formValidation: formValidation,
-        formMask: formMask,
         formWizard: formWizard,
         weather: weather,
         spinStart: spinStart,
