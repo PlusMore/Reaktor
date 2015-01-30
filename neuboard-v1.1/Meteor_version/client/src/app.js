@@ -313,6 +313,13 @@ App = function() {
         $('.preloader').remove();
     };
 
+    var maskInputs = function($selector) {
+        $selector.each(function() {
+            var mask = $(this).data('mask');
+            $(this).mask(mask);
+        });
+    }
+
     //return functions
     return {
         dateRangePicker: dateRangePicker,
@@ -321,6 +328,7 @@ App = function() {
         chartJs: chartJs,
         formValidation: formValidation,
         formWizard: formWizard,
+        maskInputs: maskInputs,
         weather: weather,
         spinStart: spinStart,
         spinStop: spinStop
