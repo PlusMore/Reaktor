@@ -79,8 +79,8 @@ App = function() {
     };
 
     //Sliders
-    var sliders = function() {
-        $('.slider-span').slider()
+    var sliders = function($selector) {
+        $selector.slider()
     };
 
 
@@ -329,15 +329,15 @@ App = function() {
 
     //return functions
     return {
-        dateRangePicker: dateRangePicker,
-        sliders: sliders,
-        nestedSortable: nestedSortable,
-        customCheckbox: customCheckbox,
         chartJs: chartJs,
+        customCheckbox: customCheckbox,
+        dateRangePicker: dateRangePicker,
+        nestedSortable: nestedSortable,
         formValidation: formValidation,
         formWizard: formWizard,
         maskInputs: maskInputs,
         weather: weather,
+        sliders: sliders,
         spinStart: spinStart,
         spinStop: spinStop
     };
