@@ -322,12 +322,9 @@ App = function() {
 
     };
 
-
     var spinStop = function() {
         $('.preloader').remove();
     };
-
-
 
     //return functions
     return {
