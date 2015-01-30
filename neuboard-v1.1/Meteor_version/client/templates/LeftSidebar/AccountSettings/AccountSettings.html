@@ -6,7 +6,13 @@
             <label for="checkOne" class="control-label">Share your status</label>
         </div>
         <div class="col-xs-4">
-        <input type="checkbox" class="js-switch" ui-switch="{size: 'small', color:'#27B6AF',secondaryColor: '#B3B8C3'}" ng-model="checkOne" checked id="checkOne"/>
+          <div class="onoffswitch pull-right">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="share-status-switch" {{shareStatus}}>
+            <label class="onoffswitch-label" for="share-status-switch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
         </div>
     </div>
     <div class="row">
@@ -14,7 +20,13 @@
             <label for="checkTwo" class="control-label">Push Notifications</label>
         </div>
         <div class="col-xs-4">
-          <input type="checkbox" class="js-switch" ui-switch="{size: 'small',color:'#27B6AF',secondaryColor: '#B3B8C3'}" ng-model="checkTwo" id="checkTwo"/>
+          <div class="onoffswitch pull-right">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="push-notifications-switch" {{pushNotifications}}>
+            <label class="onoffswitch-label" for="push-notifications-switch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
         </div>
     </div>
   </div>

@@ -1,14 +1,9 @@
 App = function() {
 
     $(function() {
-
-        // // navToggleSub();
         widgetToggle();
         widgetClose();
         widgetFlip();
-        // tooltips();
-        // switcheryToggle();
-
     });
 
 
@@ -30,15 +25,6 @@ App = function() {
             $(this).closest('.flip-wrapper').toggleClass('flipped')
         });
     };
-
-    // Needs to be moved to template (maybe every route change)
-    var customCheckbox = function() {
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_flat-grey',
-            radioClass: 'iradio_flat-grey'
-        });
-    }
-
 
     var formMask = function() {
         // apply on click using data attributes
@@ -325,34 +311,22 @@ App = function() {
 
     // TODO: Add Meteor Loader
 
-    // var spinStart = function(spinOn) {
-    //     var spinFull = $('<div class="preloader"><div class="iconWrapper"><i class="fa fa-circle-o-notch fa-spin"></i></div></div>');
-    //     var spinInner = $('<div class="preloader preloader-inner"><div class="iconWrapper"><i class="fa fa-circle-o-notch fa-spin"></i></div></div>');
-    //     if (spinOn === undefined) {
-    //         $('body').prepend(spinFull);
-    //     } else {
-    //         $(spinOn).prepend(spinInner);
-    //     };
+    var spinStart = function(spinOn) {
+        var spinFull = $('<div class="preloader"><div class="iconWrapper"><i class="fa fa-circle-o-notch fa-spin"></i></div></div>');
+        var spinInner = $('<div class="preloader preloader-inner"><div class="iconWrapper"><i class="fa fa-circle-o-notch fa-spin"></i></div></div>');
+        if (spinOn === undefined) {
+            $('body').prepend(spinFull);
+        } else {
+            $(spinOn).prepend(spinInner);
+        };
 
-    // };
-
-
-    // var spinStop = function() {
-    //     $('.preloader').remove();
-    // };
-
-
-    // TODO: Use CSS toggles
-    var switcheryToggle = function() {
-        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
-        elems.forEach(function(html) {
-            var switchery = new Switchery(html, {
-                size: 'small',
-                color: '#27B6AF',
-                secondaryColor: '#B3B8C3'
-            });
-        });
     };
+
+
+    var spinStop = function() {
+        $('.preloader').remove();
+    };
+
 
 
     //return functions
@@ -361,7 +335,6 @@ App = function() {
         sliders: sliders,
         nestedSortable: nestedSortable,
         chartJs: chartJs,
-        customCheckbox: customCheckbox,
         formValidation: formValidation,
         formMask: formMask,
         formWizard: formWizard,
