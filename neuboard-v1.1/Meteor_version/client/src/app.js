@@ -26,21 +26,7 @@ App = function() {
 
     var formWizard = function() {
         $('#myWizard').wizard()
-    }
-
-    
-
-
-    // var navToggleSub = function() {
-    //     var subMenu = $('.sidebar .nav');
-    //     $(subMenu).navgoco({
-    //         caretHtml: false,
-    //         accordion: true
-    //     });
-
-    // };
-
-    
+    }    
 
     var dateRangePicker = function() {
         $('.reportdate').daterangepicker({
@@ -48,15 +34,6 @@ App = function() {
             startDate: '2014-01-01',
             endDate: '2014-06-30'
         });
-    };
-
-
-    //tooltips
-    var tooltips = function() {
-        $('.tooltip-wrapper').tooltip({
-            selector: "[data-toggle=tooltip]",
-            container: "body"
-        })
     };
 
     //Sliders
