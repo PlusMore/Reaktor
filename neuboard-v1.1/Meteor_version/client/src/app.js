@@ -320,11 +320,19 @@ App = function() {
         });
     }
 
+    var customCheckbox = function($selector) {
+        $selector.iCheck({
+            checkboxClass: 'icheckbox_flat',
+            radioClass: 'iradio_flat'
+        });
+    }
+
     //return functions
     return {
         dateRangePicker: dateRangePicker,
         sliders: sliders,
         nestedSortable: nestedSortable,
+        customCheckbox: customCheckbox,
         chartJs: chartJs,
         formValidation: formValidation,
         formWizard: formWizard,

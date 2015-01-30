@@ -10,7 +10,8 @@
     "jquery-validation": "~1.13.1",
     "gauge.js": "~1.2.1",
     "c3": "~0.4.9",
-    "chartjs": "~1.0.1"
+    "chartjs": "~1.0.1",
+    "iCheck": "~1.0.2"
   },
   "private": true
 }
