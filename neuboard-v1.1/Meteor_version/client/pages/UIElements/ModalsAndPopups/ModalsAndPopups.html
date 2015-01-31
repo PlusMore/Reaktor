@@ -1,4 +1,10 @@
 <template name="ModalsAndPopups">
+    {{#contentFor 'modals'}}
+        {{> ModalDefault}}
+        {{> ModalForm}}
+        {{> ModalScrolling}}
+    {{/contentFor}}
+
     <div class="pageheader">
         <h1>Modals &amp; Popups</h1>
         <div class="breadcrumb-wrapper hidden-xs">
@@ -27,21 +33,21 @@
                             <div class="col-md-4">
                                 <h4>Modal Default</h4>
                                 <!-- Button trigger modal -->
-                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="ModalDefault">
+                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#basicModal">
                                     Launch default modal
                                 </button>
                             </div>
                             <div class="col-md-4">
                                 <h4>Modal Form</h4>
                                 <!-- Button trigger modal -->
-                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="ModalForm">
+                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#formModal">
                                     Launch form modal
                                 </button>
                             </div>
                             <div class="col-md-4">
                                 <h4>Modal Scrolling</h4>
                                 <!-- Button trigger modal -->
-                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="ModalScrolling">
+                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#scrollingModal">
                                     Launch scrolling modal
                                 </button>
                             </div>
