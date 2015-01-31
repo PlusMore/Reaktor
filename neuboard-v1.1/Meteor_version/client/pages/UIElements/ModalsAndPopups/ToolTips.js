@@ -1,3 +1,3 @@
 Template.ToolTips.rendered = function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  this.$('[data-toggle="tooltip"]').tooltip();
 };
