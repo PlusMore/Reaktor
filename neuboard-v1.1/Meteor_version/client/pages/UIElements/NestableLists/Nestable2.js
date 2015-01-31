@@ -35,7 +35,7 @@ var updateOutput = function(e) {
     var jsonSerializedList;
 
     if (window.JSON) {
-        jsonSerializedList = list.nestable('serialize');
+        jsonSerializedList = window.JSON.stringify(list.nestable('serialize'));
     } else {
         jsonSerializedList = 'JSON browser support required for this demo.';
     }
