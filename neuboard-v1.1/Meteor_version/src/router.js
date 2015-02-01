@@ -94,6 +94,14 @@ Router.route('/forms/file-upload', function () {
   name: 'Forms.FileUpload'
 });
 
+Router.route('/upload', function () {
+  var req = this.request;
+  var res = this.response;
+
+  // handle image upload here
+  res.end('File upload');
+}, {where: 'server'});
+
 Router.route('/forms/wysiwyg', function () {
   this.render('FormWysiwyg', {});
 },{
