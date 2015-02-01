@@ -27,19 +27,19 @@
     margin-bottom:5px;
 }
 
-.panel .actions {
+.panel > .panel-heading > .actions {
     position: absolute;
     right: 30px;
-    top: 8px
-}
+    top: 8px;
 
-.panel .actions i {
-    font-size: @14px;
-    margin: 0 3px
-}
+    & i {
+        font-size: @14px;
+        margin: 0 3px;  
 
-.panel .actions i:hover {
-    cursor: pointer
+        &:hover {
+            cursor: pointer    
+        }
+    }
 }
 
 .panel>.panel-footer {

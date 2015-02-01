@@ -24,21 +24,12 @@ App = function() {
         });
     };
 
-    var formWizard = function() {
-        $('#myWizard').wizard()
-    }    
-
     var dateRangePicker = function() {
         $('.reportdate').daterangepicker({
             format: 'YYYY-MM-DD',
             startDate: '2014-01-01',
             endDate: '2014-06-30'
         });
-    };
-
-    //Sliders
-    var sliders = function($selector) {
-        $selector.slider()
     };
 
     // TODO: Add Meteor PreLoader
@@ -76,10 +67,7 @@ App = function() {
     return {
         customCheckbox: customCheckbox,
         dateRangePicker: dateRangePicker,
-        formValidation: formValidation,
-        formWizard: formWizard,
         maskInputs: maskInputs,
-        sliders: sliders,
         spinStart: spinStart,
         spinStop: spinStop
     };
