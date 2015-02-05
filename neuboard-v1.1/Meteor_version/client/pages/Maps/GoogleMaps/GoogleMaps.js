@@ -136,7 +136,39 @@ Template.GoogleMaps.rendered = function () {
       fillOpacity: 0.6
     });
 
+    //static map
+    var $staticMap = tmpl.$("#map-static");
+
+    var url = tmpl.GMaps.staticMapURL({
+      size: [$staticMap.width(), $staticMap.height()],
+      lat: -12.043333,
+      lng: -77.028333
+    });
+
+    var img = $('<img/>').attr('src', url);
+    $staticMap.append(img);
+
+    // static map with markers
+    var $staticMap2 = tmpl.$("#map-static-markers");
+
+    var url2 = tmpl.GMaps.staticMapURL({
+      size: [$staticMap2.width(), $staticMap2.height()],
+      lat: -12.043333,
+      lng: -77.028333,
+      markers: [
+        {lat: -12.043333, lng: -77.028333},
+        {lat: -12.045333, lng: -77.034,
+          size: 'small'},
+        {lat: -12.045633, lng: -77.022,
+          color: 'blue'}
+      ]
+    });
+
+    var img2 = $('<img/>').attr('src', url2)
+    $staticMap2.append(img2);
+
   });
+
     
 };
 
