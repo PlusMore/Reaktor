@@ -138,12 +138,6 @@ Router.route('/maps/google-maps', function () {
   name: 'Maps.GoogleMaps'
 });
 
-Router.route('/maps/vector-maps', function () {
-  this.render('VectorMaps', {});
-},{
-  name: 'Maps.VectorMaps'
-});
-
 Router.route('/pages/404', function () {
   this.render('404', {});
 },{
