@@ -1,0 +1,158 @@
+Template.GoogleMaps.rendered = function () {
+  var tmpl = this;
+
+  VazcoMaps.init({}, function() {
+
+    tmpl.GMaps = VazcoMaps.gMaps();
+
+    // basic map
+    tmpl.basicMap = new tmpl.GMaps({
+      div: '#basic-map',
+      lat: 51.10789,
+      lng: 17.03854,
+      zoom: 6
+    });
+
+    // map events
+    tmpl.mapEvents = new tmpl.GMaps({
+      div: '#map-events',
+      zoom: 16,
+      lat: -12.043333,
+      lng: -77.028333,
+      click: function(e) {
+        alert('click');
+      },
+      dragend: function(e) {
+        alert('dragend');
+      }
+    });
+
+    // map markers
+    tmpl.mapMarkers = new tmpl.GMaps({
+      div: '#map-markers',
+      lat: -12.043333,
+      lng: -77.028333
+    });
+    tmpl.mapMarkers.addMarker({
+      lat: -12.043333,
+      lng: -77.03,
+      title: 'Lima',
+      details: {
+        database_id: 42,
+        author: 'HPNeo'
+      },
+      click: function(e){
+        if(console.log)
+          console.log(e);
+        alert('You clicked in this marker');
+      }
+    });
+    tmpl.mapMarkers.addMarker({
+      lat: -12.042,
+      lng: -77.028333,
+      title: 'Marker with InfoWindow',
+      infoWindow: {
+        content: '<p>HTML Content</p>'
+      }
+    });
+
+    // geolocation
+    tmpl.mapGeolocation = new tmpl.GMaps({
+      div: '#map-geolocation',
+      lat: -12.043333,
+      lng: -77.028333
+    });
+    tmpl.GMaps.geolocate({
+      success: function(position){
+        tmpl.mapGeolocation.setCenter(position.coords.latitude, position.coords.longitude);
+      },
+      error: function(error){
+        alert('Geolocation failed: '+error.message);
+      },
+      not_supported: function(){
+        alert("Your browser does not support geolocation");
+      },
+      always: function(){
+        //alert("Done!");
+      }
+    });
+
+    tmpl.mapGeocoding = new tmpl.GMaps({
+      div: '#map-geocoding',
+      lat: -12.043333,
+      lng: -77.028333
+    });
+
+    // events
+    tmpl.$('#geocoding_form').submit(function(e){
+      e.preventDefault();
+      tmpl.GMaps.geocode({
+        address: $('#address').val().trim(),
+        callback: function(results, status){
+          if(status=='OK'){
+            var latlng = results[0].geometry.location;
+            mapGeocoding.setCenter(latlng.lat(), latlng.lng());
+            mapGeocoding.addMarker({
+              lat: latlng.lat(),
+              lng: latlng.lng()
+            });
+          }
+        }
+      });
+    });
+
+    // polylines
+    tmpl.polylinesMap = new tmpl.GMaps({
+      div: '#map-polylines',
+      lat: -12.043333,
+      lng: -77.028333,
+      click: function(e){
+        console.log(e);
+      }
+    });
+    path = [[-12.044012922866312, -77.02470665341184], [-12.05449279282314, -77.03024273281858], [-12.055122327623378, -77.03039293652341], [-12.075917129727586, -77.02764635449216], [-12.07635776902266, -77.02792530422971], [-12.076819390363665, -77.02893381481931], [-12.088527520066453, -77.0241058385925], [-12.090814532191756, -77.02271108990476]];
+    tmpl.polylinesMap.drawPolyline({
+      path: path,
+      strokeColor: '#1abc9c',
+      strokeOpacity: 0.6,
+      strokeWeight: 6
+    });
+
+    // overlays
+    tmpl.mapOverlays = new tmpl.GMaps({
+      div: '#map-overlays',
+      lat: -12.043333,
+      lng: -77.028333
+    });
+    tmpl.mapOverlays.drawOverlay({
+      lat: tmpl.mapOverlays.getCenter().lat(),
+      lng: tmpl.mapOverlays.getCenter().lng(),
+      content: '<div class="overlay">Lima<div class="overlay_arrow above"></div></div>',
+      verticalAlign: 'top',
+      horizontalAlign: 'center'
+    });
+
+    // polygon
+    tmpl.mapPolygon = new tmpl.GMaps({
+      div: '#map-polygon',
+      lat: -12.043333,
+      lng: -77.028333
+    });
+
+    var path = [[-12.040397656836609,-77.03373871559225],
+                [-12.040248585302038,-77.03993927003302],
+                [-12.050047116528843,-77.02448169303511],
+                [-12.044804866577001,-77.02154422636042]];
+
+    polygon = tmpl.mapPolygon.drawPolygon({
+      paths: path,
+      strokeColor: '#1ABC9C',
+      strokeOpacity: 1,
+      strokeWeight: 3,
+      fillColor: '#1ABC9C',
+      fillOpacity: 0.6
+    });
+
+  });
+    
+};
