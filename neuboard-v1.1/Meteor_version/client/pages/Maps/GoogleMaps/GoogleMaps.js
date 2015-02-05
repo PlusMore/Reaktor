@@ -82,26 +82,7 @@ Template.GoogleMaps.rendered = function () {
       lat: 40.7127,
       lng: -74.0059
     });
-
-    // events
-    tmpl.$('#geocoding_form').submit(function(e){
-      e.preventDefault();
-      tmpl.GMaps.geocode({
-        address: $('#address').val().trim(),
-        callback: function(results, status){
-          if(status=='OK'){
-            var latlng = results[0].geometry.location;
-            tmpl.mapGeocoding.setCenter(latlng.lat(), latlng.lng());
-            tmpl.mapGeocoding.addMarker({
-              lat: latlng.lat(),
-              lng: latlng.lng()
-            });
-
-            console.log(latlng);
-          }
-        }
-      });
-    });
+    // submit event in Template.GoogleMaps.events below
 
     // polylines
     tmpl.polylinesMap = new tmpl.GMaps({
@@ -158,3 +139,22 @@ Template.GoogleMaps.rendered = function () {
   });
     
 };
+
+Template.GoogleMaps.events({
+  'submit #geocoding_form': function (e, tmpl) {
+    e.preventDefault();
+    tmpl.GMaps.geocode({
+      address: $('#address').val().trim(),
+      callback: function(results, status){
+        if(status=='OK'){
+          var latlng = results[0].geometry.location;
+          tmpl.mapGeocoding.setCenter(latlng.lat(), latlng.lng());
+          tmpl.mapGeocoding.addMarker({
+            lat: latlng.lat(),
+            lng: latlng.lng()
+          });
+        }
+      }
+    });
+  }
+});
