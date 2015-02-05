@@ -8,8 +8,8 @@ Template.GoogleMaps.rendered = function () {
     // basic map
     tmpl.basicMap = new tmpl.GMaps({
       div: '#basic-map',
-      lat: 51.10789,
-      lng: 17.03854,
+      lat: 40.7127,
+      lng: -74.0059,
       zoom: 6
     });
 
@@ -17,8 +17,8 @@ Template.GoogleMaps.rendered = function () {
     tmpl.mapEvents = new tmpl.GMaps({
       div: '#map-events',
       zoom: 16,
-      lat: -12.043333,
-      lng: -77.028333,
+      lat: 40.7127,
+      lng: -74.0059,
       click: function(e) {
         alert('click');
       },
@@ -59,8 +59,8 @@ Template.GoogleMaps.rendered = function () {
     // geolocation
     tmpl.mapGeolocation = new tmpl.GMaps({
       div: '#map-geolocation',
-      lat: -12.043333,
-      lng: -77.028333
+      lat: 40.7127,
+      lng: -74.0059
     });
     tmpl.GMaps.geolocate({
       success: function(position){
@@ -79,8 +79,8 @@ Template.GoogleMaps.rendered = function () {
 
     tmpl.mapGeocoding = new tmpl.GMaps({
       div: '#map-geocoding',
-      lat: -12.043333,
-      lng: -77.028333
+      lat: 40.7127,
+      lng: -74.0059
     });
 
     // events
@@ -91,11 +91,13 @@ Template.GoogleMaps.rendered = function () {
         callback: function(results, status){
           if(status=='OK'){
             var latlng = results[0].geometry.location;
-            mapGeocoding.setCenter(latlng.lat(), latlng.lng());
-            mapGeocoding.addMarker({
+            tmpl.mapGeocoding.setCenter(latlng.lat(), latlng.lng());
+            tmpl.mapGeocoding.addMarker({
               lat: latlng.lat(),
               lng: latlng.lng()
             });
+
+            console.log(latlng);
           }
         }
       });
@@ -113,7 +115,7 @@ Template.GoogleMaps.rendered = function () {
     path = [[-12.044012922866312, -77.02470665341184], [-12.05449279282314, -77.03024273281858], [-12.055122327623378, -77.03039293652341], [-12.075917129727586, -77.02764635449216], [-12.07635776902266, -77.02792530422971], [-12.076819390363665, -77.02893381481931], [-12.088527520066453, -77.0241058385925], [-12.090814532191756, -77.02271108990476]];
     tmpl.polylinesMap.drawPolyline({
       path: path,
-      strokeColor: '#1abc9c',
+      strokeColor: App.colors.primary,
       strokeOpacity: 0.6,
       strokeWeight: 6
     });
@@ -127,7 +129,7 @@ Template.GoogleMaps.rendered = function () {
     tmpl.mapOverlays.drawOverlay({
       lat: tmpl.mapOverlays.getCenter().lat(),
       lng: tmpl.mapOverlays.getCenter().lng(),
-      content: '<div class="overlay">Lima<div class="overlay_arrow above"></div></div>',
+      content: '<div class="map-overlay">Lima<div class="map-overlay_arrow above"></div></div>',
       verticalAlign: 'top',
       horizontalAlign: 'center'
     });
@@ -146,10 +148,10 @@ Template.GoogleMaps.rendered = function () {
 
     polygon = tmpl.mapPolygon.drawPolygon({
       paths: path,
-      strokeColor: '#1ABC9C',
+      strokeColor: App.colors.primaryDark,
       strokeOpacity: 1,
       strokeWeight: 3,
-      fillColor: '#1ABC9C',
+      fillColor: App.colors.primary,
       fillOpacity: 0.6
     });
 
