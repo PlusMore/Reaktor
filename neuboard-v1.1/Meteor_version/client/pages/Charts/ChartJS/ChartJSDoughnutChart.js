@@ -33,12 +33,12 @@ var getDoughnutData = function() {
 var initCharts = function() {
     var doughnutData = getDoughnutData();
 
-    var ctx3 = document.getElementById("doughnut-chart-area").getContext("2d");
+    var ctx3 = document.getElementById("doughnut").getContext("2d");
     window.myDoughnut = new Chart(ctx3).Doughnut(doughnutData, {
         responsive: true
     });
 }
 
-Template.BrowserStatsWidget.rendered = function () {
+Template.ChartJSDoughnutChart.rendered = function () {
     initCharts();
 };
