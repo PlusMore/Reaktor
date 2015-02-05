@@ -132,18 +132,6 @@ Router.route('/charts/charts-chartjs', function () {
   name: 'Charts.ChartJS'
 });
 
-Router.route('/charts/charts-morris', function () {
-  this.render('ChartsMorris', {});
-},{
-  name: 'Charts.Morris'
-});
-
-Router.route('/charts/charts-sparkline', function () {
-  this.render('ChartsSparkline', {});
-},{
-  name: 'Charts.Sparkline'
-});
-
 Router.route('/maps/google-maps', function () {
   this.render('GoogleMaps', {});
 },{

@@ -22,8 +22,8 @@ var graph = Morris.Line({
     parseTime: false,
     ymin: -1.0,
     ymax: 1.0,
-     lineColors: ['#1ABC9C'],
-     pointFillColors: ['#19a88b'],
+    lineColors: ['#1ABC9C'],
+    pointFillColors: ['#19a88b'],
     hideHover: true
 });
 
