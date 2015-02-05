@@ -9,8 +9,8 @@ Template.MonthlyGoalWidget.rendered = function () {
       color: '#1D212A' // Fill color
     },
     limitMax: 'false',   // If true, the pointer will not go past the end of the gauge
-    colorStart: '#1ABC9C',   // Colors
-    colorStop: '#1ABC9C',    // just experiment with them
+    colorStart: App.colors.primaryDark,   // Colors
+    colorStop: App.colors.primary,    // just experiment with them
     strokeColor: '#F0F3F3',   // to see which ones work best for you
     generateGradient: true
   };

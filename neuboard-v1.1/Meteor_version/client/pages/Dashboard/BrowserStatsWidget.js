@@ -5,28 +5,28 @@ var randomScalingFactor = function() {
 var getDoughnutData = function() {
     var doughnutData = [{
             value: 300,
-            color: "#1ABC9C",
-            highlight: "#1ABC9C",
+            color: App.colors.primary,
+            highlight: App.colors.primaryDark,
             label: "Chrome"
         }, {
             value: 50,
-            color: "#556B8D",
-            highlight: "#556B8D",
+            color: App.colors.danger,
+            highlight: App.colors.dangerDark,
             label: "IE"
         }, {
             value: 100,
-            color: "#EDCE8C",
-            highlight: "#EDCE8C",
+            color: App.colors.info,
+            highlight: App.colors.infoDark,
             label: "Safari"
         }, {
             value: 40,
-            color: "#CED1D3",
-            highlight: "#1F7BB6",
+            color: App.colors.success,
+            highlight: App.colors.successDark,
             label: "Other"
         }, {
             value: 120,
-            color: "#1F7BB6",
-            highlight: "#1F7BB6",
+            color: App.colors.warning,
+            highlight: App.colors.warningDark,
             label: "Firefox"
         }
     ]; 

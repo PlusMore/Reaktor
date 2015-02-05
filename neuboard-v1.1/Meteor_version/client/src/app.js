@@ -63,8 +63,24 @@ App = function() {
         });
     }
 
+    var colors = {
+        default: "#FFFFFF",
+        defaultDark: "#e6e6e6",
+        primary: "#27B6AF",
+        primaryDark: "#1e8c87",
+        success: "#2ecc71",
+        successDark: "#25a25a",
+        warning: "#f39c12",
+        warningDark: "#c87f0a",
+        info: "#81cfe0",
+        infoDark: "#58bfd6",
+        danger: "#c0392b",
+        dangerDark: "#962d22"
+    }
+
     //return functions
     return {
+        colors: colors,
         customCheckbox: customCheckbox,
         dateRangePicker: dateRangePicker,
         maskInputs: maskInputs,

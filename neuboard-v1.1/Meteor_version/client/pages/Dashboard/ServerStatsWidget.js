@@ -7,21 +7,21 @@ var getLineChartData = function() {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
             label: 'Network Usage',
-            fillColor: 'rgba(26,188,156,0.5)',
-            strokeColor: 'rgba(26,188,156,1)',
-            pointColor: 'rgba(220,220,220,1)',
-            pointStrokeColor: '#fff',
-            pointHighlightFill: '#fff',
-            pointHighlightStroke: 'rgba(220,220,220,1)',
+            fillColor: "rgba(39, 182, 175, .5)",
+            strokeColor: App.colors.primaryDark,
+            pointColor: App.colors.primary,
+            pointStrokeColor: App.colors.primaryDark,
+            pointHighlightFill: App.colors.primary,
+            pointHighlightStroke: App.colors.primary,
             data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
         }, {
             label: 'CPU Load',
-            fillColor: 'rgba(31,123,182,0.5)',
-            strokeColor: 'rgba(31,123,182,1)',
-            pointColor: 'rgba(151,187,205,1)',
-            pointStrokeColor: '#fff',
-            pointHighlightFill: '#fff',
-            pointHighlightStroke: 'rgba(151,187,205,1)',
+            fillColor: "rgba(129, 207, 224, .5)",
+            strokeColor: App.colors.infoDark,
+            pointColor: App.colors.info,
+            pointStrokeColor: App.colors.infoDark,
+            pointHighlightFill: App.colors.info,
+            pointHighlightStroke: App.colors.info,
             data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
         }]
     };
@@ -32,17 +32,17 @@ var getBarChartData = function() {
     var barChartData = {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
-            fillColor: 'rgba(26,188,156,0.5)',
-            strokeColor: 'rgba(255,255,255,0.8)',
-            highlightFill: 'rgba(26,188,156,1)',
-            highlightStroke: 'rgba(255,255,255,0.8)',
+            fillColor: "rgba(39, 182, 175, .5)",
+            strokeColor: App.colors.primaryDark,
+            highlightFill: App.colors.primary,
+            highlightStroke: App.colors.primaryDark,
             data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
         }, {
             label: 'CPU Load',
-            fillColor: 'rgba(31,123,182,0.5)',
-            strokeColor: 'rgba(255,255,255,0.8)',
-            highlightFill: 'rgba(31,123,182,1)',
-            highlightStroke: 'rgba(255,255,255,0.8)',
+            fillColor: "rgba(129, 207, 224, .5)",
+            strokeColor: App.colors.infoDark,
+            highlightFill: App.colors.info,
+            highlightStroke: App.colors.infoDark,
             data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
         }]
     };   
