@@ -1,19 +1,18 @@
 <template name="NestableLists">
-    <div class="pageheader">
-        <h1>Nestable Lists</h1>
-        <div class="breadcrumb-wrapper hidden-xs">
-            <span class="label">You are here:</span>
-            <ol class="breadcrumb">
-                <li><a href="index.html">Dashboard</a>
-                </li>
-                <li>UI Elements</li>
-                <li class="active">Nestable Lists</li>
-            </ol>
-        </div>
-    </div>
-    <section id="main-content" class="animated fadeInUp">
-        
-        <div class="row">
+    {{#Layout template="Page"}}
+        {{#contentFor "header"}}
+          <h1>Nestable Lists</h1>
+        {{/contentFor}}
+
+        {{#contentFor "breadcrumb"}}
+            <li>
+                <a href="{{pathFor 'Dashboard'}}">Dashboard</a>
+            </li>
+            <li>UI Elements</li>
+            <li class="active">Nestable Lists</li>
+        {{/contentFor}}
+
+         <div class="row">
             <div class="col-md-6">
                 {{> Nestable1}}
             </div>
@@ -21,5 +20,6 @@
                 {{> Nestable2}}
             </div>
         </div>
-    </section>
+
+    {{/Layout}}
 </template>

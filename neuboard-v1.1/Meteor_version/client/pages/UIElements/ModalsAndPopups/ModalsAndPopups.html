@@ -4,21 +4,20 @@
         {{> ModalForm}}
         {{> ModalScrolling}}
     {{/contentFor}}
+    {{#Layout template="Page"}}
+        {{#contentFor "header"}}
+          <h1>Modals &amp; Popups</h1>
+        {{/contentFor}}
 
-    <div class="pageheader">
-        <h1>Modals &amp; Popups</h1>
-        <div class="breadcrumb-wrapper hidden-xs">
-            <span class="label">You are here:</span>
-            <ol class="breadcrumb">
-                <li><a href="index.html">Dashboard</a>
-                </li>
-                <li>UI Elements</li>
-                <li class="active">Modals &amp; Popups</li>
-            </ol>
-        </div>
-    </div>
-    <section id="main-content" class="animated fadeInUp">
-             <div class="row">
+        {{#contentFor "breadcrumb"}}
+            <li>
+                <a href="{{pathFor 'Dashboard'}}">Dashboard</a>
+            </li>
+            <li>UI Elements</li>
+            <li class="active">Modals &amp; Popups</li>
+        {{/contentFor}}
+
+        <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -33,21 +32,21 @@
                             <div class="col-md-4">
                                 <h4>Modal Default</h4>
                                 <!-- Button trigger modal -->
-                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#basicModal">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#basicModal">
                                     Launch default modal
                                 </button>
                             </div>
                             <div class="col-md-4">
                                 <h4>Modal Form</h4>
                                 <!-- Button trigger modal -->
-                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#formModal">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#formModal">
                                     Launch form modal
                                 </button>
                             </div>
                             <div class="col-md-4">
                                 <h4>Modal Scrolling</h4>
                                 <!-- Button trigger modal -->
-                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#scrollingModal">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#scrollingModal">
                                     Launch scrolling modal
                                 </button>
                             </div>
@@ -64,5 +63,6 @@
                 {{> ToolTips}}
             </div>
         </div>
-    </section>
+
+    {{/Layout}}
 </template>
