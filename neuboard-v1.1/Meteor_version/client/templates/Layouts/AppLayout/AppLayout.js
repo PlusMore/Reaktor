@@ -1,6 +1,6 @@
 Session.setDefault('theme', 'theme-default');
 
-Template.Layout.helpers({
+Template.AppLayout.helpers({
   theme: function () {
     return Session.get('theme');
   }

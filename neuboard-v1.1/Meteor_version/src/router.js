@@ -1,5 +1,5 @@
 Router.configure({
-  layoutTemplate: 'Layout',
+  layoutTemplate: 'AppLayout',
   loadingTemplate: 'Loading',
   notFoundTemplate: '404'
 });
