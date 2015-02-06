@@ -1,0 +1,31 @@
+<template name="ChartsC3">
+            <div class="pageheader">
+                <h1>C3 Charts</h1>
+                <div class="breadcrumb-wrapper hidden-xs">
+                    <span class="label">You are here:</span>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Dashboard</a>
+                        </li>
+                        <li>Charts</li>
+                        <li class="active">C3 Charts</li>
+                    </ol>
+                </div>
+            </div>
+            <section id="main-content" class="animated fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        {{> ChartsC3Area}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{> ChartsC3Combination}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{> ChartsC3Zoom}}
+                    </div>
+                </div>
+            </section>
+</template>
