@@ -139,12 +139,14 @@ Router.route('/maps/google-maps', function () {
 });
 
 Router.route('/pages/404', function () {
+  this.layout('EmptyLayout');
   this.render('404', {});
 },{
   name: 'Pages.404'
 });
 
 Router.route('/pages/500', function () {
+  this.layout('EmptyLayout');
   this.render('500', {});
 },{
   name: 'Pages.500'
@@ -157,6 +159,7 @@ Router.route('/pages/blank-page', function () {
 });
 
 Router.route('/pages/locked-screen', function () {
+  this.layout('EmptyLayout');
   this.render('LockedScreen', {});
 },{
   name: 'Pages.LockedScreen'
@@ -168,16 +171,11 @@ Router.route('/pages/profile', function () {
   name: 'Pages.Profile'
 });
 
-Router.route('/pages/sign-in', function () {
-  this.render('SignIn', {});
+Router.route('/pages/accounts', function () {
+  this.layout('EmptyLayout');
+  this.render('Accounts', {});
 },{
-  name: 'Pages.SignIn'
-});
-
-Router.route('/pages/sign-up', function () {
-  this.render('SignUp', {});
-},{
-  name: 'Pages.SignUp'
+  name: 'Pages.Accounts'
 });
 
 Router.route('/css-animations', function () {
