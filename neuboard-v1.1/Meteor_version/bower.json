@@ -11,7 +11,8 @@
     "iCheck": "~1.0.2",
     "clndr": "~1.2.7",
     "seiyria-bootstrap-slider": "~4.4.1",
-    "nestable2": "~1.2.2"
+    "nestable2": "~1.2.2",
+    "d3": "~3.5.0"
   },
   "private": true
 }
