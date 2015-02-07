@@ -65,79 +65,82 @@
       background-clip: initial;
       min-width: initial;
       padding: initial;
-    }
-  }
-}
 
-@media (max-width: 767px) {
-  .panel .panel-body {
-    #login-dropdown-list {
-      & > .dropdown-menu {
-        // not a navbar when in the panel
-        // only looks weird on xs
-        & > .navbar-form {
-          padding-top: 0;
-          padding-bottom: 0;
-          margin-bottom: 4px;
-          margin-top: 4px;
-        }
+      .or { text-align: center; margin: 10px 0; }
+      .hline { text-decoration: line-through; color: lightgrey; }
+      .or-text { font-weight: bold; }
 
-        & > #login-buttons-password {
+      // not a navbar when in the panel
+      // only looks weird on xs
+      & > .navbar-form {
+          margin: 4px 0;
+          padding: 0px 1px;
+      }
+
+      input:last-of-type {
+        margin-bottom: 10px;
+      }
+
+      & > #login-buttons-password {
+        float: none !important;
+        display: block;
+      }
+
+      & > #login-other-options {
+        // text-align: center;
+
+        & > #signup-link, & > #forgot-password-link {
           float: none !important;
+
+          //bootstrap .btn styles
           display: block;
-        }
+          margin-bottom: 0;
+          font-weight: normal;
+          text-align: center;
+          vertical-align: middle;
+          touch-action: manipulation;
+          cursor: pointer;
+          background-image: none;
+          border: 1px solid transparent;
+          white-space: nowrap;
+          padding: 6px 12px;
+          font-size: 14px;
+          line-height: 1.42857143;
+          border-radius: 4px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
 
-        & > #login-other-options {
-          // text-align: center;
+          // theme button styles
+          font-family: @fontStack; 
+          font-weight: bold;
+          font-size: 12px;
+          letter-spacing: 2px;
+          padding: 9px 17px;
+          border-radius: 2px;
+          .transition(color .2s linear, background-color .2s linear);
 
-          & > #signup-link, & > #forgot-password-link {
-            float: none !important;
+          // theme default button styles
+          color: #565656;
+          background-color: @defaultColor;
+          border: 1px solid;
+          border-color: darken(@defaultColor, 10%);
 
-            //bootstrap .btn styles
-            display: block;
-            margin-bottom: 0;
-            font-weight: normal;
-            text-align: center;
-            vertical-align: middle;
-            touch-action: manipulation;
-            cursor: pointer;
-            background-image: none;
-            border: 1px solid transparent;
-            white-space: nowrap;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.42857143;
-            border-radius: 4px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-
-            // theme button styles
-            font-family: @fontStack; 
-            font-weight: bold;
-            font-size: 12px;
-            letter-spacing: 2px;
-            padding: 9px 17px;
-            border-radius: 2px;
-            .transition(color .2s linear, background-color .2s linear);
-
-            // theme default button styles
-            color: #565656;
-            background-color: @defaultColor;
-            border: 1px solid;
-            border-color: darken(@defaultColor, 10%);
-
-            &:hover {
-                background-color: darken(@defaultColor, 10%);
-                border-color: darken(@defaultColor, 10%);
-                color: #000;
-            }
+          &:hover {
+              background-color: darken(@defaultColor, 10%);
+              border-color: darken(@defaultColor, 10%);
+              color: #000;
           }
         }
       }
     }
   }
+}
+
+#configure-login-service-dialog-modal {
+  left: 0;
+  margin-left: initial;
 }
 
 // small
