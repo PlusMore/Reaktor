@@ -5,7 +5,7 @@ Template.AppLayout.helpers({
     return Session.get('theme');
   },
   ios: function() {
-    return Session.get('iOS') ? 'ios' : '';
+    return Session.get('iOS-standalone') ? 'ios' : '';
   }
 });
 
