@@ -26,3 +26,5 @@ ian:accounts-ui-bootstrap-3
 accounts-facebook
 accounts-password
 accounts-google
+meteorhacks:inject-initial
+coffeescript
