@@ -28,3 +28,4 @@ accounts-password
 accounts-google
 meteorhacks:inject-initial
 coffeescript
+plusmore:reactive-responsive-helpers
