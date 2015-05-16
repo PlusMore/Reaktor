@@ -41,7 +41,7 @@ var getBarChartData = function() {
             highlightStroke: App.colors.infoDark,
             data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
         }]
-    };   
+    };
 
     return barChartData;
 }
