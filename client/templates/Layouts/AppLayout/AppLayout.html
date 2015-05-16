@@ -1,15 +1,15 @@
 <template name="AppLayout">
-    
+
     {{> Loader}}
 
     <!-- Page Wrapper-->
     <section id="main-wrapper" class="{{theme}} {{ios}}">
         <!-- Page wrapper -->
         {{> Header}}
-        
+
         <!-- Left Sidebar Navigation -->
         {{> LeftSidebar}}
-        
+
         <!-- Content wrapper -->
         <section class="main-content-wrapper">
             <!-- Main content view  -->
@@ -20,12 +20,6 @@
 
     </section>
     <!-- /Page wrapper-->
-
-    <!-- Right Sidebar Navigation -->
-    {{> RightSidebar}}
-
-    <!--Config demo-->
-    {{> ConfigDemo}}
 
     {{> yield "modals"}}
 </template>
