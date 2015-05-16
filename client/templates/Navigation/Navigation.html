@@ -3,9 +3,15 @@
     <h5 class="sidebar-header">Navigation</h5>
     <ul class="nav nav-pills nav-stacked">
 
-        <li class="{{currentRouteClass 'Dashboard'}}" data-state="dashboard">
+        <li class="{{currentRouteClass 'Dashboard'}}" data-state="Dashboard">
             <a href="{{pathFor 'Dashboard'}}" title="Dashboard">
                 <i class="fa  fa-fw fa-tachometer"></i> Dashboard
+            </a>
+        </li>
+
+        <li class="{{currentRouteClass 'BlankPage'}}" data-state="BlankPage">
+            <a href="{{pathFor 'BlankPage'}}" title="Blank Page">
+                <i class="fa  fa-fw fa-tachometer"></i> Blank Page
             </a>
         </li>
 
