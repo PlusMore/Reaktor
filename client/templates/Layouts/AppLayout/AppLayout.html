@@ -1,25 +1,39 @@
 <template name="AppLayout">
-
     {{> Loader}}
+    {{> yield "modals"}}
+    {{#if ios}}
+        <div id="ios-status-bar"></div>
+    {{/if}}
 
-    <!-- Page Wrapper-->
-    <section id="main-wrapper" class="{{theme}} {{ios}}">
-        <!-- Page wrapper -->
-        {{> Header}}
+    {{#if currentUser}}
+        <!-- Page Wrapper-->
+        <section id="main-wrapper" class="{{theme}} {{ios}}">
+            <!-- Page wrapper -->
+            {{> Header}}
 
-        <!-- Left Sidebar Navigation -->
-        {{> LeftSidebar}}
+            <!-- Left Sidebar Navigation -->
+            {{> LeftSidebar}}
 
-        <!-- Content wrapper -->
-        <section class="main-content-wrapper">
-            <!-- Main content view  -->
-            {{> yield}}
+            <!-- Content wrapper -->
+            <section class="main-content-wrapper">
+                <!-- Main content view  -->
+                {{> yield}}
+
+            </section>
+            <!-- /Content wraper-->
 
         </section>
-        <!-- /Content wraper-->
+        <!-- /Page wrapper-->
 
-    </section>
-    <!-- /Page wrapper-->
+        <!-- Right Sidebar Navigation -->
+        <!-- {{> RightSidebar}} -->
 
-    {{> yield "modals"}}
+        <!--Config demo-->
+        <!-- {{> ConfigDemo}} -->
+
+    {{else}}
+        {{#unless loggingIn}}
+            {{> Accounts}}
+        {{/unless}}
+    {{/if}}
 </template>
