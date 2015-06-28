@@ -1,6 +1,14 @@
 <template name="Header">
     <header id="header">
         <!--logo start-->
+        <ul class="nav navbar-nav navbar-left">
+            <li class="toggle-navigation toggle-left">
+                <button class="sidebar-toggle" id="toggle-left">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </li>
+        </ul>
+
         <div class="brand">
             <a href="{{pathFor 'Dashboard'}}" class="logo">
                 <i class="icon-layers"></i>
@@ -9,11 +17,6 @@
         </div>
         <!--logo end-->
         <ul class="nav navbar-nav navbar-left">
-            <li class="toggle-navigation toggle-left">
-                <button class="sidebar-toggle" id="toggle-left">
-                    <i class="fa fa-bars"></i>
-                </button>
-            </li>
             <li class="toggle-profile hidden-xs">
                 <button type="button" class="btn btn-default" id="toggle-profile">
                     <i class="icon-user"></i>

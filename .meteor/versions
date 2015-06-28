@@ -9,6 +9,7 @@ blaze-tools@1.0.3
 boilerplate-generator@1.0.3
 callback-hook@1.0.3
 check@1.0.5
+chriswessels:slideout@0.1.9
 coffeescript@1.0.6
 cwaring:modernizr@0.0.2
 ddp@1.1.0
@@ -16,6 +17,7 @@ deps@1.0.7
 ejson@1.0.6
 email@1.0.6
 fastclick@1.0.3
+fortawesome:fontawesome@4.3.0
 geojson-utils@1.0.3
 html-tools@1.0.4
 htmljs@1.0.4

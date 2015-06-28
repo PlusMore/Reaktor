@@ -6,23 +6,32 @@
     {{/if}}
 
     {{#if currentUser}}
-        <!-- Page Wrapper-->
-        <section id="main-wrapper" class="{{theme}} {{ios}}">
-            <!-- Page wrapper -->
+        <nav id="menu" class="{{theme}} {{ios}}">
+            {{> LeftSidebar}}
+        </nav>
+
+        <div id="panel" class="{{theme}} {{ios}}">
             {{> Header}}
+            {{> yield}}
+        </div>
+
+        <!-- Page Wrapper-->
+        <!-- <section id="main-wrapper" class="{{theme}} {{ios}}"> -->
+            <!-- Page wrapper -->
+
 
             <!-- Left Sidebar Navigation -->
-            {{> LeftSidebar}}
+            <!-- {{> LeftSidebar}} -->
 
             <!-- Content wrapper -->
-            <section class="main-content-wrapper">
+            <!-- <section class="main-content-wrapper"> -->
                 <!-- Main content view  -->
-                {{> yield}}
+                <!-- {{> yield}} -->
 
-            </section>
+            <!-- </section> -->
             <!-- /Content wraper-->
 
-        </section>
+        <!-- </section> -->
         <!-- /Page wrapper-->
 
         <!-- Right Sidebar Navigation -->

@@ -65,6 +65,7 @@ App = function() {
     return {
         colors: colors,
         customCheckbox: customCheckbox,
-        maskInputs: maskInputs
+        maskInputs: maskInputs,
+        UI: {}
     };
 }();
