@@ -1,6 +1,6 @@
 Template.Navigation.helpers({
   currentRouteClass: function (routeName) {
-    // if page is current route, also return true 
+    // if page is current route, also return true
     var currentRouter = Router.current();
 
     if (currentRouter && currentRouter.route.getName().indexOf(routeName) > -1) {
@@ -38,12 +38,12 @@ Template.Navigation.helpers({
 });
 
 Template.Navigation.events({
-  'click li.disabled > a': function(e, tmpl) {
+  'tap li.disabled > a': function(e, tmpl) {
     e.preventDefault();
     e.stopImmediatePropagation();
     return false;
   },
-  'click [data-state]': function (e, tmpl) {
+  'tap [data-state]': function (e, tmpl) {
     var currentState = Session.get('state');
     var state = tmpl.$(e.currentTarget).data('state');
 
@@ -61,5 +61,7 @@ Template.Navigation.events({
       Session.set('state', state);
     }
   },
-  
+  'tap a': function(e, tmpl) {
+    App.UI.menu.close();
+  }
 });

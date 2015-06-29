@@ -1,14 +1,16 @@
 <template name="Page">
-  <div class="pageheader">
-        {{> yield "header"}}
-        <div class="breadcrumb-wrapper hidden-xs">
-            <span class="label">You are here:</span>
-            <ol class="breadcrumb">
-              {{> yield "breadcrumb"}}
-            </ol>
+  <div class="page">
+      <div class="pageheader">
+            {{> yield "header"}}
+            <div class="breadcrumb-wrapper hidden-xs">
+                <span class="label">You are here:</span>
+                <ol class="breadcrumb">
+                  {{> yield "breadcrumb"}}
+                </ol>
+            </div>
         </div>
-    </div>
-    <section id="main-content" class="container-fluid">
-        {{> yield}}
-    </section>
+        <section id="main-content" class="container-fluid">
+            {{> yield}}
+        </section>
+  </div>
 </template>

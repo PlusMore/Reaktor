@@ -17,5 +17,13 @@ Template.AppLayout.helpers({
   },
   ios: function() {
     return Session.get('iOS-standalone') ? 'ios' : '';
+  },
+  transition: function() {
+    return function(from, to, element) {
+      // if (to.template === 'Dashboard') {
+      //   return 'left-to-right';
+      // }
+      return 'fade';
+    }
   }
 });
