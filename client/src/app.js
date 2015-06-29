@@ -8,11 +8,11 @@ App = function() {
     });
 
     // if the user is using ios we want to know so we can adjust the header to account for the top bar
-    var iOS = function() {
-        var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
-        var standalone = ("standalone" in window.navigator) && !window.navigator.standalone;
+      var iOS = function() {
+        var iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+        var standalone = ("standalone" in window.navigator) && window.navigator.standalone;
         Session.set('iOS-standalone', iOS && standalone);
-    };
+      };
 
     var widgetToggle = function() {
         $(document).on('click', '.actions > .fa-chevron-down, .actions > .fa-chevron-up', function() {

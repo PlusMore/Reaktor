@@ -6,16 +6,8 @@
     {{/if}}
 
     {{#if currentUser}}
-        <nav id="menu" class="{{theme}} {{ios}}">
-            {{> LeftSidebar}}
-        </nav>
 
-        <div id="panel" class="{{theme}} {{ios}}">
-            {{> Header}}
-            {{#momentum plugin='iron-router' options=transition}}
-                {{> yield}}
-            {{/momentum}}
-        </div>
+        {{> LoggedInLayout}}
 
         <!-- Page Wrapper-->
         <!-- <section id="main-wrapper" class="{{theme}} {{ios}}"> -->
@@ -47,4 +39,17 @@
             {{> Accounts}}
         {{/unless}}
     {{/if}}
+</template>
+
+<template name="LoggedInLayout">
+    <nav id="menu" class="{{theme}} {{ios}}">
+        {{> LeftSidebar}}
+    </nav>
+
+    <div id="panel" class="{{theme}} {{ios}}">
+        {{> Header}}
+        {{#momentum plugin='iron-router' options=transition}}
+            {{> yield}}
+        {{/momentum}}
+    </div>
 </template>

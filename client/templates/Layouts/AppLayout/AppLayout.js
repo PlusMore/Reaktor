@@ -1,6 +1,6 @@
 Session.setDefault('theme', 'theme-green');
 
-Template.AppLayout.onRendered(function () {
+Template.LoggedInLayout.onRendered(function () {
   var template = this;
 
   App.UI.menu = new Slideout({
@@ -11,7 +11,7 @@ Template.AppLayout.onRendered(function () {
   });
 });
 
-Template.AppLayout.helpers({
+Template.LoggedInLayout.helpers({
   theme: function() {
     return Session.get('theme');
   },
