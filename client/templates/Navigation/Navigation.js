@@ -60,8 +60,5 @@ Template.Navigation.events({
     } else {
       Session.set('state', state);
     }
-  },
-  'tap a': function(e, tmpl) {
-    App.UI.menu.close();
   }
 });
