@@ -15,7 +15,7 @@ var filters = {
   },
   closeMenu: function() {
     Meteor.setTimeout(function() {
-      App.UI.menu.close();
+      App.UI.menu && App.UI.menu.close();
     });
     this.next();
   }

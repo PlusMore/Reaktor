@@ -28,7 +28,7 @@
 @primaryColor:#27B6AF; // turquoise
 @successColor:#2ecc71; //green
 @warningColor:#f39c12; //orange
-@infoColor: lighten(@primaryColor, 15%); //light-blue
+@infoColor: lighten(@primaryColor, 15%);
 @dangerColor:#c0392b; //red
 
 // @default_color: #ffffff;
@@ -39,6 +39,6 @@
 // @danger_color: #c0392b;
 
 //Main link color
-@aLinkColor:#2E2E32;
-@aLinkHover:#999;
+@aLinkColor:@primaryColor;
+@aLinkHover:darken(@aLinkColor, 10%);
 
