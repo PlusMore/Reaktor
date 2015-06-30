@@ -5,3 +5,32 @@
     margin-right: 5px;
   }
 }
+
+.s-alert-box {
+  border-radius: 4px;
+
+  &.s-alert-error {
+    background: @dangerColor;
+  }
+
+  &.s-alert-warning {
+    background: @warningColor;
+  }
+
+  &.s-alert-info {
+    background: @infoColor;
+  }
+
+  &.s-alert-success {
+    background: @successColor;
+  }
+
+  & > .s-alert-box-inner {
+    font-family: @fontHeader;
+
+    p {
+      padding: 0 20px 0 0;
+    }
+  }
+
+}
