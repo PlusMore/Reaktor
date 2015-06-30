@@ -84,12 +84,6 @@ Router.route('/ui-elements/alerts-and-notifications', function () {
   name: 'UI.AlertsAndNotifications'
 });
 
-Router.route('/ui-elements/nestable-lists', function () {
-  this.render('NestableLists', {});
-},{
-  name: 'UI.NestableLists'
-});
-
 Router.route('/ui-elements/panels', function () {
   this.render('Panels', {});
 },{
