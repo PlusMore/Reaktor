@@ -9,16 +9,16 @@
     background: @primaryColor;
 
      .brand {
-        float: left;
-        padding: 0 10px;
+        width: 100%;
     }
 
      .logo {
         color: #1d212a;
-        font-size: @19px;
+        font-size: @22px;
         text-transform: uppercase;
-        padding: 17px 0 0 10px;
-        display: inline-block;
+        padding: 17px 0 0 0;
+        display: block;
+        text-align: center;
     }
      .logo img {
         margin-right: 6px;
@@ -188,7 +188,7 @@
     }
 }
 @media (max-width: 789px){
-        #header .search{
+    #header .search{
         width: 155px;
     }
 }
@@ -200,7 +200,6 @@
     }
     #header .logo {
         font-size: @22px;
-        padding: 14px 0 0 0;
     }
     #header .logo img {
         width: 25px;
