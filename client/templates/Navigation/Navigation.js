@@ -3,7 +3,9 @@ Template.Navigation.helpers({
     // if page is current route, also return true
     var currentRouter = Router.current();
 
-    if (currentRouter && currentRouter.route.getName().indexOf(routeName) > -1) {
+    if (currentRouter &&
+        currentRouter.route &&
+        currentRouter.route.getName().indexOf(routeName) > -1) {
       return 'active';
     }
 
