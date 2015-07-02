@@ -11,16 +11,20 @@
         <!-- page content -->
         <div class="row">
             <div class="col-md-6">
+
                 <section class="panel">
                     <div class="panel-body profile-wrapper">
+
+                        {{#with user}}
+
                         <div class="col-md-3">
                             <div class="profile-pic text-center">
-                                <img src="/img/avatar2.png" alt="" class="img-circle">
+                                <img src="{{profile.picture}}" alt="" class="img-circle">
                             </div>
                         </div>
                         <div class="col-md-9">
                             <div class="profile-info">
-                                <h1>Aaron Adams</h1>
+                                <h1>{{profile.name}}</h1>
                                 <span class="text-muted">UI Designer</span>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -48,6 +52,9 @@
                                 </div>
                             </div>
                         </div>
+
+                        {{/with}}
+
                     </div>
                 </section>
             </div>
