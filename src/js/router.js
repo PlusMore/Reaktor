@@ -50,6 +50,23 @@ Router.route('/blankpage', function () {
   }
 });
 
+// Account
+
+Router.route('/profile', function() {
+  this.render('Profile', {});
+},{
+  name: 'Profile',
+  onBeforeAction: function() {
+    if (Meteor.isClient) {
+      Meta.setTitle('Profile')
+    }
+    this.next();
+  }
+
+});
+
+// Errors
+
 Router.route('/404', function () {
   this.layout('EmptyLayout');
   this.render('404', {});
