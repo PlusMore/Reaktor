@@ -1,12 +1,17 @@
 // This section sets up some basic app metadata,
 // the entire section is optional.
 App.info({
-  id: 'com.plusmoretablets.device',
-  name: 'PlusMore',
-  description: 'Hotel automation and digital concierge.',
-  author: 'PlusMore Team',
-  email: 'info@plusmoretablets.com',
-  website: 'http://plusmoretablets.com'
+  id: 'com.reaktor.boilerplate',
+  name: 'Reaktor',
+  description: 'Reaktor boilerplate.',
+  author: 'Patrick Scott',
+  email: 'pat@patscott.io',
+  website: 'https://patscott.io'
+});
+
+App.configurePlugin('com.phonegap.plugins.facebookconnect', {
+    APP_ID: '102283436784797',
+    APP_NAME: '07da7e5d7a4c21a6389dc3fd600b3956'
 });
 
 App.icons({
@@ -59,33 +64,6 @@ App.setPreference('StatusBarOverlaysWebView', 'false');
 App.setPreference('StatusBarBackgroundColor', '#000000');
 App.setPreference('StatusBarStyle', 'blackopaque');
 
-App.accessRule('https://*.plusmoretablets.com');
-
-var trustedSecure = [
-  'fontastic.s3.amazonaws.com',
-  '*.filepicker.io',
-  '*.googleapis.com',
-  '*.gstatic.com',
-  '*.cloudfront.net',
-  '*.plusmoretablets.com',
-  '*.plusmore.io',
-  '*.yelp.com',
-  '*.kadira.io'
-];
-
-var trustedBoth = [
-  '*.mxpnl.com',
-  '*.yelpcdn.com'
-];
-
-_.each(trustedSecure, function(trustedDomain) {
-  accessRule(trustedDomain, false);
-});
-
-_.each(trustedBoth, function(trustedDomain) {
-  accessRule(trustedDomain, true);
-});
-
 var accessRule = function(domain, allowHttp) {
   if (allowHttp) {
     var origin = "http://" + domain; // this should only be allowed when over http, don't know how to do that though
@@ -100,6 +78,32 @@ var accessRule = function(domain, allowHttp) {
   var wssOrigin = "ws://" + domain;
   App.accessRule(wssOrigin);
 };
+
+var trustedSecure = [
+  'fontastic.s3.amazonaws.com',
+  '*.filepicker.io',
+  '*.googleapis.com',
+  '*.gstatic.com',
+  '*.cloudfront.net',
+  '*.kadira.io',
+  '*.mxpnl.com',
+  '*.yelpcdn.com',
+  '*.facebook.com'
+];
+
+var trustedBoth = [
+
+];
+
+trustedSecure.forEach(function (trustedDomain) {
+  accessRule(trustedDomain, false);
+});
+
+trustedBoth.forEach(function (trustedDomain) {
+  accessRule(trustedDomain, true);
+});
+
+
 
 
 
