@@ -88,11 +88,12 @@ var trustedSecure = [
   '*.kadira.io',
   '*.mxpnl.com',
   '*.yelpcdn.com',
-  '*.facebook.com'
+  '*.facebook.com',
+  '*.akamaihd.net'
 ];
 
 var trustedBoth = [
-
+  '*.facebook.com',
 ];
 
 trustedSecure.forEach(function (trustedDomain) {

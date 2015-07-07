@@ -16,6 +16,7 @@ coffeescript@1.0.6
 cwaring:modernizr@0.0.2
 ddp@1.1.0
 deps@1.0.7
+dispatch:reload-on-resume@0.0.2
 ejson@1.0.6
 email@1.0.6
 facebook@1.2.0
@@ -77,6 +78,7 @@ routepolicy@1.0.5
 service-configuration@1.0.4
 session@1.1.0
 sha@1.0.3
+smeevil:syntax-error-notifier@1.0.8
 spacebars@1.0.6
 spacebars-compiler@1.0.6
 srp@1.0.3

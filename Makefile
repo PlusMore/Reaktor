@@ -1,7 +1,7 @@
 NODE_ENV?=development
 NODE_OPTIONS?=''
 APP_ENV?=development
-HOST?=patleet.local
+HOST?=$(shell ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | awk '{print $1}')
 PORT?=3000
 APP_OPTIONS?=
 SUBDOMAIN?=reaktor
@@ -27,7 +27,7 @@ ios:
 
 ios-device:
 	NODE_OPTIONS=$(NODE_OPTIONS) \
-	HOST=$(HOST) \
+	HOST=$(hostname) \
 	PORT=$(PORT) \
 	meteor run --settings ./config/$(APP_ENV)/settings.json ios-device -p $(PORT) --mobile-server $(HOST):$(PORT) $(APP_OPTIONS)
 
