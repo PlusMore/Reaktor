@@ -60,10 +60,6 @@ App.launchScreens({
   'android_xhdpi_landscape': 'resources/splash/android/1280x720.png'
 });
 
-App.setPreference('StatusBarOverlaysWebView', 'false');
-App.setPreference('StatusBarBackgroundColor', '#000000');
-App.setPreference('StatusBarStyle', 'blackopaque');
-
 var accessRule = function(domain, allowHttp) {
   if (allowHttp) {
     var origin = "http://" + domain; // this should only be allowed when over http, don't know how to do that though

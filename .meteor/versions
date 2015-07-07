@@ -69,6 +69,9 @@ percolate:momentum-iron-router@0.7.0
 percolate:velocityjs@1.0.0
 plusmore:plus-more-icons@1.0.2
 plusmore:reactive-responsive-helpers@1.1.0
+practicalmeteor:chai@1.9.2_3
+practicalmeteor:loglevel@1.2.0_1
+practicalmeteor:wkwebview@0.1.2
 random@1.0.3
 reactive-dict@1.1.0
 reactive-var@1.0.5

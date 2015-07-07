@@ -4,6 +4,7 @@
     "secret": "07da7e5d7a4c21a6389dc3fd600b3956"
   },
   "public": {
+    "primaryColor": "#27B6AF",
     "facebook": {
       "permissions": [
         "public_profile",
