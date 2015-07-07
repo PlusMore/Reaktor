@@ -1,0 +1,29 @@
+{
+    "cordova": {
+        "APP_ID": "102206630125811",
+        "APP_NAME": "reaktor",
+        "secret": "7d919e0ac5a155fbbad2aac460b918c0"
+    },
+    "permissions": [
+        "public_profile",
+        "user_interests",
+        "user_activities",
+        "user_photos",
+        "read_friendlists",
+        "user_friends",
+        "email"
+    ],
+    "profileFields": [
+        "id",
+        "name",
+        "gender",
+        "location",
+        "email",
+        "first_name",
+        "last_name",
+        "link",
+        "username",
+        "locale",
+        "age_range"
+    ]
+}
