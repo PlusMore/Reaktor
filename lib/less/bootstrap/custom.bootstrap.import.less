@@ -4,7 +4,10 @@
 // mixins and variables that bootstrap provides.
 
 @import "custom.bootstrap.mixins.import.less";
-
+@import "/lib/less/fuelux/variables.import.less";
+@import "/src/less/bootstrap-theme/variables.import.less";
+@import "/lib/less/fuelux/mixins.import.less";
+@import "/src/less/bootstrap-theme/mixins.import.less";
 
 // @import "bootstrap/less/variables.less"
 //
@@ -23,11 +26,11 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
-@brand-success:         #5cb85c;
-@brand-info:            #5bc0de;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
+@brand-primary:         @primaryColor;
+@brand-success:         @successColor;
+@brand-info:            @infoColor;
+@brand-warning:         @warningColor;
+@brand-danger:          @dangerColor;
 
 
 //== Scaffolding
@@ -333,7 +336,7 @@
 //** Number of columns in the grid.
 @grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
-@grid-gutter-width:         30px;
+@grid-gutter-width:         0px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 @grid-float-breakpoint:     @screen-sm-min;
@@ -612,7 +615,7 @@
 @modal-content-fallback-border-color:          #999;
 
 //** Modal backdrop background color
-@modal-backdrop-bg:           #000;
+@modal-backdrop-bg:           rgba(0,0,0,.5);
 //** Modal backdrop opacity
 @modal-backdrop-opacity:      .5;
 //** Modal header border color
