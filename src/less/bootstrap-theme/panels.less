@@ -5,7 +5,7 @@
   .roundBorders(0);
   margin: 0 0px 4px 0px;
   background-color: @defaultColor;
-  
+
   .panel-heading {
     font-weight: 400;
     text-transform: uppercase;
@@ -13,7 +13,7 @@
     border-radius: 0;
     background: none;
     border: none;
-    
+
     .panel-title {
       height: auto;
       font-size: @16px;
@@ -23,10 +23,10 @@
         font-size: 70%;
       }
     }
-    
+
     & > .actions {
       position: absolute;
-      right: 10px;
+      right: 20px;
       top: 7px;
 
       & i {
@@ -39,10 +39,10 @@
       }
     }
   }
-  
+
   .panel-body {
-    padding: 5px 10px 10px 10px;
-      
+    padding: 10px 20px;
+
     h1, .h1,
     h2, .h2,
     h3, .h3,
@@ -55,22 +55,51 @@
     .h1{
       float:none;
     }
-    
-    p:last-child {
-      margin-bottom: 0;
+
+    p {
+      text-align: justify;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
   }
-  
+
+  &.panel-default,
+  &.panel-primary,
+  &.panel-info,
+  &.panel-success,
+  &.panel-warning,
+  &.panel-danger {
+    .panel-body {
+      padding-left: 10px;
+    }
+  }
+
+  &.panel-solid-default,
+  &.panel-solid-primary,
+  &.panel-solid-info,
+  &.panel-solid-success,
+  &.panel-solid-warning,
+  &.panel-solid-danger {
+    .panel-body {
+      padding-left: 10px;
+    }
+  }
+
+  .panel-heading + .panel-body {
+    padding-top: 5px;
+  }
+
   .panel-footer {
     border: none;
     font-weight: 400;
-    padding: 0 10px 10px 10px;
+    padding: 5px 10px 10px 10px;
   }
-  
+
   &.panel-default {
     border-left: 10px solid @defaultColor;
-    
+
     .panel-heading {
       color: @text-color;
       a  {
@@ -79,12 +108,12 @@
           color: darken(@text-color, 10%);
         }
       }
-    } 
+    }
   }
-  
+
   &.panel-primary {
     border-left: 10px solid @primaryColor;
-    
+
     .panel-heading {
       color: @primaryColor;
       a  {
@@ -94,11 +123,11 @@
         }
       }
     }
-  }  
-  
+  }
+
   &.panel-success {
     border-left: 10px solid @successColor;
-    
+
     .panel-heading {
       color: @successColor;
       a  {
@@ -108,11 +137,11 @@
         }
       }
     }
-  }  
-  
+  }
+
   &.panel-info {
     border-left: 10px solid @infoColor;
-    
+
     .panel-heading {
       color: @infoColor;
       a  {
@@ -122,11 +151,11 @@
         }
       }
     }
-  }  
-  
+  }
+
   &.panel-warning {
     border-left: 10px solid @warningColor;
-    
+
     .panel-heading {
       color: @warningColor;
       a  {
@@ -136,11 +165,11 @@
         }
       }
     }
-  }  
-  
+  }
+
   &.panel-danger {
     border-left: 10px solid @dangerColor;
-    
+
     .panel-heading {
       color: @dangerColor;
       a  {
@@ -151,47 +180,59 @@
       }
     }
   }
+
+  &.panel-solid-default {
+    .panel-body, .panel-footer, .panel-heading {
+      background: @defaultColor;
+      border: none;
+    }
+  }
+
+  &.panel-solid-primary {
+    .panel-body, .panel-footer, .panel-heading {
+      background: @primaryColor;
+      color: #fff;
+      border: none;
+    }
+  }
+
+  &.panel-solid-success {
+    .panel-body, .panel-footer, .panel-heading {
+      background: @successColor;
+      color: #fff;
+      border: none;
+    }
+  }
+
+  &.panel-solid-warning {
+    .panel-body, .panel-footer, .panel-heading {
+      background: @warningColor;
+      color: #fff;
+      border: none;
+    }
+  }
+
+  &.panel-solid-info {
+    .panel-body, .panel-footer, .panel-heading {
+      background: @infoColor;
+      color: #fff;
+      border: none;
+    }
+  }
+
+  &.panel-solid-danger {
+    .panel-body, .panel-footer, .panel-heading {
+      background: @dangerColor;
+      color: #fff;
+      border: none;
+    }
+  }
 }
 
 @media (min-width: @container-sm) {
   .panel {
     margin: 0 2px 4px 2px;
   }
-}
-
-.panel-solid-default .panel-body,.panel-solid-default .panel-footer,.panel-solid-default .panel-heading {
-  background: @defaultColor;
-  border: none;
-}
-
-.panel-solid-primary .panel-body,.panel-solid-primary .panel-footer,.panel-solid-primary .panel-heading {
-  background: @primaryColor;
-  color: #fff;
-  border: none
-}
-
-.panel-solid-success .panel-body,.panel-solid-success .panel-footer,.panel-solid-success .panel-heading {
-  background: @successColor;
-  color: #fff;
-  border: none
-}
-
-.panel-solid-warning .panel-body,.panel-solid-warning .panel-footer,.panel-solid-warning .panel-heading {
-  background: @warningColor;
-  color: #fff;
-  border: none
-}
-
-.panel-solid-info .panel-body,.panel-solid-info .panel-footer,.panel-solid-info .panel-heading {
-  background: @infoColor;
-  color: #fff;
-  border: none
-}
-
-.panel-solid-danger .panel-body,.panel-solid-danger .panel-footer,.panel-solid-danger .panel-heading {
-  background: @dangerColor;
-  color: #fff;
-  border: none
 }
 
 .widget-mini{
