@@ -24,6 +24,6 @@ Template.LoggedInLayout.helpers({
       //   return 'left-to-right';
       // }
       return 'fade';
-    }
+    };
   }
 });

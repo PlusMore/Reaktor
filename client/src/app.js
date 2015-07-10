@@ -16,19 +16,19 @@ App = function() {
 
     var widgetToggle = function() {
         $(document).on('click', '.actions > .fa-chevron-down, .actions > .fa-chevron-up', function() {
-            $(this).parent().parent().next().slideToggle("fast"), $(this).toggleClass("fa-chevron-down fa-chevron-up")
+            $(this).parent().parent().next().slideToggle("fast"), $(this).toggleClass("fa-chevron-down fa-chevron-up");
         });
     };
 
     var widgetClose = function() {
         $(document).on('click', '.actions > .fa-times', function() {
-            $(this).parent().parent().parent().fadeOut()
+            $(this).parent().parent().parent().fadeOut();
         });
     };
 
     var widgetFlip = function() {
         $(document).on('click', ".actions > .fa-cog", function() {
-            $(this).closest('.flip-wrapper').toggleClass('flipped')
+            $(this).closest('.flip-wrapper').toggleClass('flipped');
         });
     };
 
@@ -37,14 +37,14 @@ App = function() {
             var mask = $(this).data('mask');
             $(this).mask(mask);
         });
-    }
+    };
 
     var customCheckbox = function($selector) {
         $selector.iCheck({
             checkboxClass: 'icheckbox_flat',
             radioClass: 'iradio_flat'
         });
-    }
+    };
 
     var colors = {
         default: "#FFFFFF",
@@ -59,7 +59,7 @@ App = function() {
         infoDark: "#58bfd6",
         danger: "#c0392b",
         dangerDark: "#962d22"
-    }
+    };
 
     //return functions
     return {

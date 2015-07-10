@@ -4,4 +4,4 @@ Meteor.startup(function(){
     StatusBar.backgroundColorByHexString(Meteor.settings.public.primaryColor);
     StatusBar.styleLightContent();
   }
-})
+});

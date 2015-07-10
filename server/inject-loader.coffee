@@ -5,14 +5,14 @@ Inject.rawHead 'loader-style',
     'initial-scale=1,user-scalable=no">' +
   # The loading spinner needs some theming.
   '<style>' +
-    'html{background-color: #F0F3F3;}' +
+    'html{background-color:'+ Meteor.settings.public.primaryColor + ';}' +
     '.app-loader {'+
       'position: fixed;'+
       'top: 0px;'+
       'left: 0px;'+
       'width: 100%;'+
       'height: 100%;'+
-      'background-color: #F0F3F3;'+
+      'background-color:'+ Meteor.settings.public.primaryColor + ';' +
       'text-align: center;'+
       'z-index: 9999999;'+
       'visibility: visible;'+
@@ -44,7 +44,7 @@ Inject.rawHead 'loader-style',
     '.app-loader .spinner > div {'+
       'width: 18px;'+
       'height: 18px;'+
-      'background-color: #27b6af;'+
+      'background-color: #fff;'+
       'border-radius: 100%;'+
       'display: inline-block;'+
       '-webkit-animation: bouncedelay 1.4s infinite ease-in-out;'+
@@ -83,7 +83,7 @@ Inject.rawHead 'loader-style',
 # /!\ WARNING: The trick is to create a fake body by injecting data
 # in the HTML's head as Meteor is requesting JS  file in a blocking
 # fashion and mobile only allow 1 HTTP request at a time on a GPRS network.
-Inject.rawHead 'loader-body2', 
+Inject.rawHead 'loader-body2',
   '<body>'+
   '<div id="injected-loader" class="app-loader">'+
     '<div class="spinner">'+
