@@ -60,12 +60,27 @@ build:
 	#build to .build/
 	meteor build .build --server=https://$(APP_NAME).meteor.com
 
+download-crosswalk:
+	# clean up
+	rm -rf .crosswalk/
+	mkdir .crosswalk
+	# download & unzip
+	cd .crosswalk && \
+	wget https://download.01.org/crosswalk/releases/crosswalk/android/stable/12.41.296.9/arm/crosswalk-cordova-12.41.296.9-arm.zip && \
+	unzip crosswalk-cordova-12.41.296.9-arm.zip
+	make rename-crosswalk-dir
+
+rename-crosswalk-dir:
+	cd .crosswalk && \
+	rm -rf arm && \
+	mv crosswalk-cordova-12.41.296.9-arm/ arm/
+
 add-crosswalk:
 	# add crosswalk
 	rm -rf .build/android/project/CordovaLib/*
-	cp -R private/crosswalk/x86/framework/ .build/android/project/CordovaLib/
-	cp -R private/crosswalk/arm/framework/xwalk_core_library/libs/armeabi-v7a .build/android/project/CordovaLib/xwalk_core_library/libs/
-	cp private/crosswalk/arm/VERSION .build/android/project/VERSION
+	cp -R .crosswalk/arm/framework/ .build/android/project/CordovaLib/
+	# cp -R .crosswalk/arm/framework/xwalk_core_library/libs/armeabi-v7a .build/android/project/CordovaLib/xwalk_core_library/libs/
+	cp .crosswalk/arm/VERSION .build/android/project/VERSION
 	sublime .build/android/project/AndroidManifest.xml
 	# <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	# <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -77,14 +92,17 @@ add-crosswalk:
 
 # VERSION=0.1 make build-crosswalk prepare-apk
 build-crosswalk:
-	# build CordovaLib with crosswalk assets
-	cd .build/android/project/CordovaLib && \
-	android update project --subprojects --path . --target "android-19" && \
-	ant debug | tee "CordovaLib.log"
-	# Build the app
+	# clean the app
 	cd .build/android/project && \
 	ant clean && \
-	ant release  | tee "Project.log"
+	android update project --subprojects --path . --target "android-21"
+	# build CordovaLib with crosswalk assets
+	cd .build/android/project/CordovaLib && \
+	android update project --subprojects --path . --target "android-21"
+	ant release
+	# Build the app
+	cd .build/android/project && \
+	ant release
 
 #  - signs jar
 #  - optimizes jar
