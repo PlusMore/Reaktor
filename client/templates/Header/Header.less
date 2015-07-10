@@ -1,6 +1,26 @@
 @import '/client/style/imports.import.less';
 
 #header {
+
+    button.sidebar-toggle, button#toggle-profile, .nav li.profile > a{
+      color: #fff;
+    }
+
+    button.sidebar-toggle:hover, button.sidebar-toggle:active,button#toggle-profile:hover,button#toggle-profile:active {
+      // background: #1d212a;
+      background: darken(@primaryColor, 10%);
+    }
+
+    .nav li.profile > a{
+      color: #fff;
+    }
+
+    .nav li.profile > a:hover, .nav li.profile > a:active, .nav li.profile > a:focus {
+      background: darken(@primaryColor, 10%);
+    }
+  }
+
+#header {
     z-index: 200;
     height: 60px;
     width: 100%;
@@ -12,7 +32,7 @@
     }
 
      .logo {
-        color: #1d212a;
+        color: #fff;
         font-size: @22px;
         display: block;
         text-align: center;
