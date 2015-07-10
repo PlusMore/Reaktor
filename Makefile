@@ -123,7 +123,7 @@ start-all-platforms:
 	meteor run --settings ./config/$(APP_ENV)/settings.json ios-device android-device -p $(PORT) --mobile-server $(HOST):$(PORT) $(APP_OPTIONS)
 
 # runs code concat, minification, etc.
-start-prod:
+start-prod:m
 	NODE_OPTIONS=$(NODE_OPTIONS) \
 	HOST=$(HOST) \
 	PORT=$(PORT) \
