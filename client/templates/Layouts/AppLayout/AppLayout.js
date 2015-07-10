@@ -7,7 +7,8 @@ Template.LoggedInLayout.onRendered(function () {
     'panel': template.$('#panel').get(0),
     'menu': template.$('#menu').get(0),
     'padding': 256,
-    'tolerance': 70
+    'tolerance': 70,
+    'grabWidth': 44
   });
 });
 

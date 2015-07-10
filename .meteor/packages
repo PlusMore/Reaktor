@@ -19,7 +19,6 @@ coffeescript
 plusmore:reactive-responsive-helpers
 plusmore:plus-more-icons
 jimbog:tap
-chriswessels:slideout
 fortawesome:fontawesome
 percolate:momentum-iron-router
 255kb:meteor-status
@@ -32,3 +31,4 @@ smeevil:syntax-error-notifier
 mobile-status-bar
 practicalmeteor:wkwebview
 particle4dev:cordova-fb
+patrickleet:slideout
