@@ -1,8 +1,7 @@
 <template name="Accounts">
-    <div id="accounts" class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <div id="accounts-wrapper" class="animated fadeInUp">
+    <div id="accounts" class="">
+
+                <div id="accounts-wrapper" class="animated flipInY">
                     <header>
                         <div class="brand">
                             <a href="index.html" class="logo">
@@ -11,20 +10,12 @@
                         </div>
                     </header>
                     <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                           Sign In
-                        </h3>
-                        </div>
                         <div class="panel-body">
-                            <p> Login to access your account.</p>
-
                             {{> loginButtons}}
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+
     </div>
 
 </template>
