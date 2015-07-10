@@ -65,4 +65,4 @@ This command initializes the replica set. The replica set uses a log of operatio
 
     meteor update
 
-Note: Updating Bootstrap theme can be a bit tricky as the file ```lib/less/bootstrap/custom.bootstrap.import.less``` may need to be manually deleted so it can be regenerated with new variables requires by a newer version of bootstrap. The easiest way IMO, is to just delete the file, let it regenerate, and then look at the diff to find any changes you made previously that may have been lost. To mitigate this, put variables in ```lib/less/bootstrap-theme/variables.less``` when possible.
+Note: Updating Bootstrap theme can be a bit tricky as the file ```lib/less/vendor/bootstrap/custom.bootstrap.import.less``` may need to be manually deleted so it can be regenerated with new variables requires by a newer version of bootstrap. The easiest way IMO, is to just delete the file, let it regenerate, and then look at the diff to find any changes you made previously that may have been lost. To mitigate this, put variables in ```lib/less/bootstrap-theme/variables.less``` when possible.

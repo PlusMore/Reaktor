@@ -238,6 +238,10 @@
 }
 
 // extra 20px on header for transparent bar
+// TODO: this is for "ios standalone mode", not cordova
+// need to figure out best way to make it work on cordova as well
+// involves using StatusBar, and applying the ios class, but
+// not sure how to detect "is this ios"
 .ios #header {
     height: 80px;
     padding-top: 20px;
