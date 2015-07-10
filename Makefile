@@ -132,3 +132,9 @@ start-prod:
 tag:
 	git tag -a $(TAG) -m 'tagging release'
 	git push origin $(TAG)
+
+hard-reset:
+	meteor reset
+	rm -rf .meteor/local
+	rm -rf .crosswalk
+	rm -rf .build
