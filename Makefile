@@ -8,6 +8,7 @@ SUBDOMAIN?=reaktor
 TAG?=
 SERVER=$(shell curl ipecho.net/plain)
 APP_NAME=reaktor
+PROJECT_DIR=$(shell pwd)
 
 start:
 	NODE_OPTIONS=$(NODE_OPTIONS) \
@@ -50,44 +51,50 @@ android-device:
 # android has a few extra steps that are completed automatically/manually
 #  - replace webview with crosswalk webview
 #     - https://meteor.hackpad.com/Building-Meteor-app-with-Crosswalk-kHKh4DzGxFQ
-#	VERSION=0.1 make build-step1
-build-step1:
+#	VERSION=0.1 make build add-crosswalk
+build:
 	# remove old builds
-	rm -rf ~/cordova-builds/$(APP_ENV)
+	rm -rf ~/cordova-builds/$(APP_NAME)/$(VERSION)/$(APP_ENV)/
 	# set environment variables
-	PROJECT_DIR=$(pwd) \
 	APP_ENV=$(APP_ENV) \
 	VERSION=$(VERSION) \
 	APP_NAME=$(APP_NAME) \
 	#build to ~/cordova-builds
-	meteor build ~/cordova-builds/$(APP_NAME)/$(APP_ENV) --server=$(SERVER):$(PORT)
+	meteor build ~/cordova-builds/$(APP_NAME)/$(VERSION)/$(APP_ENV)/ --server=https://$(APP_NAME).meteor.com
+
+add-crosswalk:
 	# add crosswalk
-	cd ~/cordova-builds/$(APP_NAME)/$(APP_ENV)/android/project
-	rm -rf CordovaLib/*
-	cp -a $(PROJECT_DIR)/private/crosswalk/x86/framework/* CordovaLib/
-	cp $(PROJECT_DIR)/private/crosswalk/arm/framework/xwalk_core_library/libs/armeabi-v7a CordovaLib/xwalk_core_library/libs/
-	cp $(PROJECT_DIR)/private/crosswalk/arm/VERSION VERSION
+	cd ~/cordova-builds/$(APP_NAME)/$(VERSION)/$(APP_ENV)/android/project && \
+	rm -rf CordovaLib/* && \
+	cp -R $(PROJECT_DIR)/private/crosswalk/x86/framework/ CordovaLib/ && \
+	cp -R $(PROJECT_DIR)/private/crosswalk/arm/framework/xwalk_core_library/libs/armeabi-v7a CordovaLib/xwalk_core_library/libs/ && \
+	cp $(PROJECT_DIR)/private/crosswalk/arm/VERSION VERSION && \
+	sublime AndroidManifest.xml
+	# <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	# <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	# VERSION=$(VERSION) make build-crosswalk prepare-apk
 
 # NOTE: After running build-step1, Edit the AndroidManifest to add the permissions for WiFi state and network (you probably need to add only the first one):
 # <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 # <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+# VERSION=0.1 make build-crosswalk prepare-apk
+build-crosswalk:
+	cd ~/cordova-builds/$(APP_NAME)/$(VERSION)/$(APP_ENV)/android/project/CordovaLib && \
+	android update project --subprojects --path . --target "android-19" && \
+	ant debug
+	cd ~/cordova-builds/$(APP_NAME)/$(VERSION)/$(APP_ENV)/android/project && \
+	ant clean && \
+	ant release
+
 #  - signs jar
 #  - optimizes jar
 #  - final version copied to Box for easy sharing
 #  APP_ENV=development SUBDOMAIN=www VERSION=0.1 make build-step2
-build-step2:
-	APP_NAME=$(APP_NAME)
-	cd ~/cordova-builds/$(APP_NAME)/$(APP_ENV)/android/project/CordovaLib
-	android update project --subprojects --path . --target "android-19"
-	ant debug
-	cd ..
-	ant clean
-	ant release
-	cd ..
+prepare-apk:
 	jarsigner -digestalg SHA1 ~/cordova-builds/$(APP_ENV)/android/unaligned.apk $(SUBDOMAIN)
-	~/.meteor/android_bundle/android-sdk/build-tools/20.0.0/zipalign 4 ~/cordova-builds/$(APP_NAME)/$(APP_ENV)/android/unaligned.apk ~/cordova-builds/$(APP_NAME)/$(APP_ENV)/android/$(SUBDOMAIN)-$(VERSION).apk
-	cp -f ~/cordova-builds/$(APP_NAME)/$(APP_ENV)/android/$(SUBDOMAIN)-$(VERSION).apk /Users/pat/Box\ Sync/Plus\ More/For\ Pat
+	~/.meteor/android_bundle/android-sdk/build-tools/20.0.0/zipalign 4 ~/cordova-builds/$(APP_NAME)/$(VERSION)/$(APP_ENV)/android/unaligned.apk ~/cordova-builds/$(APP_NAME)/$(VERSION)/$(APP_ENV)/android/$(SUBDOMAIN)-$(VERSION).apk
+	cp -f ~/cordova-builds/$(APP_NAME)/$(VERSION)/$(APP_ENV)/android/$(SUBDOMAIN)-$(VERSION).apk /Users/pat/Box\ Sync/Plus\ More/For\ Pat
 
 # test on web, and an android and ios device
 start-all-platforms:
