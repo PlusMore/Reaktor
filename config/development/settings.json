@@ -1,8 +1,4 @@
 {
-  "facebook": {
-    "appId": "102283436784797",
-    "secret": "07da7e5d7a4c21a6389dc3fd600b3956"
-  },
   "public": {
     "primaryColor": "#27B6AF",
     "facebook": {
@@ -10,8 +6,19 @@
         "public_profile",
         "email",
         "user_friends"
+      ],
+      "profileFields": [
+          "name",
+          "gender",
+          "location"
       ]
     }
   },
-  "cordova": {}
+  "cordova": {
+    "com.phonegap.plugins.facebookconnect": {
+       "APP_ID": "102283436784797",
+       "APP_NAME": "reaktor",
+       "secret": "07da7e5d7a4c21a6389dc3fd600b3956"
+    }
+  }
 }

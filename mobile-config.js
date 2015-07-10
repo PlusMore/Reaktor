@@ -6,12 +6,13 @@ App.info({
   description: 'Reaktor boilerplate.',
   author: 'Patrick Scott',
   email: 'pat@patscott.io',
-  website: 'https://patscott.io'
+  website: 'https://patscott.io',
+  version: '1.1.0'
 });
 
 App.configurePlugin('com.phonegap.plugins.facebookconnect', {
     APP_ID: '102283436784797',
-    APP_NAME: '07da7e5d7a4c21a6389dc3fd600b3956'
+    APP_NAME: 'Reaktor'
 });
 
 App.icons({
