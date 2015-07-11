@@ -26,5 +26,22 @@ Template.LoggedInLayout.helpers({
       // }
       return 'fade';
     };
+  },
+  profileComplete: function() {
+    var user = Meteor.user(),
+        complete = false;
+
+    try {
+      check(user.profile, {
+          firstName: String,
+          lastName: String,
+          picture: String,
+          reviewed: Boolean
+      });
+      return true;
+    } catch (e) {
+      return false;
+    }
+
   }
 });

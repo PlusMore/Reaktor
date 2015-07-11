@@ -9,34 +9,11 @@
 
         {{> LoggedInLayout}}
 
-        <!-- Page Wrapper-->
-        <!-- <section id="main-wrapper" class="{{theme}} {{ios}}"> -->
-            <!-- Page wrapper -->
-
-
-            <!-- Left Sidebar Navigation -->
-            <!-- {{> LeftSidebar}} -->
-
-            <!-- Content wrapper -->
-            <!-- <section class="main-content-wrapper"> -->
-                <!-- Main content view  -->
-                <!-- {{> yield}} -->
-
-            <!-- </section> -->
-            <!-- /Content wraper-->
-
-        <!-- </section> -->
-        <!-- /Page wrapper-->
-
-        <!-- Right Sidebar Navigation -->
-        <!-- {{> RightSidebar}} -->
-
-        <!--Config demo-->
-        <!-- {{> ConfigDemo}} -->
-
     {{else}}
         {{#unless loggingIn}}
             {{> Accounts}}
+        {{else}}
+            {{> PageLoader}}
         {{/unless}}
     {{/if}}
     {{> sAlert}}
@@ -44,6 +21,10 @@
 </template>
 
 <template name="LoggedInLayout">
+    {{#unless profileComplete}}
+        {{> CompleteProfileOverlay}}
+    {{/unless}}
+
     <nav id="menu" class="{{theme}} {{ios}}">
         {{> LeftSidebar}}
     </nav>
