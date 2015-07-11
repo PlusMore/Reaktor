@@ -1,21 +1,3 @@
-Template.RequiredProfilePanel.helpers({
-  isContinueDisabled: function () {
-    var user = Meteor.user();
-
-    try {
-      check(user.profile, {
-          firstName: String,
-          lastName: String,
-          picture: String
-      });
-
-      return false;
-    } catch (e) {
-      return true;
-    }
-  }
-});
-
 Template.RequiredProfilePanel.events({
   'tap .js-new-photo': function(event, template) {
     MeteorCamera.getPicture({width: 640, height: 640}, function(error, data) {
@@ -30,7 +12,8 @@ Template.RequiredProfilePanel.events({
       Meteor.users.update(Meteor.userId(),
         {$set:
           {
-            'profile.picture': data
+            'profile.picture': data,
+            'profile.pictureThumbnail': data
           }
         }
       );
@@ -41,7 +24,9 @@ Template.RequiredProfilePanel.events({
         complete = false;
 
     try {
-      check(user.profile, {
+
+      var requiredInfo = _.pick(user.profile, ['firstName', 'lastName', 'picture']);
+      check(requiredInfo, {
           firstName: String,
           lastName: String,
           picture: String
@@ -49,6 +34,7 @@ Template.RequiredProfilePanel.events({
 
       return Meteor.users.update(user._id, {$set: {'profile.reviewed': true}});
     } catch (e) {
+      sAlert.error('Please enter required information.');
       return false;
     }
   }

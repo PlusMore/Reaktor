@@ -32,12 +32,14 @@ Template.LoggedInLayout.helpers({
         complete = false;
 
     try {
-      check(user.profile, {
+      var requiredInfo = _.pick(user.profile, ['firstName', 'lastName', 'picture', 'reviewed']);
+      check(requiredInfo, {
           firstName: String,
           lastName: String,
           picture: String,
           reviewed: Boolean
       });
+
       return true;
     } catch (e) {
       return false;
