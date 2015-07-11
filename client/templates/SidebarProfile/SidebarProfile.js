@@ -1,9 +1,6 @@
 Template.SidebarProfile.helpers({
   user: function() {
     return Meteor.user();
-  },
-  displayName: function() {
-    return Meteor.user().profile.fullName || 'Your Account';
   }
 });
 
