@@ -17,9 +17,11 @@
           </p>
           {{#if profile.picture}}
             <img class="js-new-photo" src="{{picture}}" alt="Your Photo">
-          {{else}}
-            <button class="button btn btn-default btn-block js-new-photo"><i class="fa fa-camera"></i> Take New Photo</button>
           {{/if}}
+          {{#unless isCordova}}
+            <input type="file" capture="camera" accept="image/*" id="takePictureField" class="take-photo-input">
+          {{/unless}}
+          <button class="button btn btn-default btn-block js-new-photo"><i class="fa fa-camera"></i> Take Photo</button>
           <div class="col-xs-12">
               <div class="profile-info center-text padding-top-10">
                 {{> editableText collection="users" field="profile.firstName" userCanEdit=userCanEdit substitute='First'}}

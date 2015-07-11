@@ -1,5 +1,19 @@
 Template.RequiredProfilePanel.events({
   'tap .js-new-photo': function(event, template) {
+
+    // tons of different browser prefixes
+    navigator.getUserMedia = (
+      navigator.getUserMedia ||
+      navigator.webkitGetUserMedia ||
+      navigator.mozGetUserMedia ||
+      navigator.msGetUserMedia
+      );
+
+    if (! navigator.getUserMedia) {
+      // no browser support, trigger file upload
+      return template.$('input.take-photo-input').trigger('click');
+    }
+
     MeteorCamera.getPicture({width: 640, height: 640}, function(error, data) {
       if (error) {
         if (error.error === 'browserNotSupported') {

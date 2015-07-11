@@ -25,6 +25,9 @@ debug:
 deploy:
 	meteor deploy https://$(APP_NAME).meteor.com --settings ./config/$(APP_ENV)/settings.json
 
+mongo:
+	meteor mongo
+
 ios:
 	NODE_OPTIONS=$(NODE_OPTIONS) \
 	HOST=$(HOST) \
