@@ -24,10 +24,10 @@
                         </div>
                         <div class="col-md-9">
                             <div class="profile-info">
-                                <h1>{{displayName}}</h1>
-                                <span class="text-muted">UI Designer</span>
+                                <h1>{{> editableText collection="users" field="profile.name" userCanEdit=userCanEdit substitute='Enter Full Name...'}}</h1>
+                                <h2 class="text-muted">{{> editableText collection="users" field="profile.title" userCanEdit=userCanEdit substitute='Enter Title...'}}</h2>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    {{> editableText collection="users" field="profile.description" userCanEdit=userCanEdit substitute='Enter a short description about yourself...'}}
                                 </p>
                                 <div class="connect">
                                     <button type="button" class="btn btn-success btn-trans"><span class="fa fa-check"></span> Following</button>
