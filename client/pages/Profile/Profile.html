@@ -10,55 +10,47 @@
 
         <!-- page content -->
         <div class="row">
-            <div class="col-md-6">
-
-                <section class="panel">
-                    <div class="panel-body profile-wrapper">
-
-                        {{#with user}}
-
-                        <div id='profile-image' class="col-xs-12 circle">
-                            <span class="image-wrap " style="background-image:url({{picture}});">
-                                <img src="{{picture}}" style="opacity: 0;">
-                            </span>
+            <div class="col-md-4 col-sm-5">
+                {{#with user}}
+                    <section class="panel">
+                        <div class="panel-image" style="background-image:url({{picture}});">
                         </div>
-                        <div class="col-xs-12">
-                            <div class="profile-info">
-                                <h1>{{> editableText collection="users" field="profile.name" userCanEdit=userCanEdit substitute='Enter Full Name...'}}</h1>
-                                <h2 class="text-muted">{{> editableText collection="users" field="profile.title" userCanEdit=userCanEdit substitute='Enter Title...'}}</h2>
-                                <p>
-                                    {{> editableText collection="users" field="profile.description" userCanEdit=userCanEdit substitute='Enter a short description about yourself...'}}
-                                </p>
-                                <div class="connect">
-                                    <button type="button" class="btn btn-success btn-trans"><span class="fa fa-check"></span> Following</button>
-                                    <button type="button" class="btn btn-primary btn-trans"><span class="fa fa-comments"></span> Chat</button>
-                                </div>
-                                <div class="social">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-lg fa-github"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-lg fa-dribbble"></i></a>
-                                        </li>
+                        <div class="panel-body profile-wrapper">
+                            <div class="col-xs-12">
+                                <div class="profile-info">
+                                    <h1>{{> editableText collection="users" field="profile.name" userCanEdit=userCanEdit substitute='Enter Full Name...'}}</h1>
+                                    <h2 class="text-muted">{{> editableText collection="users" field="profile.title" userCanEdit=userCanEdit substitute='Enter Title...'}}</h2>
+                                    <p>
+                                        {{> editableText collection="users" field="profile.description" userCanEdit=userCanEdit substitute='Enter a short description about yourself...'}}
+                                    </p>
+                                    <div class="connect">
+                                        <button type="button" class="btn btn-success btn-trans"><span class="fa fa-check"></span> Following</button>
+                                        <button type="button" class="btn btn-primary btn-trans"><span class="fa fa-comments"></span> Chat</button>
+                                    </div>
+                                    <div class="social">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-lg fa-github"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-lg fa-dribbble"></i></a>
+                                            </li>
 
-                                    </ul>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        {{/with}}
-
-                    </div>
-                </section>
+                    </section>
+                {{/with}}
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8 col-sm-7">
                 <section class="panel  timeline-post-to">
                     <div class="panel-body">
                         <form role="form">

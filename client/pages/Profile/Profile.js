@@ -11,7 +11,7 @@ Template.Profile.helpers({
 // TODO: Allow image cropping and resizing
 // http://tympanus.net/codrops/2014/10/30/resizing-cropping-images-canvas/
 Template.Profile.events({
-  'tap .image-wrap': function() {
+  'tap .panel-image': function() {
     MeteorCamera.getPicture({width: 640, height: 640}, function(error, data) {
       if (error) {
         if (error.error === 'browserNotSupported') {
