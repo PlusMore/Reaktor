@@ -22,6 +22,9 @@ debug:
 	PORT=$(PORT) \
 	meteor debug -p $(PORT) --settings ./config/$(APP_ENV)/settings.json
 
+deploy:
+	meteor deploy https://$(APP_NAME).meteor.com --settings ./config/$(APP_ENV)/settings.json
+
 ios:
 	NODE_OPTIONS=$(NODE_OPTIONS) \
 	HOST=$(HOST) \
@@ -33,6 +36,10 @@ ios-device:
 	HOST=$(hostname) \
 	PORT=$(PORT) \
 	meteor run --settings ./config/$(APP_ENV)/settings.json ios-device -p $(PORT) --mobile-server $(HOST):$(PORT) $(APP_OPTIONS)
+
+ios-device-live:
+	NODE_OPTIONS=$(NODE_OPTIONS) \
+	meteor run --settings ./config/$(APP_ENV)/settings.json ios-device -p $(PORT) --mobile-server https://$(APP_NAME).meteor.com $(APP_OPTIONS)
 
 android:
 	NODE_OPTIONS=$(NODE_OPTIONS) \
