@@ -17,12 +17,12 @@
 
                         {{#with user}}
 
-                        <div class="col-md-3">
-                            <div class="profile-pic text-center">
-                                <img src="{{picture}}" alt="" class="img-circle">
-                            </div>
+                        <div id='profile-image' class="col-xs-12 circle">
+                            <span class="image-wrap " style="background-image:url({{picture}});">
+                                <img src="{{picture}}" style="opacity: 0;">
+                            </span>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-xs-12">
                             <div class="profile-info">
                                 <h1>{{> editableText collection="users" field="profile.name" userCanEdit=userCanEdit substitute='Enter Full Name...'}}</h1>
                                 <h2 class="text-muted">{{> editableText collection="users" field="profile.title" userCanEdit=userCanEdit substitute='Enter Title...'}}</h2>
