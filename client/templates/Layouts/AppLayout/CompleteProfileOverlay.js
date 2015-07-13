@@ -7,6 +7,9 @@ Template.RequiredProfilePanel.helpers({
 Template.RequiredProfilePanel.events({
   'tap .js-new-photo': function(event, template) {
 
+    // if the browser is not cordova, we will try to access the camera
+    // through the user media API, if it's not available, trigger the file
+    // input upload.
     if (!Meteor.isCordova) {
       // tons of different browser prefixes
       navigator.getUserMedia = (
@@ -22,7 +25,22 @@ Template.RequiredProfilePanel.events({
       }
     }
 
-    MeteorCamera.getPicture({width: 640, height: 640}, function(error, data) {
+    var options = {
+      width: 640,
+      height: 640,
+      quality: 100
+    };
+
+    if (Meteor.isCordova) {
+      _.extend(options, {
+        cameraDirection: Camera.Direction.FRONT,
+        saveToPhotoAlbum: true,
+        correctOrientation: true,
+        allowEdit: true
+      });
+    }
+
+    MeteorCamera.getPicture(options, function(error, data) {
       if (error) {
         if (error.error === 'browserNotSupported') {
           return;
@@ -43,7 +61,17 @@ Template.RequiredProfilePanel.events({
   },
   'tap .js-choose-photo': function() {
     if (Meteor.isCordova) {
-      MeteorCamera.getPicture({width: 640, height: 640, sourceType: Camera.PictureSourceType.PHOTOLIBRARY}, function(error, data) {
+
+      var options = {
+        width: 640,
+        height: 640,
+        quality: 100,
+        sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+        allowEdit: true,
+        mediaType: Camera.MediaType.PICTURE
+      };
+
+      MeteorCamera.getPicture(options, function(error, data) {
         if (error) {
           if (error.error === 'browserNotSupported') {
             return;

@@ -18,8 +18,6 @@ App = function() {
             var standalone = ("standalone" in window.navigator) && window.navigator.standalone;
             Session.set('iOS-standalone', iOS && standalone);
         }
-
-
       };
 
     var widgetToggle = function() {
@@ -74,6 +72,7 @@ App = function() {
         colors: colors,
         customCheckbox: customCheckbox,
         maskInputs: maskInputs,
-        UI: {}
+        UI: {},
+        iOS: iOS
     };
 }();
