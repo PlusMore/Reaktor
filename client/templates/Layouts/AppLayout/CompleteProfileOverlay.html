@@ -28,9 +28,13 @@
           {{/if}}
 
           <div class="col-xs-12">
-              <div class="profile-info center-text padding-top-10">
-                {{> editableText collection="users" field="profile.firstName" userCanEdit=userCanEdit substitute='First'}}
-                {{> editableText collection="users" field="profile.lastName" userCanEdit=userCanEdit substitute='Last'}}
+              <div class="profile-info center-text padding-top-10 row">
+                  <div class="col-xs-6 first-name">
+                    {{> editableText collection="users" field="profile.firstName" inputClass="inline-edit" userCanEdit=userCanEdit substitute='First'}}
+                  </div>
+                  <div class="col-xs-6 last-name">
+                    {{> editableText collection="users" field="profile.lastName" inputClass="inline-edit" userCanEdit=userCanEdit substitute='Last'}}
+                  </div>
               </div>
           </div>
         </div>
