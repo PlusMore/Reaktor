@@ -1,46 +1,14 @@
-function showSuccess(msg){
-  Messenger().post({
-   message: msg,
-  type: 'success',
-    showCloseButton: true
-  });
-}
-
-function showError(msg){
- Messenger().post({
-   message: msg,
-  type: 'error',
-    showCloseButton: false
-  });
-} 
-
-function tryAgain(){
-  var i = 0;
-  Messenger().run({
-    errorMessage: 'Error destroying alien planet',
-    successMessage: 'Alien planet destroyed!',
-    action: function(opts) {
-      if (++i < 3) {
-        return opts.error({
-          status: 500,
-          readyState: 0,
-          responseText: 0
-        });
-      } else {
-        return opts.success();
-      }
-    }
-  });
-}
-
 Template.Notifications.events({
-  'click .js-retry-message': function () {
-    tryAgain();
+  'tap .btn-danger': function () {
+    sAlert.error('This is an error.');
   },
-  'click .js-error-message': function () {
-    showError('Houston, we have a problem.');
+  'tap .btn-warning': function () {
+    sAlert.warning('This is a warning.');
   },
-  'click .js-success-message': function () {
-    showSuccess('We have lift off!');
+  'tap .btn-info': function () {
+    sAlert.info('This is informational.');
+  },
+  'tap .btn-success': function () {
+    sAlert.success('Yay! Success!');
   }
 });

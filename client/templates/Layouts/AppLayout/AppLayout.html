@@ -1,31 +1,38 @@
 <template name="AppLayout">
-    
     {{> Loader}}
-
-    <!-- Page Wrapper-->
-    <section id="main-wrapper" class="{{theme}} {{ios}}">
-        <!-- Page wrapper -->
-        {{> Header}}
-        
-        <!-- Left Sidebar Navigation -->
-        {{> LeftSidebar}}
-        
-        <!-- Content wrapper -->
-        <section class="main-content-wrapper">
-            <!-- Main content view  -->
-            {{> yield}}
-
-        </section>
-        <!-- /Content wraper-->
-
-    </section>
-    <!-- /Page wrapper-->
-
-    <!-- Right Sidebar Navigation -->
-    {{> RightSidebar}}
-
-    <!--Config demo-->
-    {{> ConfigDemo}}
-
     {{> yield "modals"}}
+    {{#if ios}}
+        <div id="ios-status-bar"></div>
+    {{/if}}
+
+    {{#if currentUser}}
+
+        {{> LoggedInLayout}}
+
+    {{else}}
+        {{#unless loggingIn}}
+            {{> Accounts}}
+        {{else}}
+            {{> PageLoader}}
+        {{/unless}}
+    {{/if}}
+    {{> sAlert}}
+    {{> meteorStatus}}
+</template>
+
+<template name="LoggedInLayout">
+    {{#unless profileComplete}}
+        {{> CompleteProfileOverlay}}
+    {{/unless}}
+
+    <nav id="menu" class="{{theme}} {{ios}}">
+        {{> LeftSidebar}}
+    </nav>
+
+    <div id="panel" class="{{theme}} {{ios}}">
+        {{> Header}}
+        {{#momentum plugin='iron-router' options=transition}}
+            {{> yield}}
+        {{/momentum}}
+    </div>
 </template>

@@ -1,0 +1,18 @@
+// What's up with all the imports?
+//
+// There is a reason for the madness. From the app, just import this file.
+// Here's the full process:
+//
+// custom.bootstrap.import.less is the main import to customize bootstrap.
+// in order to customize bootstrap, we need to customize that file. That file is
+// generated when you update the package, so we want to keep changes to it at a minimum.
+// To solve this, we have a variables.import.less file that we import into
+// custom.bootstrap.import.less
+//
+// We now can import that file that will be used as imports for our theme, and
+// for bootstrap, and it contains everything we need from both
+//
+// So long as we just import this file everywhere, all the files will load in the
+// correct order.
+//
+@import 'lib/less/vendor/bootstrap/custom.bootstrap.import.less';

@@ -1,0 +1,55 @@
+@import 'imports.import.less';
+
+.progress {
+  display: block;
+  margin-bottom: 15px;
+  background-color: #e6ebed;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  height: 30px;
+}
+
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
+}
+.progress.progress-sm {
+  height: 15px
+}
+.progress.progress-xs {
+  height: 6px
+}
+.progress .progress-bar {
+  background-color: @primaryColor;
+
+box-shadow: none;
+  -webkit-box-shadow: none
+}
+.progress .progress-bar.progress-bar-success {
+  background-color: @successColor;
+
+}
+.progress .progress-bar.progress-bar-info {
+  background-color: @infoColor;
+
+}
+.progress .progress-bar.progress-bar-warning {
+  background-color: @warningColor;
+
+}
+.progress .progress-bar.progress-bar-danger {
+  background-color: @dangerColor;
+
+}

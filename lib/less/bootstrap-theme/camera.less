@@ -1,0 +1,31 @@
+@import 'imports.import.less';
+
+.camera-popup {
+  min-width: 320px;
+  width: auto;
+
+  // reset styles from package
+  .permission-denied-error h2 {
+    margin-top: initial;
+    color: initial;
+    border-bottom: initial;
+    padding-bottom: initial;
+    line-height: initial;
+  }
+
+  .buttons {
+    margin-top: 5px;
+
+    // for some reason the video feed from the camera has extra margins with no
+    // css that says so?
+    &.review {
+      margin-top: 10px;
+    }
+  }
+
+}
+
+.take-photo-input {
+  visibility:hidden;
+  height: 0;
+}
