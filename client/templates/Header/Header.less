@@ -1,25 +1,46 @@
 @import '/client/style/imports.import.less';
 
 #header {
+
+    button.sidebar-toggle, button#toggle-profile, .nav li.profile > a{
+      color: #fff;
+    }
+
+    button.sidebar-toggle:hover, button.sidebar-toggle:active,button#toggle-profile:hover,button#toggle-profile:active {
+      // background: #1d212a;
+      background: darken(@primaryColor, 10%);
+    }
+
+    .nav li.profile > a{
+      color: #fff;
+    }
+
+    .nav li.profile > a:hover, .nav li.profile > a:active, .nav li.profile > a:focus {
+      background: darken(@primaryColor, 10%);
+    }
+  }
+
+#header {
     z-index: 200;
     height: 60px;
-    position: absolute;
     width: 100%;
     margin-right: 0;
+    background: @primaryColor;
+
      .brand {
-        float: left;
-        width: 240px;
-        height: 60px;
-        padding: 0 0 0 10px;
-        position: relative;
+        width: 100%;
     }
+
      .logo {
-        color: #1d212a;
-        font-size: @19px;
-        text-transform: uppercase; 
-        padding: 17px 0 0 10px;
-        display: inline-block;
-    } 
+        color: #fff;
+        font-size: @22px;
+        display: block;
+        text-align: center;
+        width: 180px;
+        margin: 0 auto;
+        line-height: 60px;
+        vertical-align: middle;
+    }
      .logo img {
         margin-right: 6px;
         margin-top: -4px;
@@ -62,8 +83,13 @@
         outline: none;
         border: none;
     }
+
+    .sidebar-toggle i {
+        font-size: 1.3em;
+    }
+
      .search {
-        -webkit-appearance: none !important;  
+        -webkit-appearance: none !important;
         color: #282323;
         outline: 0;
         height: 30px;
@@ -168,7 +194,7 @@
         margin-right: 5px;
     }
      .dropdown-menu>li.active>a, .dropdown-menu>li:active>a {
-        background-color: #fbfbfb; 
+        background-color: #fbfbfb;
         color: #444
     }
     .dropdown-menu>li.active>a:hover, .dropdown-menu>li:active>a:hover {
@@ -181,26 +207,25 @@
      .profile ul>li h5, .profile ul>li p {
         font-size: @13px;
         margin: 0;
-        padding: 0; 
+        padding: 0;
     }
-     .profile ul>li .progress { 
-        margin-bottom: 0; 
+     .profile ul>li .progress {
+        margin-bottom: 0;
     }
 }
 @media (max-width: 789px){
-        #header .search{
+    #header .search{
         width: 155px;
     }
 }
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
     #header .brand {
         width: 100%;
         padding: 0 0 0 10px;
         text-align: center;
     }
     #header .logo {
-        font-size: @22px;
-        padding: 14px 0 0 0;
+        font-size: @23px;
     }
     #header .logo img {
         width: 25px;
@@ -233,6 +258,10 @@
 }
 
 // extra 20px on header for transparent bar
+// TODO: this is for "ios standalone mode", not cordova
+// need to figure out best way to make it work on cordova as well
+// involves using StatusBar, and applying the ios class, but
+// not sure how to detect "is this ios"
 .ios #header {
     height: 80px;
     padding-top: 20px;

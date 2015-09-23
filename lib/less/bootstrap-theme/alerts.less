@@ -1,0 +1,56 @@
+@import 'imports.import.less';
+
+.alert {
+  strong {
+    margin-right: 5px;
+  }
+}
+
+.s-alert-box {
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: @shadowColor 2px 2px 10px;
+
+  a {
+    color: #fff;
+  }
+
+  & > .s-alert-close {
+    width: 44px;
+    height: 44px;
+  }
+
+  &.s-alert-error {
+    background: @dangerColor;
+  }
+
+  &.s-alert-warning {
+    background: @warningColor;
+  }
+
+  &.s-alert-info {
+    background: @infoColor;
+  }
+
+  &.s-alert-success {
+    background: @successColor;
+  }
+
+  & > .s-alert-box-inner {
+    font-family: @fontHeader;
+    margin-right: 44px;
+
+    p {
+      padding: 0;
+    }
+  }
+
+}
+
+.s-alert-effect-stackslide {
+  .s-alert-effect-stackslide .s-alert-close {
+    right: 10px;
+    width: 44px;
+    height: 44px;
+  }
+}
